@@ -11,35 +11,11 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_stgAddress"
   DTS:PackageType="5"
-  DTS:VersionBuild="187"
-  DTS:VersionGUID="{06D33247-761C-41AC-B402-98E79BEF893A}">
+  DTS:VersionBuild="188"
+  DTS:VersionGUID="{0538F661-B846-4AAB-9F75-A144E16B2019}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{95B7E3FB-0527-48F6-B280-96AC57555B82}"
-      DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;DECLARE @Time DATETIME = GETDATE() , @MyName VARCHAR(120) = SUSER_NAME()&#xA;EXEC dbo.usp_BirukPackageLog  ?,  ?, 'SharePoint', 'C', NULL , @Time,  NULL , NULL, @Time , @MyName &quot;"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="VarEndTimeLog">
-      <DTS:VariableValue
-        DTS:DataType="8">DECLARE @Time DATETIME = GETDATE() , @MyName VARCHAR(120) = SUSER_NAME()
-EXEC dbo.usp_BirukPackageLog  ?,  ?, 'SharePoint', 'C', NULL , @Time,  NULL , NULL, @Time , @MyName </DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{24B07799-DF84-4E6C-B0BD-3E1EF85BC2FB}"
-      DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;DECLARE @Time DATETIME = GETDATE() , @MyName VARCHAR(120) = SUSER_NAME()&#xA;EXEC dbo.usp_BirukPackageLog  ?,  ?, 'SharePoint', 'E', NULL , @Time,  ? , ? , @Time , @MyName &quot;"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="VarEndTimeLogError">
-      <DTS:VariableValue
-        DTS:DataType="8">DECLARE @Time DATETIME = GETDATE() , @MyName VARCHAR(120) = SUSER_NAME()
-EXEC dbo.usp_BirukPackageLog  ?,  ?, 'SharePoint', 'E', NULL , @Time,  ? , ? , @Time , @MyName </DTS:VariableValue>
-    </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{B05A3553-AC3A-435B-94CB-1C51404C5701}"
@@ -48,19 +24,6 @@ EXEC dbo.usp_BirukPackageLog  ?,  ?, 'SharePoint', 'E', NULL , @Time,  ? , ? , @
       DTS:ObjectName="VarRowCount">
       <DTS:VariableValue
         DTS:DataType="3">0</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{39F77320-757C-41DC-84F0-B3A8EA29972E}"
-      DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;DECLARE @Time DATETIME = GETDATE() , @MyName VARCHAR(120) = SUSER_NAME()&#xA;&#xA;EXEC dbo.usp_BirukPackageLog  ?,  ?, 'SharePoint', 'S', @Time , NULL,  NULL , NULL, @Time , @MyName &quot;"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="VarStartTimeLog">
-      <DTS:VariableValue
-        DTS:DataType="8">DECLARE @Time DATETIME = GETDATE() , @MyName VARCHAR(120) = SUSER_NAME()
-
-EXEC dbo.usp_BirukPackageLog  ?,  ?, 'SharePoint', 'S', @Time , NULL,  NULL , NULL, @Time , @MyName </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
