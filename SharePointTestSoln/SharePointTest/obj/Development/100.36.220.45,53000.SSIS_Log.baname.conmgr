@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="100.36.220.45,53000.SSIS_Log.baname"
+  DTS:DTSID="{10E9ACE7-54CD-4C6E-BC76-5C6044E97B9F}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::SSIS_Log_baname_ConnectionString]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=100.36.220.45,53000;User ID=baname;Initial Catalog=SSIS_Log;Provider=SQLNCLI11.1;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAACAAAAAAAQZgAAAAEAACAAAAA5l85//Yvf0FJUNVxQDYKHqhxImoIeXmj5+5kP63xr/wAAAAAOgAAAAAIAACAAAABJrhS1hdJ+4OQVksB8h9Owl0NVQAZG0ql6I/OJ/z8r3oAAAAA4axr+9r4keVa/LS78Wkql0O1Knf1+uVBcILGNgAgZYr24HbepRlzraxka0b5BHL+mjPl7EJKXMIwjJXQtLsDEx5ZMpEwOQ9PP7asifbGkQbWgZqZUe5D3HVPDbe7vFAC1J9uY25K/PFn67wZIbmE0TR72aiZimvu45hq052iFv0AAAADcDVJKYr1kQlSAuReMG3Ktq6v7nUn3HcHyx+An4NYN5lnU0y3Huc5N1RF+fNR6XaZquFJecuag2e++koDBvOPc</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
