@@ -13,7 +13,7 @@
       MicrosoftOnlineServicesAuth="True"
       AuthType="MicrosoftOnlineService">
       <Password
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAACAAAAAAAQZgAAAAEAACAAAACzlt9FGPzmHmIexrZCvy03oUogis8Yy8NAW+tNrrshzwAAAAAOgAAAAAIAACAAAABAMvdGsrbXTsCJP2pC1ysD7VWlmkUxsXUwMaAUl6TvJUAAAAALbaBZEBu5U05Fly6AlbC92XgMj7YZwPdXL3aW8hxPzqFsBSHGoRrHfQr1M2vPSJ4avAiWbbzFahsWaBv0CzK/QAAAAPVQMKtUiqbSNSIslMZnCrgr9yVGmwU63QWY5VI1cIN8eIvQi6GT2fvH7W/ywdzh/y5bX4nJAbyF6WqxoksIWaA=</Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAACAAAAAAAQZgAAAAEAACAAAAAJE+xSKLAgIK4WSwYkCY+TwMrJmFOUc/cPM07zYF4TSgAAAAAOgAAAAAIAACAAAAApsLRwyDp9OTHSnc7+vK8YmD9x3WUUZtuL8TIjQLlQVEAAAAB9YPXt8eRG5vxMyNdSBrDRiW5QMEZIWavldKDPjjX75nfa3wCS3ZE+E97B0Ptlz2FGgyUvqSTlFv3siQ37qsRdQAAAAFxAsMt7rlDvr4AgbhypulhfzE9xggsgelcOivaJlSFrFo/YohCP4gdrufLcHN8L0VDWyMPpGKueYQ5o2bU+jVo=</Password>
     </ODataConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
