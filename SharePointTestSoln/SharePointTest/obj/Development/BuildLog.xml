@@ -2,48 +2,48 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SharePointTest</Name>
-    <LastWriteTime>2019-05-14T18:46:45.3462303Z</LastWriteTime>
+    <LastWriteTime>2019-05-15T03:56:57.5732807Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Pkg_stgCustomer.dtsx</Name>
-      <LastWriteTime>2019-05-12T23:45:06.9984728Z</LastWriteTime>
+      <LastWriteTime>2019-05-14T23:44:28.9056708Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_stgCustomerAddress.dtsx</Name>
-      <LastWriteTime>2019-05-09T18:34:28.4890892Z</LastWriteTime>
+      <LastWriteTime>2019-05-15T00:40:16.8086655Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_stgProduct.dtsx</Name>
-      <LastWriteTime>2019-05-09T18:42:26.384169Z</LastWriteTime>
+      <LastWriteTime>2019-05-15T01:03:09.5609017Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_stgProductCategory.dtsx</Name>
-      <LastWriteTime>2019-05-10T19:05:48.322991Z</LastWriteTime>
+      <LastWriteTime>2019-05-15T01:21:41.5446463Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_stgProductModel.dtsx</Name>
-      <LastWriteTime>2019-05-02T22:30:08.1620531Z</LastWriteTime>
+      <LastWriteTime>2019-05-15T02:54:07.6326216Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_stgSalesOrderDetail.dtsx</Name>
-      <LastWriteTime>2019-05-02T22:30:08.1431Z</LastWriteTime>
+      <LastWriteTime>2019-05-15T03:16:47.4153946Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_stgSalesOrderHeader.dtsx</Name>
-      <LastWriteTime>2019-05-02T22:30:08.1252324Z</LastWriteTime>
+      <LastWriteTime>2019-05-15T04:12:07.8806835Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_stgAddress.dtsx</Name>
-      <LastWriteTime>2019-05-14T18:58:46.948576Z</LastWriteTime>
+      <LastWriteTime>2019-05-15T03:56:57.4956495Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
