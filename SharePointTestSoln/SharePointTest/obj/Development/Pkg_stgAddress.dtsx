@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_stgAddress"
   DTS:PackageType="5"
-  DTS:VersionBuild="194"
-  DTS:VersionGUID="{A8EF0CD0-D922-4C14-9D45-B373E7F46567}">
+  DTS:VersionBuild="195"
+  DTS:VersionGUID="{D5320501-DA8B-4D57-AB91-B543AE0949F5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -97,7 +97,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task - Start time Logging"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -185,14 +185,35 @@
           Language="CSharp"
           ReadOnlyVariables="System::PackageName,System::StartTime,User::VarRowCount,$Project::ParEmailFrom,$Project::ParEmailTo">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -593,35 +614,14 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -837,7 +837,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Script Task - Email Start Notification"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
@@ -870,14 +870,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Language="CSharp"
           ReadOnlyVariables="System::PackageName,System::StartTime,$Project::ParEmailFrom,$Project::ParEmailTo">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1277,35 +1298,14 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -3411,54 +3411,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                           dataType="nText"
                           name="PostalCode" />
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[ContentTypeID]"
-                          dataType="nText"
-                          name="ContentTypeID" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
-                          dataType="nText"
-                          name="Title" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[ComplianceAssetId]"
-                          dataType="nText"
-                          name="ComplianceAssetId" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
-                          dataType="i4"
-                          name="Id" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[ContentType]"
-                          dataType="nText"
-                          name="ContentType" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[Modified]"
-                          dataType="dbTimeStamp"
-                          name="Modified" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
-                          dataType="dbTimeStamp"
-                          name="Created" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[CreatedById]"
-                          dataType="i4"
-                          name="CreatedById" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedById]"
-                          dataType="i4"
-                          name="ModifiedById" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[Owshiddenversion]"
-                          dataType="i4"
-                          name="Owshiddenversion" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[Version]"
-                          dataType="nText"
-                          name="Version" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[Path]"
-                          dataType="nText"
-                          name="Path" />
-                        <externalMetadataColumn
                           refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
                           dataType="i4"
                           name="ErrorCode" />
@@ -3651,54 +3603,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                           refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
                           dataType="nText"
                           name="PostalCode" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ContentTypeID]"
-                          dataType="nText"
-                          name="ContentTypeID" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
-                          dataType="nText"
-                          name="Title" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ComplianceAssetId]"
-                          dataType="nText"
-                          name="ComplianceAssetId" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
-                          dataType="i4"
-                          name="Id" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ContentType]"
-                          dataType="nText"
-                          name="ContentType" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Modified]"
-                          dataType="dbTimeStamp"
-                          name="Modified" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
-                          dataType="dbTimeStamp"
-                          name="Created" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[CreatedById]"
-                          dataType="i4"
-                          name="CreatedById" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedById]"
-                          dataType="i4"
-                          name="ModifiedById" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Owshiddenversion]"
-                          dataType="i4"
-                          name="Owshiddenversion" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Version]"
-                          dataType="nText"
-                          name="Version" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Path]"
-                          dataType="nText"
-                          name="Path" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Data Flow Task - Address if not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
                           dataType="i4"
@@ -4384,14 +4288,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               Language="CSharp"
               ReadOnlyVariables="System::ErrorDescription,System::SourceName,System::PackageName,System::StartTime,$Project::ParEmailFrom,$Project::ParEmailTo">
               <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -4793,35 +4718,14 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
     }
 }]]></ProjectItem>
               <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -5510,7 +5414,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5532,7 +5438,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5578,7 +5486,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5681,9 +5591,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5705,9 +5613,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5753,9 +5659,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
