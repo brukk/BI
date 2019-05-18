@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{445F554A-2F33-423E-B6F7-AE454C35E42D}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{C20B86C1-D637-4809-AC56-3C8B9129A977}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="zip"
-              DTS:DTSID="{2C1527F7-97D2-4D9B-8FD6-3BCCDBBA423E}"
+              DTS:DTSID="{0514CD53-39AD-4E62-A0C0-3FB690E66035}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lat"
-              DTS:DTSID="{90DFC56F-781F-4545-893F-3DC09CEBC592}"
+              DTS:DTSID="{43ADE9E8-10CB-4C69-BABF-A3E4D180C17F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lng"
-              DTS:DTSID="{6FAB80FB-4B19-4614-8032-CEA281BB8146}"
+              DTS:DTSID="{39A567A1-CC3C-4C31-9CBC-CA12114D0455}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="city"
-              DTS:DTSID="{0BE1B7C2-8FF3-4512-8AB0-E9E0CD35406C}"
+              DTS:DTSID="{5A5A736F-CE61-48E8-AE0B-7FEC65C08AC4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="state_id"
-              DTS:DTSID="{F997F791-8B1F-4723-9A04-6518CBDAA980}"
+              DTS:DTSID="{3EFFFABA-F8BD-4C2F-873D-C016855DE302}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="state_name"
-              DTS:DTSID="{47E77891-8DD5-464D-BBFD-03DD078B1FBF}"
+              DTS:DTSID="{3FF6FC18-BF84-47EE-BFBD-48452A707D00}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="zcta"
-              DTS:DTSID="{2FAC7810-3A21-4BFA-971E-C6E39A564C79}"
+              DTS:DTSID="{B127459F-9DC3-483E-9811-9F4B59006C2D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="parent_zcta"
-              DTS:DTSID="{B52EE1E8-1AB8-45E7-91CF-036FA79D92CD}"
+              DTS:DTSID="{015A440F-CD97-445A-834A-4C81B1E16A9B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="population"
-              DTS:DTSID="{D1B73219-AF45-40EA-BF5D-D5103E90CBB5}"
+              DTS:DTSID="{177706B5-29BD-486D-9741-5BDA2DE17C99}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -120,7 +120,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="density"
-              DTS:DTSID="{F1CCF2D6-F480-4FA0-84B2-6A0AAAEE8D79}"
+              DTS:DTSID="{E398170F-155B-4A24-8243-34658A2AEE06}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -129,7 +129,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="county_fips"
-              DTS:DTSID="{747D99DC-4A5F-483C-A852-5513752D6053}"
+              DTS:DTSID="{952723AB-4B35-4127-87A3-B33EBC28A64E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="county_name"
-              DTS:DTSID="{F1E8240E-C1E6-415E-9ABB-086FB62B571F}"
+              DTS:DTSID="{20DDB697-46D6-42C1-8CB2-9ED090F44CCC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -147,7 +147,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="all_county_weights"
-              DTS:DTSID="{835978C3-AFF0-429A-BA20-6F782E6345D1}"
+              DTS:DTSID="{17D43997-1A90-4E4A-8622-17FDE4474BC7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -156,7 +156,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="imprecise"
-              DTS:DTSID="{124995A9-BEE5-407C-A8A4-77B358A1B541}"
+              DTS:DTSID="{09314D9F-1904-4A18-B1C3-C9DFC7370E23}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -165,7 +165,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="military"
-              DTS:DTSID="{2A28F0ED-CC8B-4873-82B3-9539004D7B71}"
+              DTS:DTSID="{1C6028CE-F470-4D6E-8EDA-98C23A38E91E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -174,7 +174,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="timezone"
-              DTS:DTSID="{16107AF7-8D16-4AC5-AE92-3A7DF1D1E576}"
+              DTS:DTSID="{59EC0574-D0DE-4FB3-A32B-BFB921402715}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -323,7 +323,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACMoo3Qtr+F0cBGgwJBPCh3lfusi9RWq//KE4s2JsN0WQAAAAAOgAAAAAIAACAAAAB8ipqgH1R3Gpw1QicxsLqRQelAj/tjP7VehPg2tYxlmiAAAABh5UbgW6MZ0GX6wh4kei0Ua5BC6c5bLU4jSTN8UhQq+EAAAACkTpXHKJjDYzyOWjGn0C0qoB7vdeMPUL6xohvz0wfxyWxybm4d38I4zCWJhcuyvN1+YxoODsOihbauLONfFjWW</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABmD2pYhij6hTcJgNKT8YDb9EkJOVUzCYpna1VcibyHPAAAAAAOgAAAAAIAACAAAAAaeOpB6Kdb9FmS9VSSHlRS69BLX6+WSXVUCfDMUbyD+yAAAAA2PKme7qY+JHh8TwSHjEXyejHlujpOpY8bfUQKc+k2PEAAAADeoOq9U7XMZVnVdp6OvOmhohb2xqvOKuplftGWDoDRgs7Dijaq8wShQbGqsRG5Cf8IdfF0wPnAK940r51sdXQ8</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -795,163 +795,6 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Flat File Destination"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="1033"
-              name="Flat File Destination">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Derived Column StateProv]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Derived Column StateProv"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StateProvince]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column StateProv]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Derived Column Add1]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="60"
-                      cachedName="Derived Column Add1"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Address1]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add1]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Derived Column Add2]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="60"
-                      cachedName="Derived Column Add2"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Address2]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add2]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Derived Column PostalCode]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="Derived Column PostalCode"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PostalCode]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column PostalCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Derived Column City]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="Derived Column City"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[city]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column City]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Derived Column Country]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Derived Column Country"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[country]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Country]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StateProvince]"
-                      dataType="wstr"
-                      length="150"
-                      name="StateProvince" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Address1]"
-                      dataType="wstr"
-                      length="150"
-                      name="Address1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Address2]"
-                      dataType="wstr"
-                      length="30"
-                      name="Address2" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PostalCode]"
-                      dataType="wstr"
-                      length="150"
-                      name="PostalCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[city]"
-                      dataType="wstr"
-                      length="150"
-                      name="city" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[country]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="country" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column Add1]"
-                      codePage="1252"
-                      dataType="str"
-                      length="60"
-                      name="Derived Column Add1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column Add2]"
-                      codePage="1252"
-                      dataType="str"
-                      length="60"
-                      name="Derived Column Add2" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column PostalCode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      name="Derived Column PostalCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column City]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      name="Derived Column City" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column Country]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Derived Column Country" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column StateProv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Derived Column StateProv" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-            </component>
-            <component
               refId="Package\Data Flow Task\Flat File Source"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -1005,15 +848,15 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]"
-                      name="city"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                      name="City"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1366,6 +1209,197 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stgAddress]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-50T1H82M.Masterpieces]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-50T1H82M.Masterpieces]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column Add1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="Derived Column Add1"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column Add2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="Derived Column Add2"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add2]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Derived Column City"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column City]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column StateProv]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Derived Column StateProv"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateProvince]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column StateProv]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Derived Column Country"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegion]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Country]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column PostalCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Derived Column PostalCode"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column PostalCode]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
+                      dataType="i4"
+                      name="AddressID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="AddressLine1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="AddressLine2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateProvince]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StateProvince" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegion]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CountryRegion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="PostalCode" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\Sort"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -1601,12 +1635,12 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[city]"
+                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[City]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="city"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]">
+                      cachedName="City"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1674,7 +1708,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]}</property>
+                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[City]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1706,7 +1740,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               startId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Derived Column Output]"
-              endId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
             <path
@@ -1918,21 +1952,21 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         <NodeLayout
           Size="154,42"
           Id="Package\Data Flow Task\Derived Column"
-          TopLeft="264.5,221.5" />
+          TopLeft="273.5,225.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Merge Join Output]"
-          TopLeft="342.5,198.5">
+          TopLeft="347,198.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,23"
+              EndConnector="0,27"
               Start="0,0"
-              End="0,15.5">
+              End="0,19.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.5" />
+                    End="0,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1942,35 +1976,23 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="172,42"
-          Id="Package\Data Flow Task\Flat File Destination"
-          TopLeft="265.5,289.5" />
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="262.5,307.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="341.5,263.5">
+          TopLeft="349.25,267.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10,26"
+              EndConnector="0,40"
               Start="0,0"
-              End="10,18.5">
+              End="0,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="4,13" />
-                  <mssgle:LineSegment
-                    End="6,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6,13"
-                    Point2="10,13"
-                    Point3="10,17" />
-                  <mssgle:LineSegment
-                    End="10,18.5" />
+                    End="0,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1987,6 +2009,19 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
