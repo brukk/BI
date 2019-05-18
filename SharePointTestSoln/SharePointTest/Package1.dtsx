@@ -11,15 +11,15 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{5890A8E9-687F-44F0-95A7-0E5D300E5F42}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{445F554A-2F33-423E-B6F7-AE454C35E42D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{FD71E0CA-4C44-46F6-B30A-42EE7D1971C3}"
+      DTS:DTSID="{CF434D5F-1A45-48AC-A2BF-E0ACFDDA5691}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="zip"
-              DTS:DTSID="{2786A0F8-76E7-4323-B239-BADCEC9D3E2F}"
+              DTS:DTSID="{2C1527F7-97D2-4D9B-8FD6-3BCCDBBA423E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lat"
-              DTS:DTSID="{09A2BBF9-C37D-44F4-8BC7-5FC382DA7AC9}"
+              DTS:DTSID="{90DFC56F-781F-4545-893F-3DC09CEBC592}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lng"
-              DTS:DTSID="{83B3DADA-6DBC-45AD-BD11-5EE8F904937E}"
+              DTS:DTSID="{6FAB80FB-4B19-4614-8032-CEA281BB8146}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="city"
-              DTS:DTSID="{5D1B1D56-420B-40F7-BC1A-D864DA052749}"
+              DTS:DTSID="{0BE1B7C2-8FF3-4512-8AB0-E9E0CD35406C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="state_id"
-              DTS:DTSID="{728DB982-5B2E-47F5-A424-5490B7B96920}"
+              DTS:DTSID="{F997F791-8B1F-4723-9A04-6518CBDAA980}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="state_name"
-              DTS:DTSID="{1B471EAC-8226-4552-ABBD-5A52B7E57612}"
+              DTS:DTSID="{47E77891-8DD5-464D-BBFD-03DD078B1FBF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="zcta"
-              DTS:DTSID="{F488F067-ED19-4A1E-9592-B08D7C8B9EE0}"
+              DTS:DTSID="{2FAC7810-3A21-4BFA-971E-C6E39A564C79}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="parent_zcta"
-              DTS:DTSID="{4FFF5632-8DBD-43C6-B00D-99039A77137E}"
+              DTS:DTSID="{B52EE1E8-1AB8-45E7-91CF-036FA79D92CD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="population"
-              DTS:DTSID="{4738A454-2303-41A3-A2C1-78904B0FEF21}"
+              DTS:DTSID="{D1B73219-AF45-40EA-BF5D-D5103E90CBB5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -120,7 +120,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="density"
-              DTS:DTSID="{1DECAD69-AF6C-468A-B005-766A5E2E02C0}"
+              DTS:DTSID="{F1CCF2D6-F480-4FA0-84B2-6A0AAAEE8D79}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -129,7 +129,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="county_fips"
-              DTS:DTSID="{D45F7D79-701D-48F0-B544-B367D80891F2}"
+              DTS:DTSID="{747D99DC-4A5F-483C-A852-5513752D6053}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="county_name"
-              DTS:DTSID="{7D2372D0-45A0-4B75-A51C-EE7D8C34EA95}"
+              DTS:DTSID="{F1E8240E-C1E6-415E-9ABB-086FB62B571F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -147,7 +147,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="all_county_weights"
-              DTS:DTSID="{AAF9932C-4B2C-4CDA-8EE3-EF6D464E2B0B}"
+              DTS:DTSID="{835978C3-AFF0-429A-BA20-6F782E6345D1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -156,7 +156,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="imprecise"
-              DTS:DTSID="{4502C313-2FAA-47E2-BAF9-42365DB85396}"
+              DTS:DTSID="{124995A9-BEE5-407C-A8A4-77B358A1B541}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -165,7 +165,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="military"
-              DTS:DTSID="{BAA8E217-5CE4-4531-A025-F37D1E48B5B0}"
+              DTS:DTSID="{2A28F0ED-CC8B-4873-82B3-9539004D7B71}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -174,7 +174,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="timezone"
-              DTS:DTSID="{475D4E2B-7026-4C1B-954F-45CFB2AF29D3}"
+              DTS:DTSID="{16107AF7-8D16-4AC5-AE92-3A7DF1D1E576}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -183,90 +183,8 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{ACCFC773-4962-4317-B812-B5E53F9D4443}"
+      DTS:DTSID="{8079F957-A65E-42AA-97EF-2B051D3FEC99}"
       DTS:ObjectName="Flat File Connection Manager 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Biruk\Desktop\join.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="PostalCode"
-              DTS:DTSID="{610C1CBE-188B-46CA-B422-69D46C364445}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AddressID"
-              DTS:DTSID="{91A681DC-5706-43FB-ADD8-B808038EB27D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="150"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AddressLine1"
-              DTS:DTSID="{463A5692-E0C6-4CED-9A29-29FC5B910ACD}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="150"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AddressLine2"
-              DTS:DTSID="{08E67EDB-FCEE-4F69-9E17-B2C408E9096D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="150"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="City"
-              DTS:DTSID="{40967D8D-7017-4A04-8D4D-D39D014B5F48}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="150"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CountryRegion"
-              DTS:DTSID="{C7709447-CAC7-43B9-8615-A1FF29AE433D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="StateProvince"
-              DTS:DTSID="{24A68725-21A6-4DC1-B02D-321BBC037B2E}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{567B857C-A787-4E8E-9C8B-57469EBFD218}"
-      DTS:ObjectName="Flat File Connection Manager 2">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -281,11 +199,11 @@
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="150"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="StateProvince"
-              DTS:DTSID="{5EE89D55-5F93-40A2-B6B6-4D1C69E6FF63}"
+              DTS:DTSID="{96CD0624-6479-4920-9F73-DD11801E067F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -294,16 +212,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Address1"
-              DTS:DTSID="{752300C5-6F9B-4FE3-8FA0-F498CEAD9E96}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="150"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Address2"
-              DTS:DTSID="{8FF28EAB-F663-454A-ACA0-DEE0964781D3}"
+              DTS:DTSID="{0E47E0BF-2C89-4736-9864-640058D55D51}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -311,8 +220,17 @@
               DTS:MaximumWidth="30"
               DTS:DataType="130"
               DTS:TextQualified="True"
+              DTS:ObjectName="Address2"
+              DTS:DTSID="{BC17D766-D0E1-4C94-93F8-A98750897403}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
               DTS:ObjectName="PostalCode"
-              DTS:DTSID="{1E5E452B-08AF-4C9B-8C8B-3F6DFC0D5208}"
+              DTS:DTSID="{EC47968B-E7BC-4AEE-93A3-1EA6215A1F20}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -321,16 +239,70 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="city"
-              DTS:DTSID="{19361A09-42D3-4C3E-B7BA-FC34C409060E}"
+              DTS:DTSID="{B3A4AE5F-6DF0-4ED3-A194-68169AAFAE1D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{E1615C4D-70CB-46B0-8C45-5618452AB7C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Derived Column Add1"
+              DTS:DTSID="{684C7635-2E18-488E-8AC5-CC3D595AD2E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Derived Column Add2"
+              DTS:DTSID="{CC279C67-9BB1-4CF4-B864-95792421C8AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Derived Column PostalCode"
+              DTS:DTSID="{C8EE4FFB-F1D5-4511-8C39-0845D0BC21BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Derived Column City"
+              DTS:DTSID="{5C3032E9-CDFD-4BC3-B4C9-9BCDB50F3D9F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Derived Column Country"
+              DTS:DTSID="{A4F1B11E-91B2-4D38-A16D-4656691A232A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="150"
-              DTS:DataType="130"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="country"
-              DTS:DTSID="{075AF4AA-C2F4-45C7-90D8-4E6F9D82E808}"
+              DTS:ObjectName="Derived Column StateProv"
+              DTS:DTSID="{018117E8-9FFD-499E-849D-892D9D67E444}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -351,40 +323,29 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACnlvvuKai2ii7EI9OXhDqN0tTi1fWHqqXR2IoCI0nIRgAAAAAOgAAAAAIAACAAAAAjYbdcWDWIDPIVoAV5vO2/EXiqCmziwpfSj3DVuf5N7CAAAABqYptutttLrIu8wmgcf1Muu8wNjUbuqHqcJktMv1KOk0AAAAAE4NJXCIKHp3gPEd8CLTeyFeCTUexkZTY5ENr/250wuNeNShKni9wSQXBH5Q+fIWtJkPF7LRqkNfG7ReT6E7G+</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACnp5KEtB52lXeJvmgUHY2g4l8Zp5M9ca71y1i0g92fQAAAAAAOgAAAAAIAACAAAAD9T2ZQVt3HOt808qkXhS1SQfcFdtld06jHPnM812BdliAAAAA7pKFeXEEv/NorblT4+LyjvpkW9Ua/F7LhD5aU7w6XxUAAAACyPcPF4bkM0sdu/hCyzKeRfNSf22Wrr8MeSaTmhVGUIA7omdxXUc0NOHTsOPms/ign7JpVrJpreX7Kt/E7iRhf</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[MySQLConnectionDicks]"
-      DTS:CreationName="ODBC"
-      DTS:DTSID="{BF4E1A3F-55BB-4CB7-86A9-28D542407FD9}"
-      DTS:ObjectName="MySQLConnectionDicks">
+      DTS:refId="Package.ConnectionManagers[LAPTOP-50T1H82M.Masterpieces]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F60CF717-5D7B-497E-93FB-E982DC1EEF1B}"
+      DTS:ObjectName="LAPTOP-50T1H82M.Masterpieces">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Dsn=MySQLConnectionDicks;" />
+          DTS:ConnectionString="Data Source=LAPTOP-50T1H82M;Initial Catalog=Masterpieces;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[MySQLConnectionDicks 1]"
       DTS:CreationName="ADO.NET:System.Data.Odbc.OdbcConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{8218B68E-868B-4C6F-A47B-E770519BCA38}"
+      DTS:DTSID="{B92794DA-7CF4-4CB1-92FD-D0B65301C2AA}"
       DTS:ObjectName="MySQLConnectionDicks 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Dsn=MySQLConnectionDicks;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[x]"
-      DTS:CreationName="FILE"
-      DTS:DTSID="{76EE4072-6810-485E-BBB0-D9443AEE03F6}"
-      DTS:ObjectName="x">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:FileUsageType="2"
-          DTS:ConnectionString="C:\Users\Biruk\Desktop\x" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -599,6 +560,241 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow Task\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Address1]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Address1"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Address1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Address2]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Address2"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Address2]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="PostalCode"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[PostalCode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="city"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[country]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="country"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[country]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[StateProvince]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StateProvince"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="60"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add1]"
+                      name="Derived Column Add1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,60,1252)(DT_WSTR,60)#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Address1]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,60,1252)(DT_WSTR,60)Address1</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="60"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add2]"
+                      name="Derived Column Add2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,60,1252)(DT_WSTR,60)#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Address2]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,60,1252)(DT_WSTR,60)Address2</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column PostalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="15"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column PostalCode]"
+                      name="Derived Column PostalCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,15,1252)(DT_WSTR,15)#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[PostalCode]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,15,1252)(DT_WSTR,15)PostalCode</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column City]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="30"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column City]"
+                      name="Derived Column City"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,30,1252)(DT_WSTR,30)#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[city]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,30,1252)(DT_WSTR,30)city</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Country]"
+                      name="Derived Column Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)(DT_WSTR,50)#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[country]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)(DT_WSTR,50)country</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column StateProv]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column StateProv]"
+                      name="Derived Column StateProv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)(DT_WSTR,50)#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)(DT_WSTR,50)StateProvince</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\Flat File Destination"
               componentClassID="Microsoft.FlatFileDestination"
               contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -623,8 +819,8 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 2]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
@@ -634,57 +830,60 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                   name="Flat File Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[StateProvince]"
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Derived Column StateProv]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="StateProvince"
+                      cachedName="Derived Column StateProv"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StateProvince]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]" />
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column StateProv]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Address1]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="Address1"
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Derived Column Add1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="Derived Column Add1"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Address1]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Address1]" />
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add1]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Address2]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="Address2"
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Derived Column Add2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="Derived Column Add2"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Address2]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Address2]" />
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add2]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[PostalCode]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
-                      cachedName="PostalCode"
-                      cachedSortKeyPosition="1"
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Derived Column PostalCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Derived Column PostalCode"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PostalCode]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[PostalCode]" />
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column PostalCode]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[city]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="city"
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Derived Column City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Derived Column City"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[city]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[city]" />
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column City]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[country]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="country"
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Derived Column Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Derived Column Country"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[country]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[country]" />
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Country]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StateProvince]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="150"
                       name="StateProvince" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Address1]"
@@ -694,12 +893,12 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Address2]"
                       dataType="wstr"
-                      length="150"
+                      length="30"
                       name="Address2" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PostalCode]"
                       dataType="wstr"
-                      length="30"
+                      length="150"
                       name="PostalCode" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[city]"
@@ -708,9 +907,46 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       name="city" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[country]"
-                      dataType="wstr"
-                      length="150"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column Add1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="Derived Column Add1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column Add2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="Derived Column Add2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column PostalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="Derived Column PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="Derived Column City" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Derived Column Country" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column StateProv]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Derived Column StateProv" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -954,7 +1190,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                   dataType="System.Int32"
                   description="Specifies the type of join to perform."
                   name="JoinType"
-                  typeConverter="JoinType">2</property>
+                  typeConverter="JoinType">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the number of columns in the ordering key."
@@ -976,19 +1212,35 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[PostalCode]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="wstr"
+                      cachedLength="30"
                       cachedName="PostalCode"
                       cachedSortKeyPosition="1"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PostalCode]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[StateProvince]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="StateProvince"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[StateProvince]" />
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[Address1]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Address1"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Address1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[Address2]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Address2"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Address2]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="city"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[country]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="country"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[country]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -999,35 +1251,19 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[PostalCode]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="PostalCode"
                       cachedSortKeyPosition="1"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[PostalCode]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[Address1]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="Address1"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Address1]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[Address2]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="Address2"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Address2]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[city]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="city"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[city]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[country]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="country"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[country]" />
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[StateProvince]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StateProvince"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[StateProvince]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1039,21 +1275,6 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                   name="Merge Join Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]"
-                      name="StateProvince">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[StateProvince]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Address1]"
                       dataType="wstr"
                       length="150"
@@ -1064,7 +1285,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[Address1]}</property>
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[Address1]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1078,7 +1299,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[Address2]}</property>
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[Address2]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1093,7 +1314,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[PostalCode]}</property>
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[PostalCode]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1107,7 +1328,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[city]}</property>
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[city]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1121,7 +1342,22 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[country]}</property>
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]"
+                      name="StateProvince">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[StateProvince]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1153,12 +1389,45 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[Address1]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Address1"
+                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Address1]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[Address2]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Address2"
+                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Address2]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[PostalCode]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="wstr"
+                      cachedLength="30"
                       cachedName="PostalCode"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]">
+                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[PostalCode]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1172,11 +1441,10 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[city]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="wstr"
+                      cachedLength="150"
                       cachedName="city"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]">
+                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[city]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1189,12 +1457,11 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[StateProvince]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="StateProvince"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvince]">
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[country]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="country"
+                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[country]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1217,10 +1484,37 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Address1]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Address1]"
+                      name="Address1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Address1]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Address2]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Address2]"
+                      name="Address2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Address2]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
                       refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PostalCode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="30"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[PostalCode]"
                       name="PostalCode"
                       sortKeyPosition="1">
@@ -1229,14 +1523,13 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]}</property>
+                          name="SortColumnId">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[PostalCode]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[city]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="150"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[city]"
                       name="city">
                       <properties>
@@ -1244,22 +1537,21 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]}</property>
+                          name="SortColumnId">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[city]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[StateProvince]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[StateProvince]"
-                      name="StateProvince">
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[country]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[country]"
+                      name="country">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvince]}</property>
+                          name="SortColumnId">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[country]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1291,45 +1583,12 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[Address1]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="Address1"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Address1]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[Address2]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="Address2"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Address2]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[PostalCode]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="PostalCode"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[PostalCode]">
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1343,10 +1602,11 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[city]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="city"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[city]">
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1359,11 +1619,12 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[country]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="country"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[country]">
+                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[StateProvince]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StateProvince"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvince]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1386,37 +1647,10 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Address1]"
-                      dataType="wstr"
-                      length="150"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Address1]"
-                      name="Address1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Address1]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Address2]"
-                      dataType="wstr"
-                      length="150"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Address2]"
-                      name="Address2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Address2]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[PostalCode]"
-                      dataType="wstr"
-                      length="30"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[PostalCode]"
                       name="PostalCode"
                       sortKeyPosition="1">
@@ -1425,13 +1659,14 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[PostalCode]}</property>
+                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[city]"
-                      dataType="wstr"
-                      length="150"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[city]"
                       name="city">
                       <properties>
@@ -1439,21 +1674,22 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[city]}</property>
+                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[country]"
-                      dataType="wstr"
-                      length="150"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[country]"
-                      name="country">
+                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[StateProvince]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[StateProvince]"
+                      name="StateProvince">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[country]}</property>
+                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvince]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1465,29 +1701,34 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
           <paths>
             <path
               refId="Package\Data Flow Task.Paths[ADO NET Source Output]"
-              endId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
+              endId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
               name="ADO NET Source Output"
               startId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output]" />
             <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
+              endId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Merge Join Output]"
-              endId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
               name="Merge Join Output"
               startId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Sort Output]"
-              endId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\Data Flow Task\Sort 1.Outputs[Sort Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Sort Output1]"
               endId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Data Flow Task\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output1]"
+              endId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort 1.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1527,13 +1768,13 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="122,42"
-          Id="Package\FTP Task"
-          TopLeft="65.5,65.5" />
-        <NodeLayout
           Size="151,42"
           Id="Package\Data Flow Task"
           TopLeft="235.5,33.5" />
+        <NodeLayout
+          Size="122,42"
+          Id="Package\FTP Task"
+          TopLeft="65.5,65.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1543,31 +1784,35 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="158,42"
-          Id="Package\Data Flow Task\ADO NET Source"
-          TopLeft="465.5,27.5" />
-        <NodeLayout
           Size="151,42"
           Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="229.5,26.5" />
+          TopLeft="383.5,11.5" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Data Flow Task\ADO NET Source"
+          TopLeft="177.5,11.5" />
         <NodeLayout
           Size="98,42"
           Id="Package\Data Flow Task\Sort"
-          TopLeft="261.5,109.5" />
+          TopLeft="214.5,81.5" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Data Flow Task\Sort 1"
+          TopLeft="405.5,79.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="307.75,68.5">
+          TopLeft="459,53.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,41"
+              EndConnector="0,26"
               Start="0,0"
-              End="0,33.5">
+              End="0,18.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.5" />
+                    End="0,18.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1576,36 +1821,20 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Data Flow Task\Sort 1"
-          TopLeft="480.5,104.561538461538" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[ADO NET Source Output]"
-          TopLeft="544.5,69.5">
+          TopLeft="260,53.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-10.5,35.0615384615385"
+              EndConnector="0,28"
               Start="0,0"
-              End="-10.5,27.5615384615385">
+              End="0,20.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.5307692307692" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.5307692307692"
-                    Point2="0,17.5307692307692"
-                    Point3="-4,17.5307692307692" />
-                  <mssgle:LineSegment
-                    End="-6.5,17.5307692307692" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-6.5,17.5307692307692"
-                    Point2="-10.5,17.5307692307692"
-                    Point3="-10.5,21.5307692307692" />
-                  <mssgle:LineSegment
-                    End="-10.5,27.5615384615385" />
+                    End="0,20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1617,33 +1846,33 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         <NodeLayout
           Size="130,42"
           Id="Package\Data Flow Task\Merge Join"
-          TopLeft="350.5,190.561538461538" />
+          TopLeft="278.5,156.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="534,146.561538461538">
+          TopLeft="263.5,123.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-98.1666666666667,44"
+              EndConnector="59.6666666666667,33"
               Start="0,0"
-              End="-98.1666666666667,36.5">
+              End="59.6666666666667,25.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.0790273556231" />
+                    End="0,15.5592705167173" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.0790273556231"
-                    Point2="0,26.0790273556231"
-                    Point3="-4,26.0790273556231" />
+                    Point1="0,15.5592705167173"
+                    Point2="0,19.5592705167173"
+                    Point3="4,19.5592705167173" />
                   <mssgle:LineSegment
-                    End="-94.1666666666667,26.0790273556231" />
+                    End="55.6666666666667,19.5592705167173" />
                   <mssgle:CubicBezierSegment
-                    Point1="-94.1666666666667,26.0790273556231"
-                    Point2="-98.1666666666667,26.0790273556231"
-                    Point3="-98.1666666666667,30.0790273556231" />
+                    Point1="55.6666666666667,19.5592705167173"
+                    Point2="59.6666666666667,19.5592705167173"
+                    Point3="59.6666666666667,23.5592705167173" />
                   <mssgle:LineSegment
-                    End="-98.1666666666667,36.5" />
+                    End="59.6666666666667,25.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1654,30 +1883,56 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output1]"
-          TopLeft="310.5,151.5">
+          TopLeft="459,121.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="84.6666666666667,39.0615384615385"
+              EndConnector="-95.1666666666667,35"
               Start="0,0"
-              End="84.6666666666667,31.5615384615385">
+              End="-95.1666666666667,27.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.1519756838906" />
+                    End="0,16.7446808510638" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.1519756838906"
-                    Point2="0,23.1519756838906"
-                    Point3="4,23.1519756838906" />
+                    Point1="0,16.7446808510638"
+                    Point2="0,20.7446808510638"
+                    Point3="-4,20.7446808510638" />
                   <mssgle:LineSegment
-                    End="80.6666666666667,23.1519756838906" />
+                    End="-91.1666666666667,20.7446808510638" />
                   <mssgle:CubicBezierSegment
-                    Point1="80.6666666666667,23.1519756838906"
-                    Point2="84.6666666666667,23.1519756838906"
-                    Point3="84.6666666666667,27.1519756838906" />
+                    Point1="-91.1666666666667,20.7446808510638"
+                    Point2="-95.1666666666667,20.7446808510638"
+                    Point3="-95.1666666666667,24.7446808510638" />
                   <mssgle:LineSegment
-                    End="84.6666666666667,31.5615384615385" />
+                    End="-95.1666666666667,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="264.5,221.5" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Merge Join Output]"
+          TopLeft="342.5,198.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1689,21 +1944,33 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         <NodeLayout
           Size="172,42"
           Id="Package\Data Flow Task\Flat File Destination"
-          TopLeft="330.5,280.5" />
+          TopLeft="265.5,289.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Merge Join Output]"
-          TopLeft="416,232.561538461538">
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="341.5,263.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,47.9384615384615"
+              EndConnector="10,26"
               Start="0,0"
-              End="0,40.4384615384615">
+              End="10,18.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.4384615384615" />
+                    End="0,9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="4,13" />
+                  <mssgle:LineSegment
+                    End="6,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6,13"
+                    Point2="10,13"
+                    Point3="10,17" />
+                  <mssgle:LineSegment
+                    End="10,18.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
