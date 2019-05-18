@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-50T1H82M"
   DTS:CreatorName="LAPTOP-50T1H82M\Biruk"
-  DTS:DTSID="{3D4290F0-F3B7-43F4-825C-2AA443622181}"
+  DTS:DTSID="{4CFBED81-4BEA-4362-BA0E-86BF4EC03807}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="AddressMySql"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{C20B86C1-D637-4809-AC56-3C8B9129A977}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{2B0B1FD3-C80D-4EBD-97B4-F5EF262FA6C7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -323,7 +323,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADAbtF/38JARuCN/kKNexOER7wc1mQTsspxGL5uub829wAAAAAOgAAAAAIAACAAAAA843gkUW20mwH22GeJOKz5iJhHWCIh/+jOoyh3ZbbaAyAAAAA1+Fsstcd1u3UED3bGwil3SR2LfMdt8h2m/m+4C1wNKUAAAACyW6rr1Ne7qrIEheLk01DIGb0milDY5UEUa4Ks2u1gTPFvydTeKcR7fRCnVIQUutRtm4PwlLOreOsAtwzgi/6H</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAfN4bB3nPWL+1RfFbKnrP+nQ4jmMOB+Xc/YS5c4fFAWAAAAAAOgAAAAAIAACAAAAAAinda7whFu1OE3d63ucyRupeJk2MMM/ChWNJsrqJ4yyAAAADLpcAOKzcdiAJ7GJfmdYDqTawyloj1/OYhhHyRcqGfokAAAABNyX6FCA64NWBAZZhsfhGTwRy/EnVCDdZlzvDNe9Z3JMLbOpZrYIKf30WSDqQeeeBp5W9+mOf060DMF7dsFz/J</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -336,16 +336,6 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=LAPTOP-50T1H82M;Initial Catalog=Masterpieces;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[MySQLConnectionDicks 1]"
-      DTS:CreationName="ADO.NET:System.Data.Odbc.OdbcConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{B92794DA-7CF4-4CB1-92FD-D0B65301C2AA}"
-      DTS:ObjectName="MySQLConnectionDicks 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Dsn=MySQLConnectionDicks;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -417,8 +407,8 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\ADO NET Source.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MySQLConnectionDicks 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[MySQLConnectionDicks 1]"
+                  connectionManagerID="{B92794DA-7CF4-4CB1-92FD-D0B65301C2AA}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MySQLConnectionDicks]"
                   description="Managed connection manager"
                   name="IDbConnection" />
               </connections>
@@ -1824,7 +1814,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\ADO NET Source"
-          TopLeft="177.5,11.5" />
+          TopLeft="187.5,7.5" />
         <NodeLayout
           Size="98,42"
           Id="Package\Data Flow Task\Sort"
@@ -1857,18 +1847,18 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[ADO NET Source Output]"
-          TopLeft="260,53.5">
+          TopLeft="265,49.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,28"
+              EndConnector="0,32"
               Start="0,0"
-              End="0,20.5">
+              End="0,24.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.5" />
+                    End="0,24.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
