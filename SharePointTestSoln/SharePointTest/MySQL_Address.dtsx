@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-50T1H82M"
   DTS:CreatorName="LAPTOP-50T1H82M\Biruk"
-  DTS:DTSID="{4CFBED81-4BEA-4362-BA0E-86BF4EC03807}"
+  DTS:DTSID="{08074B86-3611-45C1-8738-0A4ECF43951D}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
-  DTS:ObjectName="AddressMySql"
+  DTS:ObjectName="MySQL_Address"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{4BED0B41-60FB-4C38-84C3-C23897491285}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{52A5786C-F607-412D-9728-8353F9754B93}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -323,7 +323,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA1CL7pHyC1yTFp1JU0PO/C2AVT35dpnFrs0quCDYol7wAAAAAOgAAAAAIAACAAAACqyTz4ROaaLCH6XRFytoWLx55x3OAYjW356nQ0UDfphSAAAABgyvH0VvoIXGIbqZGpuUi/8sM6p0eaaFGlXFx3QJNqXUAAAAA/AYHmwJA2oJtFCpNN7NwMIvtx+FmG6zKtez/H0SIM95iR+1vSSbn+HE3zi4UvhFb7dEDZJcocPrmyKC7pP4KW</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD0zM5NE9ocRR2iQE9DX++VQ1FY2MKIk3NaqFbW/sjNaQAAAAAOgAAAAAIAACAAAAB0c/r+UCR8KZy/394nKT/jNxzxATA/DhXoaJX0gqUCfCAAAAAxNiSX1mjH2TSyYWiVR3QsDMgwBMXXsVipbW0pV4jo0UAAAADoBnMFaQeo2PbQQ5g26aMFLv/2zwcbxWQCGm4nY/ZJCWVpeCdPh5j1FRylPqJ9OZfXFaaVHarGltgeFkEusYOw</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>

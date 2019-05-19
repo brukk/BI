@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-50T1H82M"
   DTS:CreatorName="LAPTOP-50T1H82M\Biruk"
-  DTS:DTSID="{A3A912F7-80B7-4447-B713-8CD04C0530BB}"
+  DTS:DTSID="{00DB9D27-8238-4F74-8B8B-3DBBD6D48677}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
-  DTS:ObjectName="CustomerMySql"
+  DTS:ObjectName="MySQL_Customer"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{55A0FD67-32C9-4900-BB7E-61ABAC9C35AD}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{524D9074-12DA-4047-9403-66F18C8A84A3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -57,7 +57,7 @@
                   description="Specifies the SQL statement used by the component to extract data."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select  C.Fullname, C.email, A.phone from customer C Join Address A ON C.addressid = A.addressId</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select  C.Fullname, C.email, A.phone from customer C LEFT JOIN Address A ON C.addressid = A.addressId</property>
                 <property
                   dataType="System.Int32"
                   description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
@@ -105,24 +105,24 @@
                       name="Fullname"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[EmailAddress]"
+                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[email]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[email]"
                       length="150"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[EmailAddress]"
-                      name="EmailAddress"
+                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[email]"
+                      name="email"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Phone]"
+                      refId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[phone]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[phone]"
                       length="60"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Phone]"
-                      name="Phone"
+                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[phone]"
+                      name="phone"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -204,17 +204,17 @@
                       cachedName="Fullname"
                       lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Fullname]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[EmailAddress]"
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[email]"
                       cachedDataType="wstr"
                       cachedLength="150"
-                      cachedName="EmailAddress"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[EmailAddress]" />
+                      cachedName="email"
+                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[email]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Phone]"
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[phone]"
                       cachedDataType="wstr"
                       cachedLength="60"
-                      cachedName="Phone"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Phone]" />
+                      cachedName="phone"
+                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[phone]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -290,13 +290,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1252)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[EmailAddress]}</property>
+                          name="Expression">(DT_STR,50,1252)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[email]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,50,1252)EmailAddress</property>
+                          name="FriendlyExpression">(DT_STR,50,1252)email</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -314,13 +314,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,25,1252)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Phone]}</property>
+                          name="Expression">(DT_STR,25,1252)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[phone]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,25,1252)Phone</property>
+                          name="FriendlyExpression">(DT_STR,25,1252)phone</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
