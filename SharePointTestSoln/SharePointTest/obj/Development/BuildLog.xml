@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SharePointTest</Name>
-    <LastWriteTime>2019-05-19T19:45:35.8676159Z</LastWriteTime>
+    <LastWriteTime>2019-05-20T01:41:22.049676Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -47,18 +47,18 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>AddressMySql.dtsx</Name>
-      <LastWriteTime>2019-05-19T19:38:47.3365494Z</LastWriteTime>
+      <Name>MySQL_CustomerAddress.dtsx</Name>
+      <LastWriteTime>2019-05-20T02:16:17.4573702Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>CustomerMySql.dtsx</Name>
-      <LastWriteTime>2019-05-19T19:50:42.1686285Z</LastWriteTime>
+      <Name>MySQL_Customer.dtsx</Name>
+      <LastWriteTime>2019-05-19T20:06:11.6416956Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>Ademo.dtsx</Name>
-      <LastWriteTime>2019-05-19T19:16:13.5260841Z</LastWriteTime>
+      <Name>MySQL_Address.dtsx</Name>
+      <LastWriteTime>2019-05-19T20:06:11.5805911Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
