@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MySQL_Product"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{A53B7BAF-9C8F-4C1D-BBBA-0A7511B61FD6}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{3B587E54-1E0A-4B66-8330-6ED3E00D4C12}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -393,15 +393,15 @@
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Productid]"
-                      cachedDataType="i4"
-                      cachedName="Productid"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Productid]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Product]"
                       cachedDataType="nText"
                       cachedName="Product"
                       lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Product]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Productid]"
+                      cachedDataType="i4"
+                      cachedName="Productid"
+                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Productid]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[ProductNumber]"
                       cachedDataType="nText"
@@ -452,11 +452,6 @@
                       cachedDataType="i4"
                       cachedName="ProductModelID"
                       lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[ProductModelID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[last_update]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="last_update"
-                      lineageId="Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[last_update]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -469,6 +464,54 @@
                   name="Derived Column Output"
                   synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived ProductCategory]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived ProductCategory]"
+                      name="Derived ProductCategory"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)[TRIM]([REVERSE]([SUBSTRING]([REVERSE]((DT_WSTR,50)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Product]}),1,[FINDSTRING]([REVERSE]((DT_WSTR,50)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Product]})," ",1))))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)TRIM(REVERSE(SUBSTRING(REVERSE((DT_WSTR,50)Product),1,FINDSTRING(REVERSE((DT_WSTR,50)Product)," ",1))))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived ProductName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived ProductName]"
+                      name="Derived ProductName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)[TRIM]([REPLACE]([SUBSTRING]((DT_WSTR,50)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Product]},1,[FINDSTRING]((DT_WSTR,50)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Product]},":",1)),":"," "))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)TRIM(REPLACE(SUBSTRING((DT_WSTR,50)Product,1,FINDSTRING((DT_WSTR,50)Product,":",1)),":"," "))</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column ProductID]"
                       dataType="i4"
@@ -492,54 +535,36 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Product]"
-                      dataType="nText"
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column ProdNumber]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Product]"
-                      name="Derived Column Product"
+                      length="25"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column ProdNumber]"
+                      name="Derived Column ProdNumber"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Product]}</property>
+                          name="Expression">(DT_STR,25,1252)(DT_WSTR,25)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[ProductNumber]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">Product</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column ProductNo]"
-                      dataType="nText"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column ProductNo]"
-                      name="Derived Column ProductNo"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[ProductNumber]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">ProductNumber</property>
+                          name="FriendlyExpression">(DT_STR,25,1252)(DT_WSTR,25)ProductNumber</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Color]"
-                      dataType="nText"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="15"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Color]"
                       name="Derived Column Color"
                       truncationRowDisposition="FailComponent">
@@ -548,13 +573,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Color]}</property>
+                          name="Expression">(DT_STR,15,1252)(DT_WSTR,15)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Color]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">Color</property>
+                          name="FriendlyExpression">(DT_STR,15,1252)(DT_WSTR,15)Color</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -570,13 +595,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[SellStartDate]}</property>
+                          name="Expression">(DT_DBTIMESTAMP)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[SellStartDate]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">SellStartDate</property>
+                          name="FriendlyExpression">(DT_DBTIMESTAMP)SellStartDate</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -592,18 +617,18 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[SellEndDate]}</property>
+                          name="Expression">(DT_DBTIMESTAMP)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[SellEndDate]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">SellEndDate</property>
+                          name="FriendlyExpression">(DT_DBTIMESTAMP)SellEndDate</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column ListPrice]"
-                      dataType="r8"
+                      dataType="cy"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column ListPrice]"
@@ -614,18 +639,18 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[ListPrice]}</property>
+                          name="Expression">(DT_CY)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[ListPrice]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">ListPrice</property>
+                          name="FriendlyExpression">(DT_CY)ListPrice</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column StandardCost]"
-                      dataType="r8"
+                      dataType="cy"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column StandardCost]"
@@ -636,64 +661,68 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[StandardCost]}</property>
+                          name="Expression">(DT_CY)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[StandardCost]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">StandardCost</property>
+                          name="FriendlyExpression">(DT_CY)StandardCost</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Weight]"
-                      dataType="i4"
+                      dataType="numeric"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Weight]"
                       name="Derived Column Weight"
+                      precision="8"
+                      scale="2"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Weight]}</property>
+                          name="Expression">(DT_NUMERIC,8,2)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Weight]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">Weight</property>
+                          name="FriendlyExpression">(DT_NUMERIC,8,2)Weight</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column DiscontinuedDate]"
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column DiscontDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column DiscontinuedDate]"
-                      name="Derived Column DiscontinuedDate"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column DiscontDate]"
+                      name="Derived Column DiscontDate"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[DiscontinuedDate]}</property>
+                          name="Expression">(DT_DBTIMESTAMP)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[DiscontinuedDate]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">DiscontinuedDate</property>
+                          name="FriendlyExpression">(DT_DBTIMESTAMP)DiscontinuedDate</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Size]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="5"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Size]"
                       name="Derived Column Size"
                       truncationRowDisposition="FailComponent">
@@ -702,22 +731,22 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Size]}</property>
+                          name="Expression">(DT_STR,5,1252)(DT_WSTR,5)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Size]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">Size</property>
+                          name="FriendlyExpression">(DT_STR,5,1252)(DT_WSTR,5)Size</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column ProductModelID]"
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column ProdModelID]"
                       dataType="i4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column ProductModelID]"
-                      name="Derived Column ProductModelID"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column ProdModelID]"
+                      name="Derived Column ProdModelID"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -731,50 +760,6 @@
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
                           name="FriendlyExpression">ProductModelID</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column LastUpdate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column LastUpdate]"
-                      name="Derived Column LastUpdate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[last_update]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">last_update</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived ProductCategory]"
-                      dataType="empty"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived ProductCategory]"
-                      name="Derived ProductCategory"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression"></property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression"></property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -844,25 +829,25 @@
         <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\ADO NET Source"
-          TopLeft="261.5,12.5" />
+          TopLeft="245.5,12.5" />
         <NodeLayout
           Size="154,42"
           Id="Package\Data Flow Task\Derived Column"
-          TopLeft="261.5,104.5" />
+          TopLeft="245.5,114.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[ADO NET Source Output]"
-          TopLeft="339.5,54.5">
+          TopLeft="323.5,54.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,42.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
