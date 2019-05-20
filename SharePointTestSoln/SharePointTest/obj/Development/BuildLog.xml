@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SharePointTest</Name>
-    <LastWriteTime>2019-05-20T01:41:22.049676Z</LastWriteTime>
+    <LastWriteTime>2019-05-20T03:07:24.5418401Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -48,7 +48,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>MySQL_CustomerAddress.dtsx</Name>
-      <LastWriteTime>2019-05-20T02:16:17.4573702Z</LastWriteTime>
+      <LastWriteTime>2019-05-20T02:17:30.694856Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -59,6 +59,16 @@
     <ProjectBuildItemInfo>
       <Name>MySQL_Address.dtsx</Name>
       <LastWriteTime>2019-05-19T20:06:11.5805911Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>MySQL_Product.dtsx</Name>
+      <LastWriteTime>2019-05-20T03:07:24.5040391Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>A_Demo.dtsx</Name>
+      <LastWriteTime>2019-05-20T03:31:49.8226264Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
