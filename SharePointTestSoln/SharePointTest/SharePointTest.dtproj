@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-50T1H82M</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAACAAAAAAAQZgAAAAEAACAAAACLOA8dBkQ4F/GdONqL8vLr7MvrPKdvsnBOEDq+3javmgAAAAAOgAAAAAIAACAAAABP8P82NJYSPtJXH88FH/IrFsuSIcYZnWSOtOU74pu9zJAAAAARzKje3Ug+akf/qqRsQQUjPmGk9rbdowEi6+XcDQTIWvO6NU2EUT1RWgYF1XiabrDGaTPZtEThKXVc10xvH4OWJp52dLbpF+YUcYJRBss1hbWxkciO2zsYindvSdEjkIT+e+7BC+mTMbpF81o/tuQa47hc+qhhOt/+KISwvdLrA4X41z1buax/n38QX7NREX9AAAAAR27iQEikElw1uacWW5IbC6rroMtFQJZDQsGaKm8h+48TchnyQewnindX/JufY1513pN2AA18GBw6Zodb3SdJ3A==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAACAAAAAAAQZgAAAAEAACAAAACXHz38lqbDlWDU8hnnHl4Pxz+cW0JgvnTOoPLm2TPSrgAAAAAOgAAAAAIAACAAAABc75Lg19srJiFKjNIGAjftnn+w6wMUHJPacEbVcRCiY5AAAAD9P1xzBGvphffWGQY98Mn9A2JTQ7IWosKRR3rMKff4xCKwbFlHH00tlQd/Y/Wo5F4oRLLYd8rBPcHMn/zXcdOYmewLGuyk5BBFRlr3uvYFSXo2rejEZQEyAMRciG1Ez46Lq+jOK4nlS44gKR9EAaoNouF+F6E8ZOSVfFa1tcJQN80xjx8wwQIq3+dtAMecCYxAAAAAaDnyOavrCb0BU4qCjSek8Q5O8Lj6G27U/HDOtKWfKdTvTl/d4BLUb5yvkqU9IcZbsSJLLNqp76A68Na54z1vVQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -44,6 +44,7 @@
           <SSIS:Package SSIS:Name="MySQL_Product.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="A_Demo_Product.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="MySQL_Payment.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="MySQL_Rental.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="100.36.220.45,53000.SSIS_Log.baname.conmgr" />
@@ -859,6 +860,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1039,6 +1042,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1302,10 +1307,10 @@
                 <SSIS:Property SSIS:Name="Name">MySQL_Product</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">5</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{4166A89E-1D6D-45CD-BB0B-90F1BE7AB3E6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{3B587E54-1E0A-4B66-8330-6ED3E00D4C12}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1433,6 +1438,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="MySQL_Rental.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{502B64C1-168C-4DC2-99C4-2AA34B6D719B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">MySQL_Rental</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{B25F1FB7-E69B-4E94-955F-28F49992D9E0}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
