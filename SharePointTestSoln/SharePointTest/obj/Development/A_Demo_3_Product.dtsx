@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="A_Demo_3_Product"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{B12190AB-1776-4D14-A0CB-A09193E589FD}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{3E378DFE-05E3-42F1-80F2-F8A55F02FFBC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -859,7 +859,7 @@ where [refTable].[Name] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -929,7 +929,6 @@ where [refTable].[Name] = ?</property>
                 <output
                   refId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
@@ -1073,7 +1072,7 @@ where [refTable].[Name] = ?</property>
         <NodeLayout
           Size="151,42"
           Id="Package\Data Flow Task"
-          TopLeft="5.5,5.5" />
+          TopLeft="135.5,58.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1085,14 +1084,14 @@ where [refTable].[Name] = ?</property>
         <NodeLayout
           Size="163,42"
           Id="Package\Data Flow Task\Derived Column 1"
-          TopLeft="231.5,84.5" />
+          TopLeft="231.5,75.5" />
         <NodeLayout
           Size="205,42"
           Id="Package\Data Flow Task\ADO NET Source - Product"
-          TopLeft="212,17" />
+          TopLeft="213,8" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[ADO NET Source Output]"
-          TopLeft="313.75,59">
+          TopLeft="314.25,50">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1118,24 +1117,18 @@ where [refTable].[Name] = ?</property>
           TopLeft="250.5,148.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="313,126.5">
+          TopLeft="310,117.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="50.5,43"
+              EndConnector="0,31"
               Start="0,0"
-              End="43,43">
+              End="0,23.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,39"
-                    Point2="0,43"
-                    Point3="4,43" />
-                  <mssgle:LineSegment
-                    End="43,43" />
+                    End="0,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1184,7 +1177,7 @@ where [refTable].[Name] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-125.05638671875,24.5,111.6127734375,11.609375"
+              BoundingBox="-133.9250390625,24.5,129.350078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1220,7 +1213,7 @@ where [refTable].[Name] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="21.80861328125,23.7853403141361,96.3827734375,11.609375"
+              BoundingBox="12.9399609375,23.7853403141361,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
