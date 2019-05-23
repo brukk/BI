@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="A_Demo_3_Product"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{CD92A2CF-D18F-46F2-8175-6BDBDE7373F5}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{FCFC42C7-4FFC-40E9-91A6-1A31BC90DA6A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1418,10 +1418,10 @@
                       lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived splitedName]">
                       <properties>
                         <property
-                          dataType="System.Null"
+                          dataType="System.String"
                           description="Name of the reference table column with which the input column should be matched."
                           name="JoinToReferenceColumn"
-                          state="escaped" />
+                          state="escaped">Name</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies whether the match is a fuzzy or an exact match."
@@ -1432,7 +1432,7 @@
                           description="Specifies the minimum textual similarity required between input and fuzzy matched records on values in this particular join column.  Must be a floating point value between 0.0 and 1.0."
                           name="MinSimilarity">0</property>
                         <property
-                          dataType="System.UInt32"
+                          dataType="System.Int32"
                           description="Specifies the comparison options for character data. The options are those supported by the FoldString function."
                           name="FuzzyComparisonFlags"
                           typeConverter="tcComparisonFlags">1</property>
@@ -1452,10 +1452,10 @@
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column name in half]">
                       <properties>
                         <property
-                          dataType="System.String"
+                          dataType="System.Null"
                           description="Name of the reference table column with which the input column should be matched."
                           name="JoinToReferenceColumn"
-                          state="escaped">Name</property>
+                          state="escaped" />
                         <property
                           dataType="System.Int32"
                           description="Specifies whether the match is a fuzzy or an exact match."
@@ -1857,6 +1857,7 @@
                           name="CopyFromReferenceColumn"
                           state="escaped">ProductCategoryID</property>
                         <property
+                          containsID="true"
                           dataType="System.Null"
                           description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
                           name="SourceInputColumnLineageID" />
@@ -1894,11 +1895,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[_Similarity_Derived Column name in half]"
+                      refId="Package\Data Flow Task\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[_Similarity_Derived splitedName]"
                       dataType="r4"
-                      description="Column-level similarity score for fuzzy join on column &quot;Derived Column name in half&quot;."
-                      lineageId="Package\Data Flow Task\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[_Similarity_Derived Column name in half]"
-                      name="_Similarity_Derived Column name in half">
+                      description="Column-level similarity score for fuzzy join on column &quot;Derived splitedName&quot;."
+                      lineageId="Package\Data Flow Task\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[_Similarity_Derived splitedName]"
+                      name="_Similarity_Derived splitedName">
                       <properties>
                         <property
                           dataType="System.Null"
@@ -1909,7 +1910,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column name in half]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived splitedName]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies whether the column is used to indicate confidence or similarity."
@@ -2351,7 +2352,9 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,4.75,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
