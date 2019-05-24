@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{090F800B-A53C-400C-BBD6-8312252654E7}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{F79911C0-EF8E-4047-872A-AB0E15B67F39}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2648,6 +2648,22 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[addressid]"
+                      cachedDataType="i4"
+                      cachedName="addressid"
+                      lineageId="Package\Data Flow Task\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[addressid]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2727,6 +2743,19 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Data Flow Task\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[addressid]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[addressid]"
+                      name="addressid">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[addressid]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
