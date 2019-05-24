@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MySQL_Address"
   DTS:PackageType="5"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{52581648-566C-415C-8368-7C8CA507B891}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{2507F690-301A-47E2-97AE-2A3DD044E4F8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -323,7 +323,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACemk/ZQZ8WdPXdRSDSJxshs73C28AUQuNrvnraCN4zzQAAAAAOgAAAAAIAACAAAABDakqgJtU5FSv++57/If7ZhUljlnQqdX0A8dF+gMjTOCAAAACqy9OQioGWWyB/R+giSGWXMqpvIF4fyvTkXNGamH76hkAAAADlOptvjqNYNWQ5DHpN6M0NRq3oOzjVzHGUF4JWCoJ+7DD8hloeDnxC5BTg6SkvJsCluyw1fjLyabXOOhDhd6y+</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAipZmu1pDA9Jz4yJd7A8KIRxMclu8KE1zY2rvmTfT5kAAAAAAOgAAAAAIAACAAAACgeCTok0i/z8ApeuE8Zg2fItshKFFOlFf54bUGEVD80CAAAABoeD0nnT/Pxt+TiHaymFkKmq2nmAfukAsYl26uz2EnNEAAAADp7TyDheO+lQ0BIdZe/dmnsT6Z28yF+IM3u/e7DFmWtAieaenKostjRxmX/TBpCHYXF/4Td5D0tJ2k2h9Ik0K5</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -355,7 +355,6 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{3C3D89B4-944D-49EA-9BC7-B2CF471BD949}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1779,6 +1778,16 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{3AC47EC5-70D7-4A9E-9133-9E0CE861B8D9}"
+      DTS:From="Package\FTP Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -1790,7 +1799,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="151,42"
           Id="Package\Data Flow Task"
@@ -1799,6 +1808,40 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
           Size="122,42"
           Id="Package\FTP Task"
           TopLeft="65.5,65.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="187.5,86.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48,-32"
+              Start="0,0"
+              End="40.5,-32">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="20,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20,0"
+                    Point2="24,0"
+                    Point3="24,-4" />
+                  <mssgle:LineSegment
+                    End="24,-28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24,-28"
+                    Point2="24,-32"
+                    Point3="28,-32" />
+                  <mssgle:LineSegment
+                    End="40.5,-32" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>

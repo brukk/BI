@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SharePointTest</Name>
-    <LastWriteTime>2019-05-23T22:40:14.0116053Z</LastWriteTime>
+    <LastWriteTime>2019-05-24T14:04:19.0206372Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -58,17 +58,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>MySQL_Address.dtsx</Name>
-      <LastWriteTime>2019-05-23T22:34:30.8879457Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>MySQL_Product.dtsx</Name>
-      <LastWriteTime>2019-05-21T21:44:34.5349906Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>A_Demo_Product.dtsx</Name>
-      <LastWriteTime>2019-05-23T16:09:38.2638755Z</LastWriteTime>
+      <LastWriteTime>2019-05-24T03:09:39.8305146Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -82,18 +72,13 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>A_Demo2_product.dtsx</Name>
-      <LastWriteTime>2019-05-23T21:00:24.0884623Z</LastWriteTime>
+      <Name>MySQL_Product.dtsx</Name>
+      <LastWriteTime>2019-05-24T14:00:50.2022348Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>A_Demo_3_Product.dtsx</Name>
-      <LastWriteTime>2019-05-23T21:47:07.9384814Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>A_Demo_product_Latest.dtsx</Name>
-      <LastWriteTime>2019-05-23T23:57:22.5179513Z</LastWriteTime>
+      <Name>Package1.dtsx</Name>
+      <LastWriteTime>2019-05-24T14:04:18.7782817Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
