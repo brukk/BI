@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MySQL_CustomerAddress"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{CE9FAB6E-8234-4CE9-9AB3-27CC527BDA02}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{85B4D15A-AC87-4558-9CBC-7C1F51DEFCCF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -196,13 +196,13 @@ ON C.AddressID = A.AddressID</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1252)[REPLACENULL](" "," ")</property>
+                          name="Expression">(DT_STR,50,1252)"CustomerAddress "</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,50,1252)REPLACENULL(" "," ")</property>
+                          name="FriendlyExpression">(DT_STR,50,1252)"CustomerAddress "</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -292,8 +292,8 @@ ON C.AddressID = A.AddressID</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-50T1H82M.Masterpieces]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-50T1H82M.Masterpieces]"
+                  connectionManagerID="{2D1F8954-21C8-46E9-AE6F-76CA9BDCCBB7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[100.36.220.45,53000.MPSTGT.baname]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
