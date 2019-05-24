@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MySQL_Address"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{93229585-8B52-4494-AF55-25E71A769182}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{52581648-566C-415C-8368-7C8CA507B891}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -323,7 +323,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD5pmHybErxcIziJn+2r1E2UQcB3q+0sWuDlhlFP3c1LAAAAAAOgAAAAAIAACAAAACwK2aRGQGGDIoNeOOHWK+pJ1mp81hr22G5/nlfGEqA9CAAAAAyoB9fVZLfRLNMVtSXO6by9heTBluNhTukkYwoha3oQ0AAAAAdJIZ3Qi6a0At+GdhJx+30ib7fEyNVy5aaCIyDHOmGYtJxh4VJ43Z+LePqhV/8uiRSyPnT38Ma16n0VHxTjq6K</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACemk/ZQZ8WdPXdRSDSJxshs73C28AUQuNrvnraCN4zzQAAAAAOgAAAAAIAACAAAABDakqgJtU5FSv++57/If7ZhUljlnQqdX0A8dF+gMjTOCAAAACqy9OQioGWWyB/R+giSGWXMqpvIF4fyvTkXNGamH76hkAAAADlOptvjqNYNWQ5DHpN6M0NRq3oOzjVzHGUF4JWCoJ+7DD8hloeDnxC5BTg6SkvJsCluyw1fjLyabXOOhDhd6y+</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -355,6 +355,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{3C3D89B4-944D-49EA-9BC7-B2CF471BD949}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1761,7 +1762,6 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
       DTS:refId="Package\FTP Task"
       DTS:CreationName="Microsoft.FtpTask"
       DTS:Description="FTP Task"
-      DTS:Disabled="True"
       DTS:DTSID="{B490FE1F-BC85-4F8B-94AC-21F3D52790BA}"
       DTS:ExecutableType="Microsoft.FtpTask"
       DTS:LocaleID="-1"
