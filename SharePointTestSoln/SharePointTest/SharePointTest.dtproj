@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-50T1H82M</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAACAAAAAAAQZgAAAAEAACAAAABA6+o1NzOvnoMe7dvt4facY75ZL+jNJapd85GjRD0j7AAAAAAOgAAAAAIAACAAAADIsw8Dqz+ZSWchy1mDwD4PIhri2VH/VdUb3UgvkUgvTpAAAAB3t5Yxzw7+qaFrVJrj9xDfXlKxjHpQV8WwSDk1N10qsXR1I/Yx0HLtibnFbC6lknviu8tV5HthZtd6m0fDmsnRXBck62NPJS2Mn8RAZJjVyUBcWRXDS1mVZi72Oig8hxHlR2ohQERQJ+9HhE8bD79p1MGtq/dsEkZ6EVD5DfvPyuVXyv0pLU1fjV/1IvuKjpBAAAAAQWROVMSiW0+E81k04R6FPr7O2wx+LKu7gHq+jcNhswyS0bz2Mm7OzyMN5VzTPnC/OHage4aPBTqN+pSF1Uq6IA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAACAAAAAAAQZgAAAAEAACAAAAC5OEIxr2LJTDW7CZTX2yQMelYhcCtgE4Q9tD2Q5u+meAAAAAAOgAAAAAIAACAAAABPc1/Pybvaq80WDDH2kFhbQXCYkZJx3+n//fF0QgcwepAAAAAjZkUBCbhodAXoPE2+34fkjT/paPlR5hgTFMaoWnZd8XRDU1nHs74gjge4jVW7bu7uojk60cbqay/U9YAH6Yr3ghH67BzXdaYtfbWj/sbAYC4slgmfz2wDVgYRmWdeaJt6x4HLCQG+A3ZhIIIPH0ZRoe+ot/11MKKGSSS5UMs8g5aIWDYFL50dE6uniVUv0jRAAAAAHGagrHCv2Pz/Um4awJD6LPR+x4kurF40cLt9LboEEWReBs9HUk9ycLFSXoRgO/SgKR9qER1CIzBLv81pEhObjg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -38,11 +38,8 @@
           <SSIS:Package SSIS:Name="Pkg_stgSalesOrderDetail.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Pkg_stgSalesOrderHeader.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Pkg_stgAddress.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="MySQL_Product.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Pkg_stgPayment.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Pkg_stgRental.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Package1.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="A_Demo_Product.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="100.36.220.45,53000.SSIS_Log.baname.conmgr" />
@@ -211,7 +208,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Service Document Url=https://dunatkcom.sharepoint.com/sites/Masterpieces/_vti_bin/listdata.svc;Include Atom Elements=Auto;Include Expanded Entities=False;Integrated Security=False;Cookie="SPOIDCRL=77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48U1A+VjUsMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAwNDUzOWU4OWZAbGl2ZS5jb20sMCMuZnxtZW1iZXJzaGlwfHNoYXJlcG9pbnRAZHVuYXRrLmNvbSwxMzIwMzI5MzMyODAwMDAwMDAsMTMyMDA0Mjc0NjEwMDAwMDAwLDEzMjAzMzc5NzI4NDc3NTY3OCwwLjAuMC4wLDQsODVkZGY3ZTktODA2OC00YmI2LTg5NzktNDQ3NjE0NDJlMzlhLCwsMjQzMWUwOWUtZjA0MS0wMDAwLTM4MDEtYmM5MjMzNGU4NzAwLDI0MzFlMDllLWYwNDEtMDAwMC0zODAxLWJjOTIzMzRlODcwMCwsMCwwLDAsLFUzN3phUDNsQ294eVVTc0tGeHlFNEpzV3ZRZnhNOGhVbk9vMWw5UVFUanpUR1pHQjlBc3ZEYS92amxncERURVRUdnROak1LS0xlVU5QeERKSFlJOWVqQmNKTlcrRXA5S0FSTlFpNXVyTWptT01FaHo1cUxoRk1mUVFMSGV1RTJFcWcxTzAxUjdKNExoYkRlZWhieTFjN0xiblE4d3pEUnNXNmEyTHBUejA1ekVQb1NZWXpXRUQ0QkI3YjVDUkZTWkNtMkZRNEpIa29DUmMzR2h0OGltbFdHODB5QThTUDZxQkd1ckF5cmlDaWtzYUFKcFVLdXRTUTFyK2lucTlRTGpEWXZsb0JyTTk4all1SDVidlJMNFBqdno0V0dwRzA5YXlvd2IxS21IRVFVanVPdTk0MWZzbXRhdjNKcC9XVWhnd1ZnTS9QZTI3cmQ2TFdwRVVldCtmUT09PC9TUD4=";User ID=sharepoint@dunatk.com;Persist Security Info=False;Time Out=600;Schema Sample Size=25;Retry Count=5;Retry Sleep=100;Keep Alive=False;Max Received Message Size=4398046511104</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Service Document Url=https://dunatkcom.sharepoint.com/sites/Masterpieces/_vti_bin/listdata.svc;Include Atom Elements=Auto;Include Expanded Entities=False;Integrated Security=False;Cookie="SPOIDCRL=77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48U1A+VjUsMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAwNDUzOWU4OWZAbGl2ZS5jb20sMCMuZnxtZW1iZXJzaGlwfHNoYXJlcG9pbnRAZHVuYXRrLmNvbSwxMzIwMzI5NjgzMjAwMDAwMDAsMTMyMDA0Mjc0NjEwMDAwMDAwLDEzMjAzMzgzMjMyODIxNjYzOSwwLjAuMC4wLDQsODVkZGY3ZTktODA2OC00YmI2LTg5NzktNDQ3NjE0NDJlMzlhLCwsN2IzNGUwOWUtNzBjZi0wMDAwLTM4MDEtYmQ4MjE2ZjZhZTdlLDdiMzRlMDllLTcwY2YtMDAwMC0zODAxLWJkODIxNmY2YWU3ZSwsMCwwLDAsLHA0bEdHWnMvSVgwZ1BrMzhIU3lram5md2pNNWhKK0hsYUUwL2JHWi9ZU3lpdy9RdDM4cys5MHpqLzYyQlZ3UkcwMVZRdTdUOFV2MGp6eWZjdEdQdk9iVWpPRHBVbFpobVBFWURieEZjR2Jtd3k1YjBsaWJINXlQMVpYMmt4R1VoVXFva2Q3T3ZmdVk2MDhZaHZvNk4zcVRGVXI0WVI5NWZyV2kyK0JPZTNzSm4zL2Z3Z2c0bWZzekpoNUdmN3pTV3lxR0FkWmwxOW5CeGQ5ckpkUm5FeEdqMGIralRQYWEzSzdRcVZVV3huSHVSWDJqOTZRVHh2b1M0WGxFTEptblRTTXdKVXZUTXlua3JkTk4zQlBxcnRyTVhNc05LOVowWFRUZ0VmRGM0SmgrS0NzUEFUaVVsOStUSjlqWUhZTEdvbHhKTE9kN3VwYjUrQk9kb0dTWXVHQT09PC9TUD4=";User ID=sharepoint@dunatk.com;Persist Security Info=False;Time Out=600;Schema Sample Size=25;Retry Count=5;Retry Sleep=100;Keep Alive=False;Max Received Message Size=4398046511104</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -387,10 +384,10 @@
                 <SSIS:Property SSIS:Name="Name">Pkg_stgProduct</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">47</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">50</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{2769F397-5A6D-490B-B900-CEA343F59A2A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5C394101-E6D5-4AAF-AA00-A7763E15CFB1}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -798,23 +795,6 @@
                 </SSIS:Parameter>
               </SSIS:Parameters>
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="MySQL_Product.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{21FDED47-4266-472F-9E7A-C6DFA86BC487}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">MySQL_Product</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{CB25369B-9ECF-4CBC-9780-D41105E68BD7}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
             <SSIS:PackageMetaData SSIS:Name="Pkg_stgPayment.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{F33E2156-5AED-4DBB-890C-ACDD11E92A78}</SSIS:Property>
@@ -929,40 +909,6 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{E78D4E1B-8568-48C8-92F9-6AB0967D2DC2}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Package1.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{C38AA327-5E5C-4ACD-9CB8-6133963A92C8}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{A92A6CFF-6FF0-4E5A-88D6-0C344DCE4B82}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="A_Demo_Product.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{9A2C12FC-0030-4048-BD2C-F804F9B0DAF3}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">A_Demo_Product</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{31031FB8-0574-47DD-A947-BB047BBB8612}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

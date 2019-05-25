@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MySQL_Product"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{E60C76E5-CB64-4824-97D0-93B62C1BBA0D}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{CB25369B-9ECF-4CBC-9780-D41105E68BD7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -837,9 +837,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\DC-Conditional split.Outputs[Derived Column Output].Columns[Derived Size]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="5"
                       lineageId="Package\Data Flow Task\DC-Conditional split.Outputs[Derived Column Output].Columns[Derived Size]"
                       name="Derived Size"
                       truncationRowDisposition="FailComponent">
@@ -848,13 +850,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Size]}</property>
+                          name="Expression">(DT_STR,5,1252)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Size]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">Size</property>
+                          name="FriendlyExpression">(DT_STR,5,1252)Size</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1316,9 +1318,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\DC-Product.Outputs[Derived Column Output].Columns[Derived Size]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="5"
                       lineageId="Package\Data Flow Task\DC-Product.Outputs[Derived Column Output].Columns[Derived Size]"
                       name="Derived Size"
                       truncationRowDisposition="FailComponent">
@@ -1327,13 +1331,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Size]}</property>
+                          name="Expression">(DT_STR,5,1252)#{Package\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Size]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">Size</property>
+                          name="FriendlyExpression">(DT_STR,5,1252)Size</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -2272,7 +2276,9 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Fuzzy Lookup.Inputs[Fuzzy Lookup Input].Columns[Derived Size]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
                       cachedName="Derived Size"
                       lineageId="Package\Data Flow Task\DC-Product.Outputs[Derived Column Output].Columns[Derived Size]">
                       <properties>
@@ -2730,7 +2736,9 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Fuzzy Lookup.Inputs[Fuzzy Lookup Input].Columns[Derived Size1]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
                       cachedName="Derived Size"
                       lineageId="Package\Data Flow Task\DC-Conditional split.Outputs[Derived Column Output].Columns[Derived Size]">
                       <properties>
@@ -3157,7 +3165,9 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[DC-Product.Derived Size]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
                       lineageId="Package\Data Flow Task\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[DC-Product.Derived Size]"
                       name="DC-Product.Derived Size">
                       <properties>
@@ -3489,7 +3499,9 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[DC-Conditional split.Derived Size]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
                       lineageId="Package\Data Flow Task\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[DC-Conditional split.Derived Size]"
                       name="DC-Conditional split.Derived Size">
                       <properties>
@@ -4133,7 +4145,9 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Fuzzy Lookup 1.Inputs[Fuzzy Lookup Input].Columns[Derived Size]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
                       cachedName="Derived Size"
                       lineageId="Package\Data Flow Task\DC-Product.Outputs[Derived Column Output].Columns[Derived Size]">
                       <properties>
@@ -4591,7 +4605,9 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Fuzzy Lookup 1.Inputs[Fuzzy Lookup Input].Columns[Derived Size1]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
                       cachedName="Derived Size"
                       lineageId="Package\Data Flow Task\DC-Conditional split.Outputs[Derived Column Output].Columns[Derived Size]">
                       <properties>
@@ -5018,7 +5034,9 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[DC-Product.Derived Size]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
                       lineageId="Package\Data Flow Task\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[DC-Product.Derived Size]"
                       name="DC-Product.Derived Size">
                       <properties>
@@ -5350,7 +5368,9 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[DC-Conditional split.Derived Size]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
                       lineageId="Package\Data Flow Task\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[DC-Conditional split.Derived Size]"
                       name="DC-Conditional split.Derived Size">
                       <properties>
@@ -5838,7 +5858,9 @@ where [refTable].[Name] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[DC-Product.Derived Size]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
                       cachedName="DC-Product.Derived Size"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[DC-Product.Derived Size]">
                       <properties>
@@ -6030,7 +6052,9 @@ where [refTable].[Name] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[DC-Conditional split.Derived Size]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
                       cachedName="DC-Conditional split.Derived Size"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[DC-Conditional split.Derived Size]">
                       <properties>
@@ -6299,7 +6323,9 @@ where [refTable].[Name] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[DC-Product.Derived Size]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
                       cachedName="DC-Product.Derived Size"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DC-Product.Derived Size]">
                       <properties>
@@ -6491,7 +6517,9 @@ where [refTable].[Name] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[DC-Conditional split.Derived Size]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
                       cachedName="DC-Conditional split.Derived Size"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DC-Conditional split.Derived Size]">
                       <properties>
@@ -7137,7 +7165,9 @@ where [refTable].[Name] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Merge 1.Inputs[Merge Input 1].Columns[Derived Size]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
                       cachedName="Derived Size"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Size]">
                       <properties>
@@ -7362,19 +7392,6 @@ where [refTable].[Name] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Merge 1.Inputs[Merge Input 2].Columns[DC-Product.Derived Size]"
-                      cachedDataType="i4"
-                      cachedName="DC-Product.Derived Size"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[DC-Product.Derived Size]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge 1.Outputs[Merge Output 1].Columns[Derived Size]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\Data Flow Task\Merge 1.Inputs[Merge Input 2].Columns[DC-Product.Derived ProductModelID]"
                       cachedDataType="i4"
                       cachedName="DC-Product.Derived ProductModelID"
@@ -7385,6 +7402,19 @@ where [refTable].[Name] = ?</property>
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\Data Flow Task\Merge 1.Outputs[Merge Output 1].Columns[Derived ProductModelID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge 1.Inputs[Merge Input 2].Columns[DC-Product.Derived Size]"
+                      cachedDataType="i4"
+                      cachedName="DC-Product.Derived Size"
+                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[DC-Product.Derived Size]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge 1.Outputs[Merge Output 1].Columns[Derived Size]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -8363,7 +8393,9 @@ where [refTable].[Name] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[DC-Product.Derived Size]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
                       cachedName="DC-Product.Derived Size"
                       lineageId="Package\Data Flow Task\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[DC-Product.Derived Size]">
                       <properties>
@@ -8597,7 +8629,9 @@ where [refTable].[Name] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[DC-Conditional split.Derived Size]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
                       cachedName="DC-Conditional split.Derived Size"
                       lineageId="Package\Data Flow Task\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[DC-Conditional split.Derived Size]">
                       <properties>
@@ -8890,7 +8924,9 @@ where [refTable].[Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DC-Product.Derived Size]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DC-Product.Derived Size]"
                       name="DC-Product.Derived Size">
                       <properties>
@@ -9082,7 +9118,9 @@ where [refTable].[Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DC-Conditional split.Derived Size]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[DC-Conditional split.Derived Size]"
                       name="DC-Conditional split.Derived Size">
                       <properties>
@@ -9407,7 +9445,9 @@ where [refTable].[Name] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[DC-Product.Derived Size]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
                       cachedName="DC-Product.Derived Size"
                       lineageId="Package\Data Flow Task\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[DC-Product.Derived Size]">
                       <properties>
@@ -9641,7 +9681,9 @@ where [refTable].[Name] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[DC-Conditional split.Derived Size]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
                       cachedName="DC-Conditional split.Derived Size"
                       lineageId="Package\Data Flow Task\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[DC-Conditional split.Derived Size]">
                       <properties>
@@ -9950,7 +9992,9 @@ where [refTable].[Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[DC-Product.Derived Size]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[DC-Product.Derived Size]"
                       name="DC-Product.Derived Size">
                       <properties>
@@ -10142,7 +10186,9 @@ where [refTable].[Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[DC-Conditional split.Derived Size]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[DC-Conditional split.Derived Size]"
                       name="DC-Conditional split.Derived Size">
                       <properties>
@@ -10721,7 +10767,9 @@ where [refTable].[Name] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[Derived Size]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
                       cachedName="Derived Size"
                       lineageId="Package\Data Flow Task\DC-Product.Outputs[Derived Column Output].Columns[Derived Size]">
                       <properties>
@@ -11141,7 +11189,9 @@ where [refTable].[Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Size]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Size]"
                       name="Derived Size">
                       <properties>
