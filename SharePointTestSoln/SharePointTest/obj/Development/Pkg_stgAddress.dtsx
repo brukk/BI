@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_stgAddress"
   DTS:PackageType="5"
-  DTS:VersionBuild="199"
-  DTS:VersionGUID="{9FD6B7BB-D1AE-4846-B98C-EE4956B0FDD9}">
+  DTS:VersionBuild="207"
+  DTS:VersionGUID="{CE809DF0-FE1B-44B8-B3E6-8CB3DBF177BA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -180,16 +180,6 @@
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LAPTOP-50T1H82M.Masterpieces]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{F60CF717-5D7B-497E-93FB-E982DC1EEF1B}"
-      DTS:ObjectName="LAPTOP-50T1H82M.Masterpieces">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=LAPTOP-50T1H82M;Initial Catalog=Masterpieces;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
@@ -220,7 +210,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task - End Time Logging"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
@@ -328,7 +318,7 @@
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Script Task - Email End Notification"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
@@ -1739,6 +1729,443 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               version="1">
               <components>
                 <component
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+                  name="ADO NET Source- Address"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement used by the component to extract data."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select  A.addressid, A.Address1,  A.Address2, A.PostalCode, C.city, H.country FROM address A INNER JOIN City C ON A.cityId = C.cityId
+INNER JOIN Country H on H.countryId = C.countryid</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                      name="AllowImplicitStringConversion">true</property>
+                    <property
+                      dataType="System.String"
+                      description="The Source database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the mode to retrieve external column information"
+                      name="AccessMode"
+                      typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Connections[IDbConnection]"
+                      connectionManagerID="{B92794DA-7CF4-4CB1-92FD-D0B65301C2AA}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[MySQLConnectionDicks]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output]"
+                      name="ADO NET Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[addressid]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[addressid]"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[addressid]"
+                          name="addressid"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[Address1]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[Address1]"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[Address1]"
+                          name="Address1"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[Address2]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[Address2]"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[Address2]"
+                          name="Address2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[PostalCode]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[PostalCode]"
+                          length="30"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[PostalCode]"
+                          name="PostalCode"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[city]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[city]"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[city]"
+                          name="city"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[country]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[country]"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[country]"
+                          name="country"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[addressid]"
+                          dataType="i4"
+                          name="addressid" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[Address1]"
+                          dataType="wstr"
+                          length="150"
+                          name="Address1" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[Address2]"
+                          dataType="wstr"
+                          length="150"
+                          name="Address2" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[PostalCode]"
+                          dataType="wstr"
+                          length="30"
+                          name="PostalCode" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[city]"
+                          dataType="wstr"
+                          length="150"
+                          name="city" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[country]"
+                          dataType="wstr"
+                          length="150"
+                          name="country" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output]"
+                      isErrorOut="true"
+                      name="ADO NET Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[addressid]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[addressid]"
+                          name="addressid" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[Address1]"
+                          dataType="wstr"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[Address1]"
+                          name="Address1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[Address2]"
+                          dataType="wstr"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[Address2]"
+                          name="Address2" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[PostalCode]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[PostalCode]"
+                          name="PostalCode" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[city]"
+                          dataType="wstr"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[city]"
+                          name="city" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[country]"
+                          dataType="wstr"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[country]"
+                          name="country" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Inputs[Derived Column Input].Columns[Address1]"
+                          cachedDataType="wstr"
+                          cachedLength="150"
+                          cachedName="Address1"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[Address1]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Inputs[Derived Column Input].Columns[Address2]"
+                          cachedDataType="wstr"
+                          cachedLength="150"
+                          cachedName="Address2"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[Address2]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Inputs[Derived Column Input].Columns[PostalCode]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="PostalCode"
+                          cachedSortKeyPosition="1"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[PostalCode]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Inputs[Derived Column Input].Columns[city]"
+                          cachedDataType="wstr"
+                          cachedLength="150"
+                          cachedName="city"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[city]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Inputs[Derived Column Input].Columns[country]"
+                          cachedDataType="wstr"
+                          cachedLength="150"
+                          cachedName="country"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[country]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Inputs[Derived Column Input].Columns[StateProvince]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="StateProvince"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add1]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="60"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add1]"
+                          name="Derived Column Add1"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,60,1252)(DT_WSTR,60)#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[Address1]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,60,1252)(DT_WSTR,60)Address1</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add2]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="60"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add2]"
+                          name="Derived Column Add2"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,60,1252)(DT_WSTR,60)#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[Address2]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,60,1252)(DT_WSTR,60)Address2</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column PostalCode]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="15"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column PostalCode]"
+                          name="Derived Column PostalCode"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,15,1252)(DT_WSTR,15)#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[PostalCode]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,15,1252)(DT_WSTR,15)PostalCode</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column City]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="30"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column City]"
+                          name="Derived Column City"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,30,1252)(DT_WSTR,30)#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[city]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,30,1252)(DT_WSTR,30)city</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Country]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Country]"
+                          name="Derived Column Country"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,50,1252)(DT_WSTR,50)#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[country]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,50,1252)(DT_WSTR,50)country</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column StateProv]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column StateProv]"
+                          name="Derived Column StateProv"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,50,1252)(DT_WSTR,50)#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,50,1252)(DT_WSTR,50)StateProvince</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column 1"
                   componentClassID="Microsoft.DerivedColumn"
                   contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -1993,6 +2420,438 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[zip]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]"
+                          name="PostalCode"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                          name="City"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvince]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[state_name]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvince]"
+                          name="StateProvince"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[zip]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="zip" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lat]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="lat" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lng]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="lng" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="city" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[state_id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="state_id" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[state_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="state_name" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[zcta]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="zcta" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[parent_zcta]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="parent_zcta" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[population]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="population" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[density]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="density" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[county_fips]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="county_fips" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[county_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="county_name" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[all_county_weights]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="all_county_weights" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[imprecise]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="imprecise" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[military]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="military" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timezone]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="timezone" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join"
+                  componentClassID="Microsoft.MergeJoin"
+                  contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+                  name="Merge Join"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of join to perform."
+                      name="JoinType"
+                      typeConverter="JoinType">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the number of columns in the ordering key."
+                      name="NumKeyColumns">1</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the null values are treated as equal values."
+                      name="TreatNullsAsEqual">true</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Indicates the requested maximum buffers per input before blocking."
+                      name="MaxBuffersPerInput">5</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Left Input]"
+                      hasSideEffects="true"
+                      name="Merge Join Left Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Left Input].Columns[PostalCode]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="PostalCode"
+                          cachedSortKeyPosition="1"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[PostalCode]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Left Input].Columns[Address1]"
+                          cachedDataType="wstr"
+                          cachedLength="150"
+                          cachedName="Address1"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[Address1]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Left Input].Columns[Address2]"
+                          cachedDataType="wstr"
+                          cachedLength="150"
+                          cachedName="Address2"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[Address2]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Left Input].Columns[city]"
+                          cachedDataType="wstr"
+                          cachedLength="150"
+                          cachedName="city"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[city]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Left Input].Columns[country]"
+                          cachedDataType="wstr"
+                          cachedLength="150"
+                          cachedName="country"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[country]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Left Input].Columns[addressid]"
+                          cachedDataType="i4"
+                          cachedName="addressid"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[addressid]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Right Input]"
+                      hasSideEffects="true"
+                      name="Merge Join Right Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Right Input].Columns[PostalCode]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="PostalCode"
+                          cachedSortKeyPosition="1"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Outputs[Sort Output].Columns[PostalCode]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Right Input].Columns[StateProvince]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="StateProvince"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Outputs[Sort Output].Columns[StateProvince]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output]"
+                      isSorted="true"
+                      name="Merge Join Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[Address1]"
+                          dataType="wstr"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[Address1]"
+                          name="Address1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Left Input].Columns[Address1]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[Address2]"
+                          dataType="wstr"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[Address2]"
+                          name="Address2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Left Input].Columns[Address2]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[PostalCode]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[PostalCode]"
+                          name="PostalCode"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Left Input].Columns[PostalCode]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[city]"
+                          dataType="wstr"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[city]"
+                          name="city">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Left Input].Columns[city]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[country]"
+                          dataType="wstr"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[country]"
+                          name="country">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Left Input].Columns[country]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]"
+                          name="StateProvince">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Right Input].Columns[StateProvince]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[addressid]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[addressid]"
+                          name="addressid">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Left Input].Columns[addressid]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OData Source 1"
                   componentClassID="Microsoft.ManagedComponentHost"
                   contactInfo="OData Source Component;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -2189,6 +3048,203 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                           dataType="nText"
                           lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OData Source 1.Outputs[Error output].Columns[PostalCode]"
                           name="PostalCode" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[stgAddress]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="{2D1F8954-21C8-46E9-AE6F-76CA9BDCCBB7}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[100.36.220.45,53000.MPSTGT.baname]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column Add1]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="60"
+                          cachedName="Derived Column Add1"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add1]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column Add2]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="60"
+                          cachedName="Derived Column Add2"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add2]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column City]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Derived Column City"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column City]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column StateProv]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Derived Column StateProv"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateProvince]"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column StateProv]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column Country]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Derived Column Country"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegion]"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Country]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column PostalCode]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="15"
+                          cachedName="Derived Column PostalCode"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column PostalCode]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[addressid]"
+                          cachedDataType="i4"
+                          cachedName="addressid"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output].Columns[addressid]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
+                          dataType="i4"
+                          name="AddressID" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="60"
+                          name="AddressLine1" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="60"
+                          name="AddressLine2" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="City" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateProvince]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="StateProvince" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegion]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CountryRegion" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          name="PostalCode" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -2806,8 +3862,403 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                     </output>
                   </outputs>
                 </component>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Row Count 1"
+                  componentClassID="Microsoft.RowCount"
+                  contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+                  name="Row Count 1">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable to hold the row count."
+                      name="VariableName">User::VarRowCount</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Row Count 1.Inputs[Row Count Input 1]"
+                      hasSideEffects="true"
+                      name="Row Count Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Row Count 1.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Row Count 1.Inputs[Row Count Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort"
+                  componentClassID="Microsoft.Sort"
+                  contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+                  name="Sort"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                      name="EliminateDuplicates">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of threads to use for sorting."
+                      expressionType="Notify"
+                      name="MaximumThreads">-1</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Inputs[Sort Input]"
+                      name="Sort Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Inputs[Sort Input].Columns[Address1]"
+                          cachedDataType="wstr"
+                          cachedLength="150"
+                          cachedName="Address1"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[Address1]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Inputs[Sort Input].Columns[Address2]"
+                          cachedDataType="wstr"
+                          cachedLength="150"
+                          cachedName="Address2"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[Address2]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Inputs[Sort Input].Columns[PostalCode]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="PostalCode"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[PostalCode]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">1</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Inputs[Sort Input].Columns[city]"
+                          cachedDataType="wstr"
+                          cachedLength="150"
+                          cachedName="city"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[city]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Inputs[Sort Input].Columns[country]"
+                          cachedDataType="wstr"
+                          cachedLength="150"
+                          cachedName="country"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[country]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Inputs[Sort Input].Columns[addressid]"
+                          cachedDataType="i4"
+                          cachedName="addressid"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[addressid]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output]"
+                      isSorted="true"
+                      name="Sort Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[Address1]"
+                          dataType="wstr"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[Address1]"
+                          name="Address1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[Address1]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[Address2]"
+                          dataType="wstr"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[Address2]"
+                          name="Address2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[Address2]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[PostalCode]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[PostalCode]"
+                          name="PostalCode"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[PostalCode]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[city]"
+                          dataType="wstr"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[city]"
+                          name="city">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[city]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[country]"
+                          dataType="wstr"
+                          length="150"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[country]"
+                          name="country">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[country]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[addressid]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output].Columns[addressid]"
+                          name="addressid">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[addressid]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1"
+                  componentClassID="Microsoft.Sort"
+                  contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+                  name="Sort 1"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                      name="EliminateDuplicates">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of threads to use for sorting."
+                      expressionType="Notify"
+                      name="MaximumThreads">-1</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Inputs[Sort Input]"
+                      name="Sort Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Inputs[Sort Input].Columns[PostalCode]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="PostalCode"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">1</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Inputs[Sort Input].Columns[City]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="City"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].Columns[City]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Inputs[Sort Input].Columns[StateProvince]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="StateProvince"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvince]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Outputs[Sort Output]"
+                      isSorted="true"
+                      name="Sort Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Outputs[Sort Output].Columns[PostalCode]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Outputs[Sort Output].Columns[PostalCode]"
+                          name="PostalCode"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Outputs[Sort Output].Columns[city]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Outputs[Sort Output].Columns[city]"
+                          name="city">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].Columns[City]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Outputs[Sort Output].Columns[StateProvince]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Outputs[Sort Output].Columns[StateProvince]"
+                          name="StateProvince">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvince]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
               </components>
               <paths>
+                <path
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[ADO NET Source Output]"
+                  endId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Inputs[Sort Input]"
+                  name="ADO NET Source Output"
+                  startId="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address.Outputs[ADO NET Source Output]" />
                 <path
                   refId="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Derived Column Error Output]"
                   endId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input]"
@@ -2819,10 +4270,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   name="Derived Column Output"
                   startId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column 1.Outputs[Derived Column Output]" />
                 <path
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Derived Column Output1]"
+                  endId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Row Count 1.Inputs[Row Count Input 1]"
+                  name="Derived Column Output"
+                  startId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Outputs[Derived Column Output]" />
+                <path
                   refId="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Error output]"
                   endId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input]"
                   name="Error output"
                   startId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OData Source 1.Outputs[Error output]" />
+                <path
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Flat File Source Output]"
+                  endId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Inputs[Sort Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Merge Join Output]"
+                  endId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column.Inputs[Derived Column Input]"
+                  name="Merge Join Output"
+                  startId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Outputs[Merge Join Output]" />
                 <path
                   refId="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Output]"
                   endId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column 1.Inputs[Derived Column Input]"
@@ -2833,6 +4299,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   endId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
                   name="Row Count Output 1"
                   startId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Row Count.Outputs[Row Count Output 1]" />
+                <path
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Row Count Output 11]"
+                  endId="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Row Count Output 1"
+                  startId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Row Count 1.Outputs[Row Count Output 1]" />
+                <path
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Sort Output]"
+                  endId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Sort Output1]"
+                  endId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort.Outputs[Sort Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -2891,7 +4372,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                       description="Specifies the SQL statement used by the component to extract data."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select  A.Address1,  A.Address2, A.PostalCode, C.city, H.country FROM address A INNER JOIN City C ON A.cityId = C.cityId
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select  A.addressid, A.Address1,  A.Address2, A.PostalCode, C.city, H.country FROM address A INNER JOIN City C ON A.cityId = C.cityId
 INNER JOIN Country H on H.countryId = C.countryid</property>
                     <property
                       dataType="System.Int32"
@@ -2929,6 +4410,15 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       refId="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address.Outputs[ADO NET Source Output]"
                       name="ADO NET Source Output">
                       <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[addressid]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[addressid]"
+                          lineageId="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[addressid]"
+                          name="addressid"
+                          truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[Address1]"
                           dataType="wstr"
@@ -2983,6 +4473,10 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[addressid]"
+                          dataType="i4"
+                          name="addressid" />
+                        <externalMetadataColumn
                           refId="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address.Outputs[ADO NET Source Output].ExternalColumns[Address1]"
                           dataType="wstr"
                           length="150"
@@ -3014,6 +4508,11 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       isErrorOut="true"
                       name="ADO NET Source Error Output">
                       <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[addressid]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[addressid]"
+                          name="addressid" />
                         <outputColumn
                           refId="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address.Outputs[ADO NET Source Error Output].Columns[Address1]"
                           dataType="wstr"
@@ -3840,6 +5339,11 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           cachedLength="150"
                           cachedName="country"
                           lineageId="Package\Sequence Container\Data Flow Task - If Data exist\Sort.Outputs[Sort Output].Columns[country]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - If Data exist\Merge Join.Inputs[Merge Join Left Input].Columns[addressid]"
+                          cachedDataType="i4"
+                          cachedName="addressid"
+                          lineageId="Package\Sequence Container\Data Flow Task - If Data exist\Sort.Outputs[Sort Output].Columns[addressid]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -3957,6 +5461,19 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                               dataType="System.Int32"
                               description="The input column associated with this output column"
                               name="InputColumnID">#{Package\Sequence Container\Data Flow Task - If Data exist\Merge Join.Inputs[Merge Join Right Input].Columns[StateProvince]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - If Data exist\Merge Join.Outputs[Merge Join Output].Columns[addressid]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task - If Data exist\Merge Join.Outputs[Merge Join Output].Columns[addressid]"
+                          name="addressid">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Sequence Container\Data Flow Task - If Data exist\Merge Join.Inputs[Merge Join Left Input].Columns[addressid]}</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -4225,8 +5742,8 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[LAPTOP-50T1H82M.Masterpieces]"
-                      connectionManagerRefId="Package.ConnectionManagers[LAPTOP-50T1H82M.Masterpieces]"
+                      connectionManagerID="{2D1F8954-21C8-46E9-AE6F-76CA9BDCCBB7}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[100.36.220.45,53000.MPSTGT.baname]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -4286,6 +5803,12 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           cachedName="Derived Column PostalCode"
                           externalMetadataColumnId="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
                           lineageId="Package\Sequence Container\Data Flow Task - If Data exist\Derived Column.Outputs[Derived Column Output].Columns[Derived Column PostalCode]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[addressid]"
+                          cachedDataType="i4"
+                          cachedName="addressid"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
+                          lineageId="Package\Sequence Container\Data Flow Task - If Data exist\Merge Join.Outputs[Merge Join Output].Columns[addressid]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -5202,6 +6725,22 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                               name="NewSortKeyPosition">0</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - If Data exist\Sort.Inputs[Sort Input].Columns[addressid]"
+                          cachedDataType="i4"
+                          cachedName="addressid"
+                          lineageId="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[addressid]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -5281,6 +6820,19 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
                               name="SortColumnId">#{Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[country]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - If Data exist\Sort.Outputs[Sort Output].Columns[addressid]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task - If Data exist\Sort.Outputs[Sort Output].Columns[addressid]"
+                          name="addressid">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address.Outputs[ADO NET Source Output].Columns[addressid]}</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -6958,58 +8510,56 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - OData Error Output"
+          TopLeft="219,7" />
         <NodeLayout
           Size="154,42"
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column 1"
-          TopLeft="73,112" />
+          TopLeft="13,106" />
         <NodeLayout
-          Size="273,42"
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - OData Error Output"
-          TopLeft="363.5,18.5" />
-        <NodeLayout
-          Size="171,42"
+          Size="143,42"
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination 1"
-          TopLeft="56,273" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OData Source 1"
-          TopLeft="76,14" />
-        <NodeLayout
-          Size="288,42"
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - Derived Col Err Output"
-          TopLeft="369.5,105.5" />
+          TopLeft="19,268" />
         <NodeLayout
           Size="130,42"
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Row Count"
-          TopLeft="79.5,193.5" />
+          TopLeft="19.5,187.5" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OData Source 1"
+          TopLeft="16,8" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - Derived Col Err Output"
+          TopLeft="219,111" />
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Row Count Output 1]"
-          TopLeft="143,235.5">
+          TopLeft="87.5,229.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37.5"
+              EndConnector="0,38.5"
               Start="0,0"
-              End="0,30">
+              End="0,31">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30" />
+                    End="0,31" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Output]"
-          TopLeft="149,56">
+          TopLeft="89,50">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7026,38 +8576,36 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Error output]"
-          TopLeft="220,37.25">
+          TopLeft="160,28.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="143.5,0"
+              EndConnector="59,0"
               Start="0,0"
-              End="136,0">
+              End="51.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="136,0" />
+                    End="51.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="40.48861328125,5,55.0227734375,11.2822265625"
+              BoundingBox="-1.76138671875,5,55.0227734375,11.2822265625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Derived Column Output]"
-          TopLeft="147.25,154">
+          TopLeft="87.25,148">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7074,33 +8622,253 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Derived Column Error Output]"
-          TopLeft="227,129.75">
+          TopLeft="167,129.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="142.5,0"
+              EndConnector="52,0"
               Start="0,0"
-              End="135,0">
+              End="44.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="135,0" />
+                    End="44.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="2.53861328125001,5,129.9227734375,11.609375"
+              BoundingBox="-42.71138671875,5,129.9227734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1"
+          TopLeft="627,71" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort"
+          TopLeft="462,76" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column"
+          TopLeft="495,213" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join"
+          TopLeft="505,142" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source"
+          TopLeft="617,6" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address"
+          TopLeft="437,6" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination"
+          TopLeft="480,351" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Row Count 1"
+          TopLeft="497.5,271.5" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Merge Join Output]"
+          TopLeft="571,184">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29"
+              Start="0,0"
+              End="0,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Flat File Source Output]"
+          TopLeft="683.5,48">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[ADO NET Source Output]"
+          TopLeft="513.25,48">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28"
+              Start="0,0"
+              End="0,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Sort Output]"
+          TopLeft="680.5,113">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-90.1666666666666,29"
+              Start="0,0"
+              End="-90.1666666666666,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.1884498480243" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.1884498480243"
+                    Point2="0,17.1884498480243"
+                    Point3="-4,17.1884498480243" />
+                  <mssgle:LineSegment
+                    End="-86.1666666666666,17.1884498480243" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-86.1666666666666,17.1884498480243"
+                    Point2="-90.1666666666666,17.1884498480243"
+                    Point3="-90.1666666666666,21.1884498480243" />
+                  <mssgle:LineSegment
+                    End="-90.1666666666666,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Sort Output1]"
+          TopLeft="511,118">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38.6666666666666,24"
+              Start="0,0"
+              End="38.6666666666666,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.2249240121581" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.2249240121581"
+                    Point2="0,14.2249240121581"
+                    Point3="4,14.2249240121581" />
+                  <mssgle:LineSegment
+                    End="34.6666666666666,14.2249240121581" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.6666666666666,14.2249240121581"
+                    Point2="38.6666666666666,14.2249240121581"
+                    Point3="38.6666666666666,18.2249240121581" />
+                  <mssgle:LineSegment
+                    End="38.6666666666666,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Derived Column Output1]"
+          TopLeft="649,234">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.5,58.5"
+              Start="0,0"
+              End="-5,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,54.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,54.5"
+                    Point2="22.5,58.5"
+                    Point3="18.5,58.5" />
+                  <mssgle:LineSegment
+                    End="-5,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Row Count Output 11]"
+          TopLeft="566.25,313.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.5"
+              Start="0,0"
+              End="0,30">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7118,45 +8886,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - OData Error Output">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination 1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - Derived Col Err Output">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Sequence Container\Data Flow Task - If Data exist">
     <LayoutInfo>
@@ -7165,30 +8894,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="193,47"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination - OData Error Output"
-          TopLeft="219,11" />
+          TopLeft="219,16" />
         <NodeLayout
           Size="154,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\Derived Column 1"
-          TopLeft="13,110" />
+          TopLeft="13,115" />
         <NodeLayout
           Size="143,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination 1"
-          TopLeft="19,272" />
+          TopLeft="19,277" />
         <NodeLayout
           Size="130,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\Row Count"
-          TopLeft="19.5,191.5" />
+          TopLeft="19.5,196.5" />
         <NodeLayout
           Size="144,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\OData Source 1"
-          TopLeft="16,12" />
+          TopLeft="16,17" />
         <NodeLayout
           Size="188,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination - Derived Col Err Output"
-          TopLeft="219,115" />
+          TopLeft="219,120" />
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Row Count Output 1]"
-          TopLeft="87.5,233.5">
+          TopLeft="87.5,238.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7210,7 +8939,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Output]"
-          TopLeft="89,54">
+          TopLeft="89,59">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7232,7 +8961,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Error output]"
-          TopLeft="160,33.75">
+          TopLeft="160,38.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7256,7 +8985,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Derived Column Output]"
-          TopLeft="87.25,152">
+          TopLeft="87.25,157">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7278,7 +9007,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Derived Column Error Output]"
-          TopLeft="167,133.5">
+          TopLeft="167,138.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7303,34 +9032,34 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="107,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\Sort 1"
-          TopLeft="632,80" />
+          TopLeft="632,85" />
         <NodeLayout
           Size="98,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\Sort"
-          TopLeft="467,85" />
+          TopLeft="467,90" />
         <NodeLayout
           Size="154,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\Derived Column"
-          TopLeft="500,222" />
+          TopLeft="500,227" />
         <NodeLayout
           Size="130,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\Merge Join"
-          TopLeft="510,151" />
+          TopLeft="510,156" />
         <NodeLayout
           Size="139,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\Flat File Source"
-          TopLeft="622,15" />
+          TopLeft="622,20" />
         <NodeLayout
           Size="157,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address"
-          TopLeft="442,12" />
+          TopLeft="442,20" />
         <NodeLayout
           Size="171,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination"
-          TopLeft="485,360" />
+          TopLeft="485,365" />
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Merge Join Output]"
-          TopLeft="576,193">
+          TopLeft="576,198">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7352,7 +9081,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Flat File Source Output]"
-          TopLeft="688.5,57">
+          TopLeft="688.5,62">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7374,18 +9103,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[ADO NET Source Output]"
-          TopLeft="518.25,54">
+          TopLeft="518.25,62">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,31"
+              EndConnector="0,28"
               Start="0,0"
-              End="0,23.5">
+              End="0,20.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.5" />
+                    End="0,20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7396,7 +9125,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Sort Output]"
-          TopLeft="685.5,122">
+          TopLeft="685.5,127">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7430,7 +9159,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Sort Output1]"
-          TopLeft="516,127">
+          TopLeft="516,132">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7465,10 +9194,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="139,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\Row Count 1"
-          TopLeft="502.5,280.5" />
+          TopLeft="502.5,285.5" />
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Derived Column Output1]"
-          TopLeft="654,243">
+          TopLeft="654,248">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7502,7 +9231,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Row Count Output 11]"
-          TopLeft="571.25,322.5">
+          TopLeft="571.25,327.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7582,5 +9311,65 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Sequence Container.PrecedenceConstraints[Constraint 3]">
     <ShowAnnotation>ConstraintOptions</ShowAnnotation>
   </PrecedenceConstraint>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - OData Error Output">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - Derived Col Err Output">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
