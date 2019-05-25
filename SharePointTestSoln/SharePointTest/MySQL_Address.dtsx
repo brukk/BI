@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MySQL_Address"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{2507F690-301A-47E2-97AE-2A3DD044E4F8}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{20C405FC-0636-4C6E-8C71-8A832C304B59}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -323,7 +323,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACo1OzZf6e3ABL6IbaBqbrLRmbkOg5hUbmUviNrP1RV8QAAAAAOgAAAAAIAACAAAACxglX1WG7u6fi2EwrcINp6uIqQw9/BHz4SjPqEKEJd5CAAAAA300nQ0p7fZtVc16YZEVgqMQjczJPTiMeuW5aX5hgGH0AAAAArgNMTW52ZVxMpGwLcW6ZYxd51Ofu4jfXYIbUODkLUwo0hICoh6SATNsYxMyDRhKyVVCMXEpN4NriiGhCXTdPH</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABj/ayirKEbwx3OZSY1wBjpaGc4rSyvusK2V46GugHWTQAAAAAOgAAAAAIAACAAAAC55S8djZxaE1ayPJC/Y8gbYKbl8YmbMy3/ora1Xl2PJiAAAACjlb1jqXx8r27Ur/10QiS/tu5/DLcKqFcSbTZ8jURzw0AAAAA8uZlDmjDfxdYFI8XbcObP2v2ZPWsj6g/yN/wet86JyqOoS5q4/M32KtUUphS5T6cI/SpUG4RvdoozTnmUhsSL</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -355,6 +355,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{3C3D89B4-944D-49EA-9BC7-B2CF471BD949}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1849,7 +1850,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="107,42"
           Id="Package\Data Flow Task\Sort 1"
@@ -1897,7 +1898,9 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1919,7 +1922,9 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1941,7 +1946,9 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1963,7 +1970,9 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1997,7 +2006,9 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2031,7 +2042,9 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

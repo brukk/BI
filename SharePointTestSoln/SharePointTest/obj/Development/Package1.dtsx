@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{F79911C0-EF8E-4047-872A-AB0E15B67F39}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{BC346CCF-FA96-455A-9BAF-07B044A73B1A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -460,6 +460,11 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       cachedLength="50"
                       cachedName="StateProvince"
                       lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[addressid]"
+                      cachedDataType="i4"
+                      cachedName="addressid"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[addressid]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -607,13 +612,35 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1252)(DT_WSTR,50)#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]}</property>
+                          name="Expression">(DT_STR,50,1252)(DT_WSTR,50)[REPLACENULL](#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]}," ")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,50,1252)(DT_WSTR,50)StateProvince</property>
+                          name="FriendlyExpression">(DT_STR,50,1252)(DT_WSTR,50)REPLACENULL(StateProvince," ")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column addressID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column addressID]"
+                      name="Derived Column addressID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[addressid]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">addressid</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1126,324 +1153,6 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Merge"
-              componentClassID="Microsoft.Merge"
-              contactInfo="Merge;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Combines rows from multiple sorted data flows into one sorted data flow. Unlike the Merge Join, all rows flow to the output. For example, combine two sorted lists of customers into a single sorted list. If sorting is not important, use the Union All transformation. "
-              name="Merge"
-              version="1">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1]"
-                  name="Merge Input 1">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[Derived Column City]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="Derived Column City"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column City]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column City]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[Derived Column StateProv]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Derived Column StateProv"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column StateProv]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column StateProv]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2]"
-                  name="Merge Input 2">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[Address1]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="Address1"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Address1]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Address1]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[Address2]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="Address2"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Address2]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Address2]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[PostalCode]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
-                      cachedName="PostalCode"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[PostalCode]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[PostalCode]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[city]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="city"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[city]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[city]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[country]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="country"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[country]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[country]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[StateProvince]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="StateProvince"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[StateProvince]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[StateProvince]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[Derived Column Add1]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="60"
-                      cachedName="Derived Column Add1"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column Add1]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column Add1]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[Derived Column Add2]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="60"
-                      cachedName="Derived Column Add2"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column Add2]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column Add2]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[Derived Column PostalCode]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="Derived Column PostalCode"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column PostalCode]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column PostalCode]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[Derived Column City]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="Derived Column City"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column City]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column City]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[Derived Column Country]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Derived Column Country"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column Country]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column Country]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[Derived Column StateProv]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Derived Column StateProv"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column StateProv]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column StateProv]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1]"
-                  name="Merge Output 1">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Address1]"
-                      dataType="wstr"
-                      length="150"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Address1]"
-                      name="Address1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Address2]"
-                      dataType="wstr"
-                      length="150"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Address2]"
-                      name="Address2" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[PostalCode]"
-                      dataType="wstr"
-                      length="30"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[PostalCode]"
-                      name="PostalCode" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[city]"
-                      dataType="wstr"
-                      length="150"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[city]"
-                      name="city" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[country]"
-                      dataType="wstr"
-                      length="150"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[country]"
-                      name="country" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[StateProvince]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[StateProvince]"
-                      name="StateProvince" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column Add1]"
-                      codePage="1252"
-                      dataType="str"
-                      length="60"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column Add1]"
-                      name="Derived Column Add1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column Add2]"
-                      codePage="1252"
-                      dataType="str"
-                      length="60"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column Add2]"
-                      name="Derived Column Add2" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column PostalCode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column PostalCode]"
-                      name="Derived Column PostalCode" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column City]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column City]"
-                      name="Derived Column City" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column Country]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column Country]"
-                      name="Derived Column Country" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column StateProv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Derived Column StateProv]"
-                      name="Derived Column StateProv" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Data Flow Task\Merge Join"
               componentClassID="Microsoft.MergeJoin"
               contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -1506,6 +1215,11 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       cachedLength="150"
                       cachedName="country"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[country]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[addressid]"
+                      cachedDataType="i4"
+                      cachedName="addressid"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[addressid]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1623,6 +1337,19 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[StateProvince]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[addressid]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[addressid]"
+                      name="addressid">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[addressid]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1833,493 +1560,11 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output"
+              refId="Package\Data Flow Task\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination - Derived Col Err Output"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[ErrorStgAddressT]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Connections[OleDbConnection]"
-                  connectionManagerID="{10E9ACE7-54CD-4C6E-BC76-5C6044E97B9F}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[100.36.220.45,53000.SSIS_Log.baname]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].Columns[AddressID]"
-                      cachedDataType="r8"
-                      cachedName="AddressID"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[AddressID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].Columns[AddressLine1]"
-                      cachedDataType="nText"
-                      cachedName="AddressLine1"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[AddressLine1]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].Columns[AddressLine2]"
-                      cachedDataType="nText"
-                      cachedName="AddressLine2"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[AddressLine2]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].Columns[City]"
-                      cachedDataType="nText"
-                      cachedName="City"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[City]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].Columns[StateProvince]"
-                      cachedDataType="nText"
-                      cachedName="StateProvince"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[StateProvince]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[StateProvince]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].Columns[CountryRegion]"
-                      cachedDataType="nText"
-                      cachedName="CountryRegion"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegion]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[CountryRegion]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].Columns[PostalCode]"
-                      cachedDataType="nText"
-                      cachedName="PostalCode"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[PostalCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
-                      dataType="r8"
-                      name="AddressID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
-                      dataType="nText"
-                      name="AddressLine1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
-                      dataType="nText"
-                      name="AddressLine2" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                      dataType="nText"
-                      name="City" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[StateProvince]"
-                      dataType="nText"
-                      name="StateProvince" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegion]"
-                      dataType="nText"
-                      name="CountryRegion" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
-                      dataType="nText"
-                      name="PostalCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[ContentTypeID]"
-                      dataType="nText"
-                      name="ContentTypeID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
-                      dataType="nText"
-                      name="Title" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[ComplianceAssetId]"
-                      dataType="nText"
-                      name="ComplianceAssetId" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
-                      dataType="i4"
-                      name="Id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[ContentType]"
-                      dataType="nText"
-                      name="ContentType" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[Modified]"
-                      dataType="dbTimeStamp"
-                      name="Modified" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
-                      dataType="dbTimeStamp"
-                      name="Created" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[CreatedById]"
-                      dataType="i4"
-                      name="CreatedById" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedById]"
-                      dataType="i4"
-                      name="ModifiedById" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[Owshiddenversion]"
-                      dataType="i4"
-                      name="Owshiddenversion" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[Version]"
-                      dataType="nText"
-                      name="Version" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[Path]"
-                      dataType="nText"
-                      name="Path" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\OLE DB Destination - OData Error Output"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination - OData Error Output"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[ErrorStgAddressT]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Connections[OleDbConnection]"
-                  connectionManagerID="{10E9ACE7-54CD-4C6E-BC76-5C6044E97B9F}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[100.36.220.45,53000.SSIS_Log.baname]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ErrorColumn]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].Columns[AddressID]"
-                      cachedDataType="r8"
-                      cachedName="AddressID"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[AddressID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].Columns[AddressLine1]"
-                      cachedDataType="nText"
-                      cachedName="AddressLine1"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[AddressLine1]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].Columns[AddressLine2]"
-                      cachedDataType="nText"
-                      cachedName="AddressLine2"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[AddressLine2]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].Columns[City]"
-                      cachedDataType="nText"
-                      cachedName="City"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[City]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].Columns[StateProvince]"
-                      cachedDataType="nText"
-                      cachedName="StateProvince"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[StateProvince]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[StateProvince]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].Columns[CountryRegion]"
-                      cachedDataType="nText"
-                      cachedName="CountryRegion"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegion]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[CountryRegion]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].Columns[PostalCode]"
-                      cachedDataType="nText"
-                      cachedName="PostalCode"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
-                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[PostalCode]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
-                      dataType="r8"
-                      name="AddressID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
-                      dataType="nText"
-                      name="AddressLine1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
-                      dataType="nText"
-                      name="AddressLine2" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                      dataType="nText"
-                      name="City" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[StateProvince]"
-                      dataType="nText"
-                      name="StateProvince" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegion]"
-                      dataType="nText"
-                      name="CountryRegion" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
-                      dataType="nText"
-                      name="PostalCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ContentTypeID]"
-                      dataType="nText"
-                      name="ContentTypeID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
-                      dataType="nText"
-                      name="Title" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ComplianceAssetId]"
-                      dataType="nText"
-                      name="ComplianceAssetId" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
-                      dataType="i4"
-                      name="Id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ContentType]"
-                      dataType="nText"
-                      name="ContentType" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Modified]"
-                      dataType="dbTimeStamp"
-                      name="Modified" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
-                      dataType="dbTimeStamp"
-                      name="Created" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[CreatedById]"
-                      dataType="i4"
-                      name="CreatedById" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedById]"
-                      dataType="i4"
-                      name="ModifiedById" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Owshiddenversion]"
-                      dataType="i4"
-                      name="Owshiddenversion" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Version]"
-                      dataType="nText"
-                      name="Version" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Path]"
-                      dataType="nText"
-                      name="Path" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\OLE DB Destination 1"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination 1"
+              name="OLE DB Destination"
               usesDispositions="true"
               version="4">
               <properties>
@@ -2372,7 +1617,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination 1.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="{2D1F8954-21C8-46E9-AE6F-76CA9BDCCBB7}:external"
                   connectionManagerRefId="Project.ConnectionManagers[100.36.220.45,53000.MPSTGT.baname]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2380,105 +1625,105 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Derived Column AddressLn1]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column AddressId]"
+                      cachedDataType="i4"
+                      cachedName="Derived Column AddressId"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column AddressLn1]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="60"
                       cachedName="Derived Column AddressLn1"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
-                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column AddressLn1]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressLn1]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Derived Column AddressLn2]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column AddressLn2]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="60"
                       cachedName="Derived Column AddressLn2"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
-                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column AddressLn2]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressLn2]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Derived Column City]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column City]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="Derived Column City"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column City]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column City]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Derived Column StateProv]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column StateProv]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Derived Column StateProv"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[StateProvince]"
-                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column StateProv]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateProvince]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column StateProv]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Derived Column CountryReg]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column CountryReg]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Derived Column CountryReg"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegion]"
-                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column CountryReg]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegion]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column CountryReg]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Derived Column postalCode]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column postalCode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="15"
                       cachedName="Derived Column postalCode"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
-                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column postalCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Derived Column AddressId]"
-                      cachedDataType="i4"
-                      cachedName="Derived Column AddressId"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
-                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column AddressId]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column postalCode]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressID]"
                       dataType="i4"
                       name="AddressID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
                       codePage="1252"
                       dataType="str"
                       length="60"
                       name="AddressLine1" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
                       codePage="1252"
                       dataType="str"
                       length="60"
                       name="AddressLine2" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
                       codePage="1252"
                       dataType="str"
                       length="30"
                       name="City" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[StateProvince]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateProvince]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="StateProvince" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegion]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegion]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="CountryRegion" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
                       codePage="1252"
                       dataType="str"
                       length="15"
@@ -2488,54 +1733,25 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Row Count"
-              componentClassID="Microsoft.RowCount"
-              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
-              name="Row Count">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable to hold the row count."
-                  name="VariableName">User::VarRowCount</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]"
-                  hasSideEffects="true"
-                  name="Row Count Input 1">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Row Count.Outputs[Row Count Output 1]"
-                  name="Row Count Output 1"
-                  synchronousInputId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]">
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -2867,12 +2083,12 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[city]"
+                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[City]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[city]"
-                      name="city">
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[City]"
+                      name="City">
                       <properties>
                         <property
                           containsID="true"
@@ -2902,142 +2118,110 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Sort 2"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort 2"
+              refId="Package\Data Flow Task\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
               version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input]"
-                  name="Sort Input">
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[AddressID]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[AddressID]"
                       cachedDataType="r8"
                       cachedName="AddressID"
                       lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[AddressID]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[AddressID]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[AddressLine1]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[AddressLine1]"
                       cachedDataType="nText"
                       cachedName="AddressLine1"
                       lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[AddressLine1]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[AddressLine1]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[AddressLine2]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[AddressLine2]"
                       cachedDataType="nText"
                       cachedName="AddressLine2"
                       lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[AddressLine2]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[AddressLine2]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[City]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[City]"
                       cachedDataType="nText"
                       cachedName="City"
                       lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[City]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[City]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[StateProvince]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[StateProvince]"
                       cachedDataType="nText"
                       cachedName="StateProvince"
                       lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[StateProvince]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[StateProvince]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[CountryRegion]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[CountryRegion]"
                       cachedDataType="nText"
                       cachedName="CountryRegion"
                       lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[CountryRegion]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[CountryRegion]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[PostalCode]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[PostalCode]"
                       cachedDataType="nText"
                       cachedName="PostalCode"
                       lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[PostalCode]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[PostalCode]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[Derived Column AddressLn1]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Derived Column AddressLn1]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="60"
@@ -3045,17 +2229,14 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column AddressLn1]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressLn1]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[Derived Column AddressLn2]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Derived Column AddressLn2]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="60"
@@ -3063,17 +2244,14 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column AddressLn2]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressLn2]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[Derived Column City]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Derived Column City]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -3081,17 +2259,14 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column City]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column City]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[Derived Column StateProv]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Derived Column StateProv]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -3099,17 +2274,14 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column StateProv]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column StateProv]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[Derived Column CountryReg]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Derived Column CountryReg]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -3117,17 +2289,14 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column CountryReg]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column CountryReg]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[Derived Column postalCode]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Derived Column postalCode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="15"
@@ -3135,424 +2304,35 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column postalCode]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column postalCode]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 2.Inputs[Sort Input].Columns[Derived Column AddressId]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Derived Column AddressId]"
                       cachedDataType="i4"
                       cachedName="Derived Column AddressId"
                       lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column AddressId]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressId]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[AddressID]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[AddressID]"
-                      name="AddressID">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[AddressID]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[AddressLine1]"
-                      dataType="nText"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[AddressLine1]"
-                      name="AddressLine1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[AddressLine1]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[AddressLine2]"
-                      dataType="nText"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[AddressLine2]"
-                      name="AddressLine2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[AddressLine2]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[City]"
-                      dataType="nText"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[City]"
-                      name="City">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[City]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[StateProvince]"
-                      dataType="nText"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[StateProvince]"
-                      name="StateProvince">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[StateProvince]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[CountryRegion]"
-                      dataType="nText"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[CountryRegion]"
-                      name="CountryRegion">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[CountryRegion]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[PostalCode]"
-                      dataType="nText"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[PostalCode]"
-                      name="PostalCode">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[PostalCode]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column AddressLn1]"
-                      codePage="1252"
-                      dataType="str"
-                      length="60"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column AddressLn1]"
-                      name="Derived Column AddressLn1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column AddressLn1]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column AddressLn2]"
-                      codePage="1252"
-                      dataType="str"
-                      length="60"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column AddressLn2]"
-                      name="Derived Column AddressLn2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column AddressLn2]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column City]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column City]"
-                      name="Derived Column City">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column City]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column StateProv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column StateProv]"
-                      name="Derived Column StateProv">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column StateProv]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column CountryReg]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column CountryReg]"
-                      name="Derived Column CountryReg">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column CountryReg]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column postalCode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column postalCode]"
-                      name="Derived Column postalCode">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column postalCode]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column AddressId]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Derived Column AddressId]"
-                      name="Derived Column AddressId"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column AddressId]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Sort 3"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort 3"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
                 <input
-                  refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input]"
-                  name="Sort Input">
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[Address1]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="Address1"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Address1]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[Address2]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="Address2"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Address2]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[PostalCode]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
-                      cachedName="PostalCode"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[PostalCode]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[city]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="city"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[city]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[country]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="country"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[country]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[StateProvince]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="StateProvince"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[Derived Column Add1]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="60"
-                      cachedName="Derived Column Add1"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add1]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[Derived Column Add2]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="60"
-                      cachedName="Derived Column Add2"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add2]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[Derived Column PostalCode]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="Derived Column PostalCode"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column PostalCode]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[Derived Column City]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Derived Column City]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
@@ -3560,35 +2340,14 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column City]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column City]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[Derived Column Country]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Derived Column Country"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Country]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 3.Inputs[Sort Input].Columns[Derived Column StateProv]"
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Derived Column StateProv]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -3596,201 +2355,183 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column StateProv]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column StateProv]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Derived Column Add1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="Derived Column Add1"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add1]">
+                      <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressLn1]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Derived Column Add2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="Derived Column Add2"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add2]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressLn2]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Derived Column Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Derived Column Country"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Country]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column CountryReg]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Derived Column PostalCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Derived Column PostalCode"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column PostalCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column postalCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[addressid]"
+                      cachedDataType="i4"
+                      cachedName="addressid"
+                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[addressid]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressId]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
+                  refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Address1]"
-                      dataType="wstr"
-                      length="150"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Address1]"
-                      name="Address1"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Address1]}</property>
-                      </properties>
-                    </outputColumn>
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[AddressID]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[AddressID]"
+                      name="AddressID" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Address2]"
-                      dataType="wstr"
-                      length="150"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Address2]"
-                      name="Address2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Address2]}</property>
-                      </properties>
-                    </outputColumn>
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[AddressLine1]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[AddressLine1]"
+                      name="AddressLine1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[PostalCode]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[AddressLine2]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[AddressLine2]"
+                      name="AddressLine2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[City]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[StateProvince]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[StateProvince]"
+                      name="StateProvince" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[CountryRegion]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[CountryRegion]"
+                      name="CountryRegion" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[PostalCode]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[PostalCode]"
+                      name="PostalCode" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressLn1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressLn1]"
+                      name="Derived Column AddressLn1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressLn2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressLn2]"
+                      name="Derived Column AddressLn2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column City]"
+                      codePage="1252"
+                      dataType="str"
                       length="30"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[PostalCode]"
-                      name="PostalCode">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[PostalCode]}</property>
-                      </properties>
-                    </outputColumn>
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column City]"
+                      name="Derived Column City" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[city]"
-                      dataType="wstr"
-                      length="150"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[city]"
-                      name="city">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[city]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[country]"
-                      dataType="wstr"
-                      length="150"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[country]"
-                      name="country">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[country]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[StateProvince]"
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column StateProv]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[StateProvince]"
-                      name="StateProvince">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]}</property>
-                      </properties>
-                    </outputColumn>
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column StateProv]"
+                      name="Derived Column StateProv" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column Add1]"
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column CountryReg]"
                       codePage="1252"
                       dataType="str"
-                      length="60"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column Add1]"
-                      name="Derived Column Add1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add1]}</property>
-                      </properties>
-                    </outputColumn>
+                      length="50"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column CountryReg]"
+                      name="Derived Column CountryReg" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column Add2]"
-                      codePage="1252"
-                      dataType="str"
-                      length="60"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column Add2]"
-                      name="Derived Column Add2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Add2]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column PostalCode]"
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column postalCode]"
                       codePage="1252"
                       dataType="str"
                       length="15"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column PostalCode]"
-                      name="Derived Column PostalCode">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column PostalCode]}</property>
-                      </properties>
-                    </outputColumn>
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column postalCode]"
+                      name="Derived Column postalCode" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column City]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column City]"
-                      name="Derived Column City">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column City]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column Country]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column Country]"
-                      name="Derived Column Country">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Country]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column StateProv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Derived Column StateProv]"
-                      name="Derived Column StateProv">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column StateProv]}</property>
-                      </properties>
-                    </outputColumn>
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Derived Column AddressId]"
+                      name="Derived Column AddressId" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -3804,25 +2545,15 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               name="ADO NET Source Output"
               startId="Package\Data Flow Task\ADO NET Source- Address.Outputs[ADO NET Source Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Derived Column Error Output]"
-              endId="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output.Inputs[OLE DB Destination Input]"
-              name="Derived Column Error Output"
-              startId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Error Output]" />
-            <path
               refId="Package\Data Flow Task.Paths[Derived Column Output]"
-              endId="Package\Data Flow Task\Sort 3.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output1]"
-              endId="Package\Data Flow Task\Sort 2.Inputs[Sort Input]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
               name="Derived Column Output"
               startId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Error output]"
-              endId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input]"
-              name="Error output"
-              startId="Package\Data Flow Task\OData Source 1.Outputs[Error output]" />
+              refId="Package\Data Flow Task.Paths[Derived Column Output1]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
               endId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
@@ -3839,11 +2570,6 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               name="Output"
               startId="Package\Data Flow Task\OData Source 1.Outputs[Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Row Count Output 1]"
-              endId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
-              name="Row Count Output 1"
-              startId="Package\Data Flow Task\Row Count.Outputs[Row Count Output 1]" />
-            <path
               refId="Package\Data Flow Task.Paths[Sort Output]"
               endId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
@@ -3854,15 +2580,10 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               name="Sort Output"
               startId="Package\Data Flow Task\Sort.Outputs[Sort Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Sort Output2]"
-              endId="Package\Data Flow Task\Merge.Inputs[Merge Input 2]"
-              name="Sort Output"
-              startId="Package\Data Flow Task\Sort 3.Outputs[Sort Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Sort Output3]"
-              endId="Package\Data Flow Task\Merge.Inputs[Merge Input 1]"
-              name="Sort Output"
-              startId="Package\Data Flow Task\Sort 2.Outputs[Sort Output]" />
+              refId="Package\Data Flow Task.Paths[Union All Output 1]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Union All Output 1"
+              startId="Package\Data Flow Task\Union All.Outputs[Union All Output 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -3891,219 +2612,65 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="193,47"
-          Id="Package\Data Flow Task\OLE DB Destination - OData Error Output"
-          TopLeft="238,47" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Data Flow Task\Derived Column 1"
-          TopLeft="50,228" />
-        <NodeLayout
-          Size="143,42"
-          Id="Package\Data Flow Task\OLE DB Destination 1"
-          TopLeft="294,380" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Data Flow Task\Row Count"
-          TopLeft="297.5,304.5" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\Data Flow Task\OData Source 1"
-          TopLeft="35,48" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output"
-          TopLeft="238,151" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Data Flow Task\Sort 1"
-          TopLeft="651,116" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="486,121" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="526,271" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Data Flow Task\Merge Join"
-          TopLeft="531,197" />
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="139,42"
           Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="641,51" />
+          TopLeft="566,10" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="411,80" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Data Flow Task\Sort 1"
+          TopLeft="576,75" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Data Flow Task\Merge Join"
+          TopLeft="456,156" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Data Flow Task\Derived Column 1"
+          TopLeft="32,114" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="451,273" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Data Flow Task\OData Source 1"
+          TopLeft="33,11" />
         <NodeLayout
           Size="157,42"
           Id="Package\Data Flow Task\ADO NET Source- Address"
-          TopLeft="461,48" />
+          TopLeft="386,7" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Row Count Output 1]"
-          TopLeft="364,346.5">
+          Id="Package\Data Flow Task.Paths[Sort Output1]"
+          TopLeft="460,122">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33.5"
+              EndConnector="40.6666666666666,34"
               Start="0,0"
-              End="0,26">
+              End="40.6666666666666,26.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,5,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output]"
-          TopLeft="104.833333333333,90">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,138"
-              Start="0,0"
-              End="0,130.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,130.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Error output]"
-          TopLeft="179,69.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="59,0"
-              Start="0,0"
-              End="51.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="51.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-1.76138671875,5,55.0227734375,11.2822265625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Error Output]"
-          TopLeft="151.333333333333,228">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="180.666666666667,-35"
-              Start="0,0"
-              End="180.666666666667,-27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-10.2159383033419" />
+                    End="0,16.1519756838906" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-10.2159383033419"
-                    Point2="0,-14.2159383033419"
-                    Point3="4,-14.2159383033419" />
+                    Point1="0,16.1519756838906"
+                    Point2="0,20.1519756838906"
+                    Point3="4,20.1519756838906" />
                   <mssgle:LineSegment
-                    End="176.666666666667,-14.2159383033419" />
+                    End="36.6666666666666,20.1519756838906" />
                   <mssgle:CubicBezierSegment
-                    Point1="176.666666666667,-14.2159383033419"
-                    Point2="180.666666666667,-14.2159383033419"
-                    Point3="180.666666666667,-18.2159383033419" />
+                    Point1="36.6666666666666,20.1519756838906"
+                    Point2="40.6666666666666,20.1519756838906"
+                    Point3="40.6666666666666,24.1519756838906" />
                   <mssgle:LineSegment
-                    End="180.666666666667,-27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="25.3719466145834,-9.21593830334191,129.9227734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Merge Join Output]"
-          TopLeft="599.5,239">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="707.5,93">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,23"
-              Start="0,0"
-              End="0,15.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[ADO NET Source Output]"
-          TopLeft="537.25,90">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31"
-              Start="0,0"
-              End="0,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
+                    End="40.6666666666666,26.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4114,7 +2681,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="704.5,158">
+          TopLeft="629.5,117">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4147,31 +2714,97 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output1]"
-          TopLeft="535,163">
+          Id="Package\Data Flow Task.Paths[Output]"
+          TopLeft="107,53">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="40.6666666666666,34"
+              EndConnector="0,61"
               Start="0,0"
-              End="40.6666666666666,26.5">
+              End="0,53.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.1519756838906" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.1519756838906"
-                    Point2="0,20.1519756838906"
-                    Point3="4,20.1519756838906" />
+                    End="0,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Merge Join Output]"
+          TopLeft="521,198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="31.3333333333334,75"
+              Start="0,0"
+              End="31.3333333333334,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="36.6666666666666,20.1519756838906" />
+                    End="0,40.5372750642674" />
                   <mssgle:CubicBezierSegment
-                    Point1="36.6666666666666,20.1519756838906"
-                    Point2="40.6666666666666,20.1519756838906"
-                    Point3="40.6666666666666,24.1519756838906" />
+                    Point1="0,40.5372750642674"
+                    Point2="0,44.5372750642674"
+                    Point3="4,44.5372750642674" />
                   <mssgle:LineSegment
-                    End="40.6666666666666,26.5" />
+                    End="27.3333333333334,44.5372750642674" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.3333333333334,44.5372750642674"
+                    Point2="31.3333333333334,44.5372750642674"
+                    Point3="31.3333333333334,48.5372750642674" />
+                  <mssgle:LineSegment
+                    End="31.3333333333334,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="632.5,52">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[ADO NET Source Output]"
+          TopLeft="462.25,49">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4181,31 +2814,23 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="107,42"
-          Id="Package\Data Flow Task\Sort 2"
-          TopLeft="65.3966789667898,315.5" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Data Flow Task\Sort 3"
-          TopLeft="553.39667896679,350.5" />
-        <NodeLayout
-          Size="108,42"
-          Id="Package\Data Flow Task\Merge"
-          TopLeft="306.39667896679,236.282082324455" />
+          Size="121,42"
+          Id="Package\Data Flow Task\Union All"
+          TopLeft="233.5,115.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="604.948339483395,313">
+          TopLeft="186,135.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37.5"
+              EndConnector="47.5,0"
               Start="0,0"
-              End="0,30">
+              End="40,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30" />
+                    End="40,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4216,30 +2841,30 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output1]"
-          TopLeft="127,270">
+          TopLeft="503.666666666667,273">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-8.10332103321025,45.5"
+              EndConnector="-190.833333333333,-115.5"
               Start="0,0"
-              End="-8.10332103321025,38">
+              End="-190.833333333333,-108">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.75" />
+                    End="0,-53.5513188073394" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.75"
-                    Point2="0,22.75"
-                    Point3="-4,22.75" />
+                    Point1="0,-53.5513188073394"
+                    Point2="0,-57.5513188073394"
+                    Point3="-4,-57.5513188073394" />
                   <mssgle:LineSegment
-                    End="-4.10332103321025,22.75" />
+                    End="-186.833333333333,-57.5513188073394" />
                   <mssgle:CubicBezierSegment
-                    Point1="-4.10332103321025,22.75"
-                    Point2="-8.10332103321025,22.75"
-                    Point3="-8.10332103321025,26.75" />
+                    Point1="-186.833333333333,-57.5513188073394"
+                    Point2="-190.833333333333,-57.5513188073394"
+                    Point3="-190.833333333333,-61.5513188073394" />
                   <mssgle:LineSegment
-                    End="-8.10332103321025,38" />
+                    End="-190.833333333333,-108" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4248,66 +2873,24 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="192.5,273.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output2]"
-          TopLeft="590.39667896679,350.5">
+          Id="Package\Data Flow Task.Paths[Union All Output 1]"
+          TopLeft="276.583333333333,157.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-230,-72.2179176755448"
+              EndConnector="0,116"
               Start="0,0"
-              End="-230,-64.7179176755448">
+              End="0,108.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-25.5255575027089" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-25.5255575027089"
-                    Point2="0,-29.5255575027089"
-                    Point3="-4,-29.5255575027089" />
-                  <mssgle:LineSegment
-                    End="-226,-29.5255575027089" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-226,-29.5255575027089"
-                    Point2="-230,-29.5255575027089"
-                    Point3="-230,-33.5255575027089" />
-                  <mssgle:LineSegment
-                    End="-230,-64.7179176755448" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output3]"
-          TopLeft="135.39667896679,315.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="208.333333333333,-37.2179176755448"
-              Start="0,0"
-              End="208.333333333333,-29.7179176755448">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-14.6120639535471" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-14.6120639535471"
-                    Point2="0,-18.6120639535471"
-                    Point3="4,-18.6120639535471" />
-                  <mssgle:LineSegment
-                    End="204.333333333333,-18.6120639535471" />
-                  <mssgle:CubicBezierSegment
-                    Point1="204.333333333333,-18.6120639535471"
-                    Point2="208.333333333333,-18.6120639535471"
-                    Point3="208.333333333333,-22.6120639535471" />
-                  <mssgle:LineSegment
-                    End="208.333333333333,-29.7179176755448" />
+                    End="0,108.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4324,6 +2907,19 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

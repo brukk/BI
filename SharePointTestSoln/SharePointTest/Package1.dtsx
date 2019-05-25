@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{4C6C8028-0A48-4DEF-949D-4212D237B63F}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{BC346CCF-FA96-455A-9BAF-07B044A73B1A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -612,13 +612,13 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1252)(DT_WSTR,50)#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]}</property>
+                          name="Expression">(DT_STR,50,1252)(DT_WSTR,50)[REPLACENULL](#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]}," ")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,50,1252)(DT_WSTR,50)StateProvince</property>
+                          name="FriendlyExpression">(DT_STR,50,1252)(DT_WSTR,50)REPLACENULL(StateProvince," ")</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
