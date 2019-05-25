@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/25/2019 5:16:44 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{4D81AFFF-6C51-4E51-AD56-D8204613F522}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{A92A6CFF-6FF0-4E5A-88D6-0C344DCE4B82}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -10535,7 +10535,33 @@ where [refTable].[Name] = ?</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{583484c6-efe6-401e-a54b-76864e5dcd81}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2D1F8954-21C8-46E9-AE6F-76CA9BDCCBB7}"
+          SQLTask:SqlStatementSource="DELETE FROM [MPSTGT].[dbo].[stgProduct]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{9A555B9F-F553-4D77-8E50-9F8EE19279FA}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -10547,11 +10573,49 @@ where [refTable].[Name] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="151,42"
           Id="Package\Data Flow Task"
-          TopLeft="5.5,5.5" />
+          TopLeft="321.5,62.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="54.5,49.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="217.5,70.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="104,13"
+              Start="0,0"
+              End="96.5,13">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="48,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="48,0"
+                    Point2="52,0"
+                    Point3="52,4" />
+                  <mssgle:LineSegment
+                    End="52,9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="52,9"
+                    Point2="52,13"
+                    Point3="56,13" />
+                  <mssgle:LineSegment
+                    End="96.5,13" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -10563,58 +10627,58 @@ where [refTable].[Name] = ?</property>
         <NodeLayout
           Size="113,42"
           Id="Package\Data Flow Task\Lookup"
-          TopLeft="334.5,195" />
+          TopLeft="327.5,139" />
         <NodeLayout
           Size="152,42"
           Id="Package\Data Flow Task\Fuzzy Lookup 1"
-          TopLeft="278.5,265" />
+          TopLeft="271.5,209" />
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task\DC-Conditional split"
-          TopLeft="60,199.5" />
+          TopLeft="53,143.5" />
         <NodeLayout
           Size="132,42"
           Id="Package\Data Flow Task\DC-Product"
-          TopLeft="327.5,126" />
+          TopLeft="320.5,70" />
         <NodeLayout
           Size="98,42"
           Id="Package\Data Flow Task\Sort"
-          TopLeft="294,339.5" />
+          TopLeft="287,283.5" />
         <NodeLayout
           Size="108,42"
           Id="Package\Data Flow Task\Merge"
-          TopLeft="349,404.5" />
+          TopLeft="342,348.5" />
         <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task\Conditional Split"
-          TopLeft="72.5,267" />
+          TopLeft="65.5,211" />
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="497,393.5" />
+          TopLeft="490,337.5" />
         <NodeLayout
           Size="143,42"
           Id="Package\Data Flow Task\Fuzzy Lookup"
-          TopLeft="77.5,338" />
+          TopLeft="70.5,282" />
         <NodeLayout
           Size="107,42"
           Id="Package\Data Flow Task\Sort 1"
-          TopLeft="94.5,406.288461538462" />
+          TopLeft="87.5,350.288461538462" />
         <NodeLayout
           Size="117,42"
           Id="Package\Data Flow Task\Merge 1"
-          TopLeft="477,265.5" />
+          TopLeft="470,209.5" />
         <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\ADO NET Source"
-          TopLeft="313.5,60" />
+          TopLeft="306.5,4" />
         <NodeLayout
           Size="107,42"
           Id="Package\Data Flow Task\Sort 2"
-          TopLeft="533.5,188" />
+          TopLeft="526.5,132" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="343,381.5">
+          TopLeft="336,325.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10648,7 +10712,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output1]"
-          TopLeft="201.5,426.394230769231">
+          TopLeft="194.5,370.394230769231">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10670,7 +10734,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output2]"
-          TopLeft="587,230">
+          TopLeft="580,174">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10704,7 +10768,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Merge Output 1]"
-          TopLeft="419.666666666667,404.5">
+          TopLeft="412.666666666667,348.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10738,7 +10802,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="334.5,218.25">
+          TopLeft="327.5,162.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10762,7 +10826,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="447.5,212.5">
+          TopLeft="440.5,156.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10786,7 +10850,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Fuzzy Lookup Output]"
-          TopLeft="148.5,380">
+          TopLeft="141.5,324">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10808,7 +10872,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Fuzzy Lookup Output1]"
-          TopLeft="354.5,307">
+          TopLeft="347.5,251">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10842,7 +10906,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="392.25,168">
+          TopLeft="385.25,112">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10864,7 +10928,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output1]"
-          TopLeft="147.75,241.5">
+          TopLeft="140.75,185.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10886,7 +10950,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Conditional Split Default Output]"
-          TopLeft="149.5,309">
+          TopLeft="142.5,253">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10910,7 +10974,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Case 1]"
-          TopLeft="227.5,287">
+          TopLeft="220.5,231">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10934,7 +10998,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[ADO NET Source Output]"
-          TopLeft="393,102">
+          TopLeft="386,46">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10956,7 +11020,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Merge Output 11]"
-          TopLeft="553.666666666667,307.5">
+          TopLeft="546.666666666667,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
