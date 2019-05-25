@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-50T1H82M"
   DTS:CreatorName="LAPTOP-50T1H82M\Biruk"
-  DTS:DTSID="{CCAE188B-C687-4416-867F-55D45E47F7F1}"
+  DTS:DTSID="{F33E2156-5AED-4DBB-890C-ACDD11E92A78}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
-  DTS:ObjectName="MySQL_Payment"
+  DTS:ObjectName="Pkg_stgPayment"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{67237EB0-6431-4392-8C21-F818A03EED77}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{B0FD3D8B-DB8B-44BE-AC2B-371690AFB85B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
