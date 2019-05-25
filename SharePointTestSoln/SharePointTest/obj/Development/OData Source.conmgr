@@ -13,7 +13,7 @@
       MicrosoftOnlineServicesAuth="True"
       AuthType="MicrosoftOnlineService">
       <Password
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAACAAAAAAAQZgAAAAEAACAAAACWNYYOta/EIlXpnDlMDf/H+a88/zNiimR8hv5Df5EPUgAAAAAOgAAAAAIAACAAAAC3yZRW+r+/JrtebUjrpg8hqIIovl5Zu8ml1DwavXp3zUAAAADcCkOnYS4vHMX2rUU9NontiRNIY0N+TQd5eS15r90FiWycvL6zOFpEaMF2USqvD63eeZAax/1aGB/WVQkskHd5QAAAAJp7TVCLhT9PLI8dQKXqOySlAmhhu6rUKzcFdPHR7Y3TfnzUiloogn6cq2F5h3fDRH6T3Z10XeHRvDxXHDHIQWI=</Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAACAAAAAAAQZgAAAAEAACAAAAAxt5dyWtlhBQ2Yc2dskYxA3cjDLTya2vMwRpQ+85VK2gAAAAAOgAAAAAIAACAAAAAr+BMA5vaw2ezkfke5w5L+HAZmJvALlM9IkhvtlbSnM0AAAAApu2grAXA2FbRsFpQOyc4msW4YGB1yobI9gcReq+KAw4JTgU0uPc31cyw0noFuzyBJ5hxk0nsiOkJJRuGkyiHSQAAAAOM/RWgFKEPGOsQp4qTOytxt/D6joZtDeoVBqPrn2+IdUzjxBCp1HqssUkBrbIatNNfBdDMqYXMJrMWAJ+4/rao=</Password>
     </ODataConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
