@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_stgAddress"
   DTS:PackageType="5"
-  DTS:VersionBuild="216"
-  DTS:VersionGUID="{BA3CC2EC-E503-4884-9EED-FCB38765478C}">
+  DTS:VersionBuild="217"
+  DTS:VersionGUID="{59D0A9B8-AC97-4A1E-AE13-2897859D3646}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -195,7 +195,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABfoVFTtw2d3gpKeu2+Gq3LmIXQm8WghA/KsxY6yF/6iQAAAAAOgAAAAAIAACAAAAAQ4zVQxlS3CPNJfCwmUj0o40U7B6SSBXmsNy7AeV/7XSAAAACqQTSquimNrzCwZB3pbO7HygF6+YkgCw8CynkPstcFWUAAAABuEWSfCiNztXibobHMA9ckoWeHnzEm9NlcG4wuWqLbXeGH6ifmJKsBkvow+mUYD7xGeNElFOY/NN0wEtqUUyXO</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACBt/m7XYyUPMTgQqhO+1V/jbc/c3FIx0loj5XSm086YwAAAAAOgAAAAAIAACAAAACHgyL9g3LmJZIZgCtMhxZ+qenPTPOMJ4+qQiLsjx6zXiAAAAA52p4vfxMm6r/4Tqk0ij2vGpIQrnqXp45uiU7Nw2IxMEAAAAAsdOca/vnkkKrpJBsS87LBY92LUe5iBS3lsfRfRUvgSPTqN6jrNe3IUJCJiw4IlnGQD8nqwXYaFXhNOeQ1G+/f</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -239,7 +239,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task - End Time Logging"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
@@ -292,7 +292,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task - Start time Logging"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -368,7 +368,7 @@
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Script Task - Email End Notification"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
@@ -401,91 +401,14 @@
           Language="CSharp"
           ReadOnlyVariables="System::PackageName,System::StartTime,User::VarRowCount,$Project::ParEmailFrom,$Project::ParEmailTo">
           <ProjectItem
-            Name="ST_7dd47f4a1469491497f1900817c5d23d.csproj"
-            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{ba38855a-9de9-46a6-a589-5aa861552692}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ST_e6765987cbdb4366b385d86b362cd7d4</RootNamespace>
-    <AssemblyName>ST_7dd47f4a1469491497f1900817c5d23d</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
-    <TargetFrameworkProfile></TargetFrameworkProfile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>.\bin\Debug\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DebugSymbols>false</DebugSymbols>
-    <Optimize>true</Optimize>
-    <OutputPath>.\bin\Release\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-  </ItemGroup>
-  <ItemGroup>
-    <AppDesigner Include="Properties\" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="ScriptMain.cs">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <!-- Include the build rules for a C# project.-->
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
-        <Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host>
-        <ProjectClient>
-          <HostIdentifier>SSIS_ST140</HostIdentifier>
-        </ProjectClient>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
-</Project>]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -605,35 +528,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Settings.get_Default():ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Sett" +
-    "ings")]
-
-namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -780,6 +674,92 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4
 	}
 }]]></ProjectItem>
           <ProjectItem
+            Name="ST_7dd47f4a1469491497f1900817c5d23d.csproj"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ba38855a-9de9-46a6-a589-5aa861552692}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ST_e6765987cbdb4366b385d86b362cd7d4</RootNamespace>
+    <AssemblyName>ST_7dd47f4a1469491497f1900817c5d23d</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptMain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_ST140</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
+          <ProjectItem
             Name="Project"
             Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 <c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
@@ -799,6 +779,35 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4
     <msb:File Include="Properties\Settings.Designer.cs" />
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Settings.get_Default():ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Sett" +
+    "ings")]
+
+namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
           <ProjectItem
             Name="Properties\AssemblyInfo.cs"
             Encoding="UTF8"><![CDATA[using System.Reflection;
@@ -829,15 +838,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -1053,7 +1053,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Script Task - Email Start Notification"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
@@ -1085,6 +1085,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           VSTAMinorVersion="0"
           Language="CSharp"
           ReadOnlyVariables="System::PackageName,System::StartTime,$Project::ParEmailFrom,$Project::ParEmailTo">
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1204,35 +1213,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Settings.get_Default():ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Sett" +
-    "ings")]
-
-namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -1485,6 +1465,35 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Settings.get_Default():ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Sett" +
+    "ings")]
+
+namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
             Name="Properties\AssemblyInfo.cs"
             Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -1514,15 +1523,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -7913,14 +7913,35 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               Language="CSharp"
               ReadOnlyVariables="System::ErrorDescription,System::SourceName,System::PackageName,System::StartTime,$Project::ParEmailFrom,$Project::ParEmailTo">
               <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -8322,35 +8343,14 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
     }
 }]]></ProjectItem>
               <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -8624,6 +8624,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Id="Package\Execute SQL Task - Start time Logging"
           TopLeft="187,4" />
         <NodeLayout
+          Size="122,42"
+          Id="Package\FTP Task"
+          TopLeft="41.5,3.5" />
+        <NodeLayout
           Size="244,42"
           Id="Package\Script Task - Email End Notification"
           TopLeft="409,338" />
@@ -8884,10 +8888,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="122,42"
-          Id="Package\FTP Task"
-          TopLeft="41.5,3.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -9009,83 +9009,71 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="139,42"
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source"
-          TopLeft="621,10" />
-        <NodeLayout
           Size="154,42"
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column"
-          TopLeft="499,217" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort"
-          TopLeft="466,80" />
+          TopLeft="496,231" />
         <NodeLayout
           Size="154,42"
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Derived Column 1"
           TopLeft="12,84" />
         <NodeLayout
-          Size="193,47"
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - OData Error Output"
-          TopLeft="218,6" />
-        <NodeLayout
-          Size="185,42"
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - Derived Col Err Output"
-          TopLeft="241,85" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1"
-          TopLeft="631,75" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OData Source 1"
-          TopLeft="15,7" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join"
-          TopLeft="509,146" />
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address"
-          TopLeft="441,10" />
+          Size="139,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Flat File Source"
+          TopLeft="621,10" />
         <NodeLayout
           Size="121,42"
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Union All"
           TopLeft="196.5,163.5" />
         <NodeLayout
           Size="130,42"
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Row Count"
-          TopLeft="186.5,232.5" />
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Merge Join"
+          TopLeft="509,146" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort 1"
+          TopLeft="631,75" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Sort"
+          TopLeft="466,80" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OData Source 1"
+          TopLeft="15,7" />
         <NodeLayout
           Size="171,42"
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination"
           TopLeft="173.5,298.5" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - Derived Col Err Output"
+          TopLeft="241,85" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\Row Count"
+          TopLeft="186.5,232.5" />
+        <NodeLayout
+          Size="193,47"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - OData Error Output"
+          TopLeft="218,6" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist\ADO NET Source- Address"
+          TopLeft="441,10" />
         <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Sort Output]"
-          TopLeft="515,122">
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Union All Output 1]"
+          TopLeft="254.25,205.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="38.6666666666666,24"
+              EndConnector="0,27"
               Start="0,0"
-              End="38.6666666666666,16.5">
+              End="0,19.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,10.2249240121581" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.2249240121581"
-                    Point2="0,14.2249240121581"
-                    Point3="4,14.2249240121581" />
-                  <mssgle:LineSegment
-                    End="34.6666666666666,14.2249240121581" />
-                  <mssgle:CubicBezierSegment
-                    Point1="34.6666666666666,14.2249240121581"
-                    Point2="38.6666666666666,14.2249240121581"
-                    Point3="38.6666666666666,18.2249240121581" />
-                  <mssgle:LineSegment
-                    End="38.6666666666666,16.5" />
+                    End="0,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9129,6 +9117,62 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Sort Output]"
+          TopLeft="515,122">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38.6666666666666,24"
+              Start="0,0"
+              End="38.6666666666666,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.2249240121581" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.2249240121581"
+                    Point2="0,14.2249240121581"
+                    Point3="4,14.2249240121581" />
+                  <mssgle:LineSegment
+                    End="34.6666666666666,14.2249240121581" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.6666666666666,14.2249240121581"
+                    Point2="38.6666666666666,14.2249240121581"
+                    Point3="38.6666666666666,18.2249240121581" />
+                  <mssgle:LineSegment
+                    End="38.6666666666666,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Row Count Output 1]"
+          TopLeft="255.25,274.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24"
+              Start="0,0"
+              End="0,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Output]"
           TopLeft="88,49">
           <EdgeLayout.Curve>
@@ -9152,18 +9196,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Merge Join Output]"
-          TopLeft="575,188">
+          TopLeft="574,188">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,29"
+              EndConnector="23.3333333333334,43"
               Start="0,0"
-              End="0,21.5">
+              End="23.3333333333334,35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.5" />
+                    End="0,21.53470437018" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.53470437018"
+                    Point2="0,25.53470437018"
+                    Point3="4,25.53470437018" />
+                  <mssgle:LineSegment
+                    End="19.3333333333334,25.53470437018" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.3333333333334,25.53470437018"
+                    Point2="23.3333333333334,25.53470437018"
+                    Point3="23.3333333333334,29.53470437018" />
+                  <mssgle:LineSegment
+                    End="23.3333333333334,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9219,6 +9275,74 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Derived Column Output1]"
+          TopLeft="548.666666666667,231">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-272.833333333333,-25.5"
+              Start="0,0"
+              End="-272.833333333333,-18">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-8.70613532110091" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-8.70613532110091"
+                    Point2="0,-12.7061353211009"
+                    Point3="-4,-12.7061353211009" />
+                  <mssgle:LineSegment
+                    End="-268.833333333333,-12.7061353211009" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-268.833333333333,-12.7061353211009"
+                    Point2="-272.833333333333,-12.7061353211009"
+                    Point3="-272.833333333333,-16.7061353211009" />
+                  <mssgle:LineSegment
+                    End="-272.833333333333,-18" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Derived Column Output]"
+          TopLeft="89,126">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="168,37.5"
+              Start="0,0"
+              End="168,30">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.75"
+                    Point2="0,18.75"
+                    Point3="4,18.75" />
+                  <mssgle:LineSegment
+                    End="164,18.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="164,18.75"
+                    Point2="168,18.75"
+                    Point3="168,22.75" />
+                  <mssgle:LineSegment
+                    End="168,30" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Derived Column Error Output]"
           TopLeft="166,105.5">
           <EdgeLayout.Curve>
@@ -9264,32 +9388,142 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="259,42"
+          Id="{6e55531b-3e05-42c6-8e18-d39988dac39f}"
+          TopLeft="210,111" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - Derived Col Err Output">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - OData Error Output">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Sequence Container\Data Flow Task - If Data exist">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\Derived Column"
+          TopLeft="500,227" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\Sort"
+          TopLeft="467,90" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\Derived Column 1"
+          TopLeft="13,94" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\Sort 1"
+          TopLeft="632,85" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\Flat File Source"
+          TopLeft="622,20" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\Merge Join"
+          TopLeft="510,156" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\OData Source 1"
+          TopLeft="16,17" />
+        <NodeLayout
+          Size="193,47"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination - OData Error Output"
+          TopLeft="219,16" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination"
+          TopLeft="174.5,308.5" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\Union All"
+          TopLeft="197.5,173.5" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination - Derived Col Err Output"
+          TopLeft="242,95" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\Row Count"
+          TopLeft="187.5,242.5" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address"
+          TopLeft="442,20" />
         <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Derived Column Output]"
-          TopLeft="89,126">
+          Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Derived Column Error Output]"
+          TopLeft="167,115.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="168,37.5"
+              EndConnector="75,0"
               Start="0,0"
-              End="168,30">
+              End="67.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.75"
-                    Point2="0,18.75"
-                    Point3="4,18.75" />
+                    End="67.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-31.21138671875,5,129.9227734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[ADO NET Source Output]"
+          TopLeft="518.25,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28"
+              Start="0,0"
+              End="0,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="164,18.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="164,18.75"
-                    Point2="168,18.75"
-                    Point3="168,22.75" />
-                  <mssgle:LineSegment
-                    End="168,30" />
+                    End="0,20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9299,42 +9533,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Derived Column Output1]"
-          TopLeft="499,238">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-181.5,-53.5"
-              Start="0,0"
-              End="-174,-53.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-86.75,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-86.75,0"
-                    Point2="-90.75,0"
-                    Point3="-90.75,-4" />
-                  <mssgle:LineSegment
-                    End="-90.75,-49.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-90.75,-49.5"
-                    Point2="-90.75,-53.5"
-                    Point3="-94.75,-53.5" />
-                  <mssgle:LineSegment
-                    End="-174,-53.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Union All Output 1]"
-          TopLeft="254.25,205.5">
+          Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Union All Output 1]"
+          TopLeft="255.25,215.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9354,88 +9554,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - if Data does not Exist.Paths[Row Count Output 1]"
-          TopLeft="255.25,274.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,24"
-              Start="0,0"
-              End="0,16.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <DtsEventHandler
-    design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist.EventHandlers[OnError]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="259,42"
-          Id="{6e55531b-3e05-42c6-8e18-d39988dac39f}"
-          TopLeft="210,111" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <TaskHost
-    design-time-name="Package\Sequence Container\Data Flow Task - If Data exist">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\Flat File Source"
-          TopLeft="622,20" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\Derived Column"
-          TopLeft="500,227" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\Sort"
-          TopLeft="467,90" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\Derived Column 1"
-          TopLeft="13,94" />
-        <NodeLayout
-          Size="193,47"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination - OData Error Output"
-          TopLeft="219,16" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination - Derived Col Err Output"
-          TopLeft="242,95" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\Sort 1"
-          TopLeft="632,85" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\OData Source 1"
-          TopLeft="16,17" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\Merge Join"
-          TopLeft="510,156" />
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address"
-          TopLeft="442,20" />
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Sort Output1]"
           TopLeft="516,132">
@@ -9496,6 +9614,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                     Point3="-90.1666666666666,21.1884498480243" />
                   <mssgle:LineSegment
                     End="-90.1666666666666,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Row Count Output 1]"
+          TopLeft="256.25,284.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24"
+              Start="0,0"
+              End="0,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9595,43 +9735,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Derived Column Error Output]"
-          TopLeft="167,115.5">
+          Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Derived Column Output1]"
+          TopLeft="500,248">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="75,0"
+              EndConnector="-181.5,-53.5"
               Start="0,0"
-              End="67.5,0">
+              End="-174,-53.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="67.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-31.21138671875,5,129.9227734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[ADO NET Source Output]"
-          TopLeft="518.25,62">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28"
-              Start="0,0"
-              End="0,20.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
+                    End="-86.75,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-86.75,0"
+                    Point2="-90.75,0"
+                    Point3="-90.75,-4" />
                   <mssgle:LineSegment
-                    End="0,20.5" />
+                    End="-90.75,-49.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-90.75,-49.5"
+                    Point2="-90.75,-53.5"
+                    Point3="-94.75,-53.5" />
+                  <mssgle:LineSegment
+                    End="-174,-53.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9640,10 +9768,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="121,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\Union All"
-          TopLeft="197.5,173.5" />
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Derived Column Output]"
           TopLeft="90,136">
@@ -9678,92 +9802,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Derived Column Output1]"
-          TopLeft="500,248">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-181.5,-53.5"
-              Start="0,0"
-              End="-174,-53.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-86.75,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-86.75,0"
-                    Point2="-90.75,0"
-                    Point3="-90.75,-4" />
-                  <mssgle:LineSegment
-                    End="-90.75,-49.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-90.75,-49.5"
-                    Point2="-90.75,-53.5"
-                    Point3="-94.75,-53.5" />
-                  <mssgle:LineSegment
-                    End="-174,-53.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\Row Count"
-          TopLeft="187.5,242.5" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination"
-          TopLeft="174.5,308.5" />
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Union All Output 1]"
-          TopLeft="255.25,215.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27"
-              Start="0,0"
-              End="0,19.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Row Count Output 1]"
-          TopLeft="256.25,284.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,24"
-              Start="0,0"
-              End="0,16.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -9779,6 +9817,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address">
     <Properties>
@@ -9819,44 +9870,5 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Sequence Container.PrecedenceConstraints[Constraint 3]">
     <ShowAnnotation>ConstraintOptions</ShowAnnotation>
   </PrecedenceConstraint>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - OData Error Output">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - Derived Col Err Output">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
