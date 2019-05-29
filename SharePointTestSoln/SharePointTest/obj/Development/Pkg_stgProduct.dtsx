@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_stgProduct"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{5C394101-E6D5-4AAF-AA00-A7763E15CFB1}">
+  DTS:VersionBuild="53"
+  DTS:VersionGUID="{EA17F3AA-B4A1-475C-8BE5-C9D637832871}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -44,7 +44,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task - End Time Logging"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
@@ -97,7 +97,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task - Start time Logging"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -152,7 +152,7 @@
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Script Task - Email End Notification"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
@@ -838,7 +838,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Script Task - Email Start Notification"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
@@ -8151,6 +8151,35 @@ where [refTable].[Name] = ?</property>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Sequence Container\Data Flow Task - Product\Row Count"
+                  componentClassID="Microsoft.RowCount"
+                  contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+                  name="Row Count">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable to hold the row count."
+                      name="VariableName">User::VarRowCount</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task - Product\Row Count.Inputs[Row Count Input 1]"
+                      hasSideEffects="true"
+                      name="Row Count Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task - Product\Row Count.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\Sequence Container\Data Flow Task - Product\Row Count.Inputs[Row Count Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Sequence Container\Data Flow Task - Product\Sort"
                   componentClassID="Microsoft.Sort"
                   contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -11311,6 +11340,11 @@ where [refTable].[Name] = ?</property>
                   name="Output"
                   startId="Package\Sequence Container\Data Flow Task - Product\OData Source.Outputs[Output]" />
                 <path
+                  refId="Package\Sequence Container\Data Flow Task - Product.Paths[Row Count Output 1]"
+                  endId="Package\Sequence Container\Data Flow Task - Product\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Row Count Output 1"
+                  startId="Package\Sequence Container\Data Flow Task - Product\Row Count.Outputs[Row Count Output 1]" />
+                <path
                   refId="Package\Sequence Container\Data Flow Task - Product.Paths[Sort Output2]"
                   endId="Package\Sequence Container\Data Flow Task - Product\Merge.Inputs[Merge Input 2]"
                   name="Sort Output"
@@ -11327,7 +11361,7 @@ where [refTable].[Name] = ?</property>
                   startId="Package\Sequence Container\Data Flow Task - Product\Sort 2.Outputs[Sort Output]" />
                 <path
                   refId="Package\Sequence Container\Data Flow Task - Product.Paths[Union All Output 1]"
-                  endId="Package\Sequence Container\Data Flow Task - Product\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  endId="Package\Sequence Container\Data Flow Task - Product\Row Count.Inputs[Row Count Input 1]"
                   name="Union All Output 1"
                   startId="Package\Sequence Container\Data Flow Task - Product\Union All.Outputs[Union All Output 1]" />
               </paths>
@@ -17960,6 +17994,35 @@ where [refTable].[Name] = ?</property>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Row Count"
+                  componentClassID="Microsoft.RowCount"
+                  contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+                  name="Row Count">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable to hold the row count."
+                      name="VariableName">User::VarRowCount</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Row Count.Inputs[Row Count Input 1]"
+                      hasSideEffects="true"
+                      name="Row Count Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Row Count.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\Sequence Container\Data Flow Task - Product if not Exist\Row Count.Inputs[Row Count Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort"
                   componentClassID="Microsoft.Sort"
                   contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -21120,6 +21183,11 @@ where [refTable].[Name] = ?</property>
                   name="Output"
                   startId="Package\Sequence Container\Data Flow Task - Product if not Exist\OData Source.Outputs[Output]" />
                 <path
+                  refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Row Count Output 1]"
+                  endId="Package\Sequence Container\Data Flow Task - Product if not Exist\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Row Count Output 1"
+                  startId="Package\Sequence Container\Data Flow Task - Product if not Exist\Row Count.Outputs[Row Count Output 1]" />
+                <path
                   refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Sort Output2]"
                   endId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge.Inputs[Merge Input 2]"
                   name="Sort Output"
@@ -21136,7 +21204,7 @@ where [refTable].[Name] = ?</property>
                   startId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 2.Outputs[Sort Output]" />
                 <path
                   refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Union All Output 1]"
-                  endId="Package\Sequence Container\Data Flow Task - Product if not Exist\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  endId="Package\Sequence Container\Data Flow Task - Product if not Exist\Row Count.Inputs[Row Count Input 1]"
                   name="Union All Output 1"
                   startId="Package\Sequence Container\Data Flow Task - Product if not Exist\Union All.Outputs[Union All Output 1]" />
               </paths>
@@ -22225,36 +22293,36 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="575,253"
-          Size="575,296"
+          PanelSize="575,204"
+          Size="575,246"
           Id="Package\Sequence Container"
           TopLeft="60.5,71" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="253.5,322">
+          TopLeft="253.5,317">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-57.5,33"
+              EndConnector="-57.5,38"
               Start="0,0"
-              End="-57.5,25.5">
+              End="-57.5,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.25494276795005" />
+                    End="0,11.2632674297607" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9.25494276795005"
-                    Point2="0,13.2549427679501"
-                    Point3="-4,13.2549427679501" />
+                    Point1="0,11.2632674297607"
+                    Point2="0,15.2632674297607"
+                    Point3="-4,15.2632674297607" />
                   <mssgle:LineSegment
-                    End="-53.5,13.2549427679501" />
+                    End="-53.5,15.2632674297607" />
                   <mssgle:CubicBezierSegment
-                    Point1="-53.5,13.2549427679501"
-                    Point2="-57.5,13.2549427679501"
-                    Point3="-57.5,17.2549427679501" />
+                    Point1="-53.5,15.2632674297607"
+                    Point2="-57.5,15.2632674297607"
+                    Point3="-57.5,19.2632674297607" />
                   <mssgle:LineSegment
-                    End="-57.5,25.5" />
+                    End="-57.5,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -22265,30 +22333,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="442.5,322">
+          TopLeft="442.5,317">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="62.5,34"
+              EndConnector="62.5,39"
               Start="0,0"
-              End="62.5,26.5">
+              End="62.5,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.65660770031218" />
+                    End="0,11.6649323621228" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9.65660770031218"
-                    Point2="0,13.6566077003122"
-                    Point3="4,13.6566077003122" />
+                    Point1="0,11.6649323621228"
+                    Point2="0,15.6649323621228"
+                    Point3="4,15.6649323621228" />
                   <mssgle:LineSegment
-                    End="58.5,13.6566077003122" />
+                    End="58.5,15.6649323621228" />
                   <mssgle:CubicBezierSegment
-                    Point1="58.5,13.6566077003122"
-                    Point2="62.5,13.6566077003122"
-                    Point3="62.5,17.6566077003122" />
+                    Point1="58.5,15.6649323621228"
+                    Point2="62.5,15.6649323621228"
+                    Point3="62.5,19.6649323621228" />
                   <mssgle:LineSegment
-                    End="62.5,26.5" />
+                    End="62.5,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -22454,70 +22522,70 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="113,42"
           Id="Package\Sequence Container\Data Flow Task - Product\Lookup"
-          TopLeft="473,141" />
+          TopLeft="483,141" />
         <NodeLayout
           Size="152,42"
           Id="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup 1"
-          TopLeft="449,209" />
+          TopLeft="460,203" />
         <NodeLayout
           Size="171,42"
           Id="Package\Sequence Container\Data Flow Task - Product\DC-Conditional split"
-          TopLeft="677.5,136.5" />
+          TopLeft="687.5,136.5" />
         <NodeLayout
           Size="132,42"
           Id="Package\Sequence Container\Data Flow Task - Product\DC-Product"
-          TopLeft="466,72" />
+          TopLeft="476,72" />
         <NodeLayout
           Size="155,42"
           Id="Package\Sequence Container\Data Flow Task - Product\Conditional Split"
-          TopLeft="687,204" />
+          TopLeft="697,204" />
         <NodeLayout
           Size="143,42"
           Id="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup"
-          TopLeft="698,290" />
+          TopLeft="708,290" />
         <NodeLayout
           Size="158,42"
           Id="Package\Sequence Container\Data Flow Task - Product\ADO NET Source"
-          TopLeft="452,6" />
+          TopLeft="462,6" />
         <NodeLayout
           Size="107,42"
           Id="Package\Sequence Container\Data Flow Task - Product\Sort 2"
-          TopLeft="275,142" />
+          TopLeft="285,142" />
         <NodeLayout
           Size="98,42"
           Id="Package\Sequence Container\Data Flow Task - Product\Sort"
-          TopLeft="477,278.5" />
+          TopLeft="487,272.5" />
         <NodeLayout
           Size="107,42"
           Id="Package\Sequence Container\Data Flow Task - Product\Sort 1"
-          TopLeft="718,363.5" />
+          TopLeft="728,363.5" />
         <NodeLayout
           Size="108,42"
           Id="Package\Sequence Container\Data Flow Task - Product\Merge"
-          TopLeft="455,360.733183856502" />
+          TopLeft="465,360.733183856502" />
         <NodeLayout
           Size="117,42"
           Id="Package\Sequence Container\Data Flow Task - Product\Merge 1"
-          TopLeft="253,232.346153846154" />
+          TopLeft="265,221.346153846154" />
         <NodeLayout
           Size="171,42"
           Id="Package\Sequence Container\Data Flow Task - Product\OLE DB Destination"
-          TopLeft="18,348.881374722838" />
+          TopLeft="22,362.881374722838" />
         <NodeLayout
           Size="144,42"
           Id="Package\Sequence Container\Data Flow Task - Product\OData Source"
-          TopLeft="19,9" />
+          TopLeft="29,9" />
         <NodeLayout
           Size="176,42"
           Id="Package\Sequence Container\Data Flow Task - Product\Derived Column - u2"
-          TopLeft="5,89" />
+          TopLeft="15,89" />
         <NodeLayout
           Size="121,42"
           Id="Package\Sequence Container\Data Flow Task - Product\Union All"
-          TopLeft="38.5,237" />
+          TopLeft="42.5,222" />
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Lookup No Match Output]"
-          TopLeft="586,159.75">
+          TopLeft="596,159.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -22541,7 +22609,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Lookup Match Output]"
-          TopLeft="473,162.5">
+          TopLeft="483,162.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -22565,7 +22633,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Derived Column Output]"
-          TopLeft="530.75,114">
+          TopLeft="540.75,114">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -22587,7 +22655,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Derived Column Output1]"
-          TopLeft="763.75,178.5">
+          TopLeft="773.75,178.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -22609,7 +22677,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Conditional Split Default Output]"
-          TopLeft="767,246">
+          TopLeft="777,246">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -22633,31 +22701,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Case 1]"
-          TopLeft="687,227.5">
+          TopLeft="697,224.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-86,0"
+              EndConnector="-85,0"
               Start="0,0"
-              End="-78.5,0">
+              End="-77.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-78.5,0" />
+                    End="-77.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-54.4680859375,5,30.436171875,9.5537109375"
+              BoundingBox="-53.9680859375,5,30.436171875,9.5537109375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[ADO NET Source Output]"
-          TopLeft="531.5,48">
+          TopLeft="541.5,48">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -22679,7 +22747,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Fuzzy Lookup Output]"
-          TopLeft="770.5,332">
+          TopLeft="780.5,332">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -22701,7 +22769,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Fuzzy Lookup Output1]"
-          TopLeft="525.5,251">
+          TopLeft="536,245">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -22723,18 +22791,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Sort Output2]"
-          TopLeft="525.833333333333,320.5">
+          TopLeft="535.833333333333,314.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40.233183856502"
+              EndConnector="0,46.233183856502"
               Start="0,0"
-              End="0,32.733183856502">
+              End="0,38.733183856502">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.733183856502" />
+                    End="0,38.733183856502" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -22745,7 +22813,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Sort Output]"
-          TopLeft="718,383.116591928251">
+          TopLeft="728,383.116591928251">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -22767,30 +22835,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Sort Output1]"
-          TopLeft="328.5,184">
+          TopLeft="338.5,184">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-17,48.3461538461538"
+              EndConnector="-15,37.346153846154"
               Start="0,0"
-              End="-17,40.8461538461538">
+              End="-15,29.846153846154">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.1730769230769" />
+                    End="0,14.673076923077" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.1730769230769"
-                    Point2="0,24.1730769230769"
-                    Point3="-4,24.1730769230769" />
+                    Point1="0,14.673076923077"
+                    Point2="0,18.673076923077"
+                    Point3="-4,18.673076923077" />
                   <mssgle:LineSegment
-                    End="-13,24.1730769230769" />
+                    End="-11,18.673076923077" />
                   <mssgle:CubicBezierSegment
-                    Point1="-13,24.1730769230769"
-                    Point2="-17,24.1730769230769"
-                    Point3="-17,28.1730769230769" />
+                    Point1="-11,18.673076923077"
+                    Point2="-15,18.673076923077"
+                    Point3="-15,22.673076923077" />
                   <mssgle:LineSegment
-                    End="-17,40.8461538461538" />
+                    End="-15,29.846153846154" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -22801,30 +22869,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Merge Output 1]"
-          TopLeft="492.333333333333,360.733183856502">
+          TopLeft="502.333333333333,360.733183856502">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-180.833333333333,-86.387030010348"
+              EndConnector="-178.833333333333,-97.387030010348"
               Start="0,0"
-              End="-180.833333333333,-78.887030010348">
+              End="-178.833333333333,-89.887030010348">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-31.3114867195583" />
+                    End="0,-35.8078370845218" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-31.3114867195583"
-                    Point2="0,-35.3114867195583"
-                    Point3="-4,-35.3114867195583" />
+                    Point1="0,-35.8078370845218"
+                    Point2="0,-39.8078370845218"
+                    Point3="-4,-39.8078370845218" />
                   <mssgle:LineSegment
-                    End="-176.833333333333,-35.3114867195583" />
+                    End="-174.833333333333,-39.8078370845218" />
                   <mssgle:CubicBezierSegment
-                    Point1="-176.833333333333,-35.3114867195583"
-                    Point2="-180.833333333333,-35.3114867195583"
-                    Point3="-180.833333333333,-39.3114867195583" />
+                    Point1="-174.833333333333,-39.8078370845218"
+                    Point2="-178.833333333333,-39.8078370845218"
+                    Point3="-178.833333333333,-43.8078370845218" />
                   <mssgle:LineSegment
-                    End="-180.833333333333,-78.887030010348" />
+                    End="-178.833333333333,-89.887030010348" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -22835,7 +22903,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Output]"
-          TopLeft="92,51">
+          TopLeft="102,51">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -22857,18 +22925,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Merge Output 11]"
-          TopLeft="253,255.673076923077">
+          TopLeft="265,242.673076923077">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-93.5,0"
+              EndConnector="-101.5,0"
               Start="0,0"
-              End="-86,0">
+              End="-94,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-86,0" />
+                    End="-94,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -22879,40 +22947,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Derived Column Output2]"
-          TopLeft="96,131">
+          TopLeft="103,131">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,106"
+              EndConnector="0,91"
               Start="0,0"
-              End="0,98.5">
+              End="0,83.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,98.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product.Paths[Union All Output 1]"
-          TopLeft="101.25,279">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,69.881374722838"
-              Start="0,0"
-              End="0,62.381374722838">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,62.381374722838" />
+                    End="0,83.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -22924,14 +22970,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="180,42"
           Id="Package\Sequence Container\Data Flow Task - Product\OLE DB Destination 1"
-          TopLeft="236.5,10.8965517241379" />
+          TopLeft="246.5,10.8965517241379" />
         <NodeLayout
           Size="180,42"
           Id="Package\Sequence Container\Data Flow Task - Product\OLE DB Destination 2"
-          TopLeft="246.5,82.8965517241379" />
+          TopLeft="256.5,82.8965517241379" />
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Error output]"
-          TopLeft="163,30.948275862069">
+          TopLeft="173,30.948275862069">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -22955,7 +23001,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Derived Column Error Output]"
-          TopLeft="181,106.948275862069">
+          TopLeft="191,106.948275862069">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -22975,6 +23021,54 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <mssgm:EdgeLabel
               BoundingBox="-35.96138671875,5,129.9227734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Sequence Container\Data Flow Task - Product\Row Count"
+          TopLeft="38.5,289.5" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product.Paths[Union All Output 1]"
+          TopLeft="103.25,264">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.5"
+              Start="0,0"
+              End="0,18">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product.Paths[Row Count Output 1]"
+          TopLeft="105.5,331.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.381374722838"
+              Start="0,0"
+              End="0,23.881374722838">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.881374722838" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -23004,78 +23098,78 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="113,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Lookup"
-          TopLeft="474,194" />
+          TopLeft="474,135" />
         <NodeLayout
           Size="152,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup 1"
-          TopLeft="450,262" />
+          TopLeft="450,203" />
         <NodeLayout
           Size="171,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Conditional split"
-          TopLeft="678.5,189.5" />
+          TopLeft="678.5,130.5" />
         <NodeLayout
           Size="132,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Product"
-          TopLeft="467,125" />
+          TopLeft="467,66" />
         <NodeLayout
           Size="155,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Conditional Split"
-          TopLeft="688,257" />
+          TopLeft="688,198" />
         <NodeLayout
           Size="143,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup"
-          TopLeft="699,343" />
+          TopLeft="699,284" />
         <NodeLayout
           Size="158,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\ADO NET Source"
-          TopLeft="453,59" />
+          TopLeft="453,0" />
         <NodeLayout
           Size="107,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 2"
-          TopLeft="276,195" />
+          TopLeft="276,136" />
         <NodeLayout
           Size="98,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort"
-          TopLeft="478,331.5" />
+          TopLeft="478,269.5" />
         <NodeLayout
           Size="107,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 1"
-          TopLeft="719,416.5" />
+          TopLeft="719,357.5" />
         <NodeLayout
           Size="108,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge"
-          TopLeft="456,413.733183856502" />
+          TopLeft="456,354.733183856502" />
         <NodeLayout
           Size="117,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1"
-          TopLeft="254,285.346153846154" />
+          TopLeft="258,214.346153846154" />
         <NodeLayout
           Size="171,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\OLE DB Destination"
-          TopLeft="19,401.881374722838" />
+          TopLeft="20,368.881374722838" />
         <NodeLayout
           Size="144,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\OData Source"
-          TopLeft="20,62" />
+          TopLeft="20,3" />
         <NodeLayout
           Size="176,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Derived Column - u2"
-          TopLeft="6,142" />
+          TopLeft="6,83" />
         <NodeLayout
           Size="121,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Union All"
-          TopLeft="39.5,290" />
+          TopLeft="38.5,219" />
         <NodeLayout
           Size="180,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\OLE DB Destination 1"
-          TopLeft="237.5,63.8965517241379" />
+          TopLeft="237.5,4.89655172413794" />
         <NodeLayout
           Size="180,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\OLE DB Destination 2"
-          TopLeft="247.5,135.896551724138" />
+          TopLeft="247.5,76.8965517241379" />
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Lookup No Match Output]"
-          TopLeft="587,212.75">
+          TopLeft="587,153.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23099,7 +23193,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Lookup Match Output]"
-          TopLeft="474,215.5">
+          TopLeft="474,156.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23123,7 +23217,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Output]"
-          TopLeft="531.75,167">
+          TopLeft="531.75,108">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23145,7 +23239,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Output1]"
-          TopLeft="764.75,231.5">
+          TopLeft="764.75,172.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23167,7 +23261,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Conditional Split Default Output]"
-          TopLeft="768,299">
+          TopLeft="768,240">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23191,7 +23285,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Case 1]"
-          TopLeft="688,280.5">
+          TopLeft="688,221.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23215,7 +23309,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[ADO NET Source Output]"
-          TopLeft="532.5,101">
+          TopLeft="532.5,42">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23237,7 +23331,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Fuzzy Lookup Output]"
-          TopLeft="771.5,385">
+          TopLeft="771.5,326">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23259,18 +23353,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Fuzzy Lookup Output1]"
-          TopLeft="526.5,304">
+          TopLeft="526.5,245">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,27.5"
+              EndConnector="0,24.5"
               Start="0,0"
-              End="0,20">
+              End="0,17">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20" />
+                    End="0,17" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23281,18 +23375,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Sort Output2]"
-          TopLeft="526.833333333333,373.5">
+          TopLeft="526.833333333333,311.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40.233183856502"
+              EndConnector="0,43.233183856502"
               Start="0,0"
-              End="0,32.733183856502">
+              End="0,35.733183856502">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.733183856502" />
+                    End="0,35.733183856502" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23303,7 +23397,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Sort Output]"
-          TopLeft="719,436.116591928251">
+          TopLeft="719,377.116591928251">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23325,30 +23419,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Sort Output1]"
-          TopLeft="329.5,237">
+          TopLeft="329.5,178">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-17,48.3461538461538"
+              EndConnector="-13,36.346153846154"
               Start="0,0"
-              End="-17,40.8461538461538">
+              End="-13,28.846153846154">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.1730769230769" />
+                    End="0,14.173076923077" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.1730769230769"
-                    Point2="0,24.1730769230769"
-                    Point3="-4,24.1730769230769" />
+                    Point1="0,14.173076923077"
+                    Point2="0,18.173076923077"
+                    Point3="-4,18.173076923077" />
                   <mssgle:LineSegment
-                    End="-13,24.1730769230769" />
+                    End="-9,18.173076923077" />
                   <mssgle:CubicBezierSegment
-                    Point1="-13,24.1730769230769"
-                    Point2="-17,24.1730769230769"
-                    Point3="-17,28.1730769230769" />
+                    Point1="-9,18.173076923077"
+                    Point2="-13,18.173076923077"
+                    Point3="-13,22.173076923077" />
                   <mssgle:LineSegment
-                    End="-17,40.8461538461538" />
+                    End="-13,28.846153846154" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23359,30 +23453,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Merge Output 1]"
-          TopLeft="493.333333333333,413.733183856502">
+          TopLeft="493.333333333333,354.733183856502">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-180.833333333333,-86.387030010348"
+              EndConnector="-176.833333333333,-98.387030010348"
               Start="0,0"
-              End="-180.833333333333,-78.887030010348">
+              End="-176.833333333333,-90.887030010348">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-31.3114867195583" />
+                    End="0,-36.2165962086094" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-31.3114867195583"
-                    Point2="0,-35.3114867195583"
-                    Point3="-4,-35.3114867195583" />
+                    Point1="0,-36.2165962086094"
+                    Point2="0,-40.2165962086094"
+                    Point3="-4,-40.2165962086094" />
                   <mssgle:LineSegment
-                    End="-176.833333333333,-35.3114867195583" />
+                    End="-172.833333333333,-40.2165962086094" />
                   <mssgle:CubicBezierSegment
-                    Point1="-176.833333333333,-35.3114867195583"
-                    Point2="-180.833333333333,-35.3114867195583"
-                    Point3="-180.833333333333,-39.3114867195583" />
+                    Point1="-172.833333333333,-40.2165962086094"
+                    Point2="-176.833333333333,-40.2165962086094"
+                    Point3="-176.833333333333,-44.2165962086094" />
                   <mssgle:LineSegment
-                    End="-180.833333333333,-78.887030010348" />
+                    End="-176.833333333333,-90.887030010348" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23393,7 +23487,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Output]"
-          TopLeft="93,104">
+          TopLeft="93,45">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23415,18 +23509,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Merge Output 11]"
-          TopLeft="254,308.673076923077">
+          TopLeft="258,237.673076923077">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-93.5,0"
+              EndConnector="-98.5,0"
               Start="0,0"
-              End="-86,0">
+              End="-91,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-86,0" />
+                    End="-91,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23437,40 +23531,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Output2]"
-          TopLeft="97,184">
+          TopLeft="96.5,125">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,106"
+              EndConnector="0,94"
               Start="0,0"
-              End="0,98.5">
+              End="0,86.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,98.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Union All Output 1]"
-          TopLeft="102.25,332">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,69.881374722838"
-              Start="0,0"
-              End="0,62.381374722838">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,62.381374722838" />
+                    End="0,86.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23481,7 +23553,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Error output]"
-          TopLeft="164,83.948275862069">
+          TopLeft="164,24.948275862069">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23505,7 +23577,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Error Output]"
-          TopLeft="182,159.948275862069">
+          TopLeft="182,100.948275862069">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23525,6 +23597,54 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <mssgm:EdgeLabel
               BoundingBox="-35.96138671875,5,129.9227734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Row Count"
+          TopLeft="40,294.5" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Union All Output 1]"
+          TopLeft="102,261">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.5"
+              Start="0,0"
+              End="0,26">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Row Count Output 1]"
+          TopLeft="105.25,336.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.381374722838"
+              Start="0,0"
+              End="0,24.881374722838">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.881374722838" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
