@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_stgSalesOrderDetail"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{0C6BEB9E-AA82-47C5-AACD-203D67535455}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{A1BE27C3-D13B-4A7A-8CE3-CE51B22DDADC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -2143,54 +2143,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                           refId="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output.Inputs[OLE DB Destination Input].ExternalColumns[LineTotal]"
                           dataType="r8"
                           name="LineTotal" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ContentTypeID]"
-                          dataType="nText"
-                          name="ContentTypeID" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
-                          dataType="nText"
-                          name="Title" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ComplianceAssetId]"
-                          dataType="nText"
-                          name="ComplianceAssetId" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
-                          dataType="i4"
-                          name="Id" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ContentType]"
-                          dataType="nText"
-                          name="ContentType" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Modified]"
-                          dataType="dbTimeStamp"
-                          name="Modified" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
-                          dataType="dbTimeStamp"
-                          name="Created" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output.Inputs[OLE DB Destination Input].ExternalColumns[CreatedById]"
-                          dataType="i4"
-                          name="CreatedById" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedById]"
-                          dataType="i4"
-                          name="ModifiedById" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Owshiddenversion]"
-                          dataType="i4"
-                          name="Owshiddenversion" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Version]"
-                          dataType="nText"
-                          name="Version" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Path]"
-                          dataType="nText"
-                          name="Path" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
                           dataType="i4"
@@ -5075,6 +5027,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - Derived Column Error Output">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\Data Flow Task - If Data Exist\OLE DB Destination - OData Error Output">
     <Properties>
