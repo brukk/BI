@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/29/2019 7:52:56 PM"
@@ -499,7 +499,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC/YGL4dGzKrxMNK97iYN4PaN7j1tHwXQnugoTgO2I57QAAAAAOgAAAAAIAACAAAABgIwVhdrUn2bajwOTPJbECfazfjq4dCw17jJyMbIJwzyAAAAAu/wKboRcJVre6LcrGTspU6pg0XMT5ryTKqAlJ7XlhykAAAACJlk7n4b9bBS2iMRrDjRSCX3iGfq6i+pP+79Sy2ZfwfyORnkuGWf83Hjnkl8cQJjHHRm5RG9grWz6Y5fcBfHRF</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACzLySI5MTbTphW7BkzxU/QmU5Suky4NSe+5SPWzf7DDwAAAAAOgAAAAAIAACAAAACVMWuTD0448zQtlAtjKOQbviPPRwggMMQzldBL3CwDciAAAACOT3v+YDTXbSnES194CLn/5JKggazoBHxSt+ffEaRkZ0AAAACn46nqSXhjKTAXat1uFK4Q63cChPKP5EF1+le/BDef1dRqwJWuJM7l9O/rca7DtkznPdAXFQWJtvmAHrCLUlMw</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -547,8 +547,7 @@
               componentClassID="Microsoft.Cache"
               contactInfo="Cache Transform;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Writes data to a cache (a .caw file) with the Cache Connection Manager. Reuse the cache between multiple Lookup transforms to reduce database load. Share the cache to reduce memory usage. Note: cache data is stored in clear text and not recommended for sensitive data."
-              name="Cache Transform"
-              version="1">
+              name="Cache Transform">
               <properties>
                 <property
                   dataType="System.Boolean"
