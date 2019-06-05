@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_stgCustomer"
   DTS:PackageType="5"
-  DTS:VersionBuild="78"
-  DTS:VersionGUID="{AB4C4F3C-91E1-45CE-B51C-70A8B245E6EE}">
+  DTS:VersionBuild="79"
+  DTS:VersionGUID="{A6A94AF8-B3DC-473A-9850-86F3EB484C7D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -44,7 +44,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task - End Time Logging"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
@@ -152,7 +152,7 @@
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Script Task - Email End Notification"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
@@ -4479,6 +4479,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                               name="FriendlyExpression">(DT_I4)CustomerID</property>
                           </properties>
                         </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column.Outputs[Derived Column Output].Columns[SourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column.Outputs[Derived Column Output].Columns[SourceName]"
+                          name="SourceName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,100,1252)"SharePoint"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,100,1252)"SharePoint"</property>
+                          </properties>
+                        </outputColumn>
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -4719,6 +4743,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
                               name="FriendlyExpression">(DT_STR,10,1252)" "</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[SourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[SourceName]"
+                          name="SourceName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,100,1252)"MySQL"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,100,1252)"MySQL"</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -5167,6 +5215,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                           cachedName="PasswordSaltOCN"
                           externalMetadataColumnId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PasswordSalt]"
                           lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[PasswordSaltOCN]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="SourceName"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceName]"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[SourceName]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -5240,6 +5296,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                           dataType="str"
                           length="10"
                           name="PasswordSalt" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="SourceName" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -5792,192 +5854,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   version="1">
                   <inputs>
                     <input
-                      refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 1]"
-                      name="Union All Input 1">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 1].Columns[customerid]"
-                          cachedDataType="i4"
-                          cachedName="customerid"
-                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\ADO NET Source.Outputs[ADO NET Source Output].Columns[customerid]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[customerid]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 1].Columns[Fullname]"
-                          cachedDataType="wstr"
-                          cachedLength="273"
-                          cachedName="Fullname"
-                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Fullname]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[Fullname]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 1].Columns[email]"
-                          cachedDataType="wstr"
-                          cachedLength="150"
-                          cachedName="email"
-                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\ADO NET Source.Outputs[ADO NET Source Output].Columns[email]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[email]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 1].Columns[phone]"
-                          cachedDataType="wstr"
-                          cachedLength="60"
-                          cachedName="phone"
-                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\ADO NET Source.Outputs[ADO NET Source Output].Columns[phone]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[phone]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 1].Columns[FirstName]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="FirstName"
-                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[FirstName]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[FirstNameOCN]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 1].Columns[LastName]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="LastName"
-                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[LastName]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[LastNameOCN]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 1].Columns[Derived Column Email]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Derived Column Email"
-                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column Email]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[Derived Column EmailOCN]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 1].Columns[Derived Column Phone]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="25"
-                          cachedName="Derived Column Phone"
-                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column Phone]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[Derived Column PhoneOCN]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 1].Columns[Derived Column customerID]"
-                          cachedDataType="i4"
-                          cachedName="Derived Column customerID"
-                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column customerID]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[Derived Column customerID OCN]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 1].Columns[PasswordHash]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="128"
-                          cachedName="PasswordHash"
-                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[PasswordHash]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[PasswordHashOCN]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 1].Columns[PasswordSalt]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="10"
-                          cachedName="PasswordSalt"
-                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[PasswordSalt]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[PasswordSaltOCN]}</property>
-                          </properties>
-                        </inputColumn>
-                      </inputColumns>
-                      <externalMetadataColumns />
-                    </input>
-                    <input
-                      refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2]"
+                      refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 3]"
                       hasSideEffects="true"
-                      name="Union All Input 2">
+                      name="Union All Input 3">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[Derived Column Email]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Derived Column Email"
-                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Email]">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Output column lineage ID"
-                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[Derived Column EmailOCN]}</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[Derived Column custID]"
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 3].Columns[Derived Column custID]"
                           cachedDataType="i4"
                           cachedName="Derived Column custID"
                           lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column.Outputs[Derived Column Output].Columns[Derived Column custID]">
@@ -5990,7 +5872,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                           </properties>
                         </inputColumn>
                         <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[Derived Column PWHash]"
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 3].Columns[Derived Column PWHash]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="128"
@@ -6005,7 +5887,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                           </properties>
                         </inputColumn>
                         <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[Derived Column PWsalt]"
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 3].Columns[Derived Column PWsalt]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="10"
@@ -6020,7 +5902,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                           </properties>
                         </inputColumn>
                         <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[Derived Column pho]"
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 3].Columns[Derived Column pho]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="25"
@@ -6035,7 +5917,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                           </properties>
                         </inputColumn>
                         <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[Derived Column LN]"
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 3].Columns[Derived Column Email]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Derived Column Email"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Email]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[Derived Column EmailOCN]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 3].Columns[Derived Column LN]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
@@ -6050,7 +5947,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                           </properties>
                         </inputColumn>
                         <inputColumn
-                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[Derived Column FN]"
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 3].Columns[Derived Column FN]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
@@ -6064,14 +5961,210 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                               name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[FirstNameOCN]}</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 3].Columns[SourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="SourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column.Outputs[Derived Column Output].Columns[SourceName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[SourceName]}</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
                     <input
-                      refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 3]"
+                      refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2]"
+                      hasSideEffects="true"
+                      name="Union All Input 2">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[customerid]"
+                          cachedDataType="i4"
+                          cachedName="customerid"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\ADO NET Source.Outputs[ADO NET Source Output].Columns[customerid]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[customerid]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[Fullname]"
+                          cachedDataType="wstr"
+                          cachedLength="273"
+                          cachedName="Fullname"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Fullname]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[Fullname]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[email]"
+                          cachedDataType="wstr"
+                          cachedLength="150"
+                          cachedName="email"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\ADO NET Source.Outputs[ADO NET Source Output].Columns[email]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[email]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[phone]"
+                          cachedDataType="wstr"
+                          cachedLength="60"
+                          cachedName="phone"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\ADO NET Source.Outputs[ADO NET Source Output].Columns[phone]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[phone]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[Derived Column customerID]"
+                          cachedDataType="i4"
+                          cachedName="Derived Column customerID"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column customerID]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[Derived Column customerID OCN]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[PasswordHash]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="128"
+                          cachedName="PasswordHash"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[PasswordHash]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[PasswordHashOCN]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[PasswordSalt]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="PasswordSalt"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[PasswordSalt]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[PasswordSaltOCN]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[FirstName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="FirstName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[FirstName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[FirstNameOCN]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[LastName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="LastName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[LastName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[LastNameOCN]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[Derived Column Email]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Derived Column Email"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column Email]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[Derived Column EmailOCN]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[Derived Column Phone]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="25"
+                          cachedName="Derived Column Phone"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column Phone]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[Derived Column PhoneOCN]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2].Columns[SourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="SourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output].Columns[SourceName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[SourceName]}</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 1]"
                       dangling="true"
                       hasSideEffects="true"
-                      name="Union All Input 3">
+                      name="Union All Input 1">
                       <externalMetadataColumns />
                     </input>
                   </inputs>
@@ -6150,6 +6243,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                           length="10"
                           lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[PasswordSaltOCN]"
                           name="PasswordSaltOCN" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[SourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Outputs[Union All Output 1].Columns[SourceName]"
+                          name="SourceName" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -6169,14 +6269,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   startId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column.Outputs[Derived Column Error Output]" />
                 <path
                   refId="Package\Sequence Container\Data Flow Task - Customer (if not exist).Paths[Derived Column Output]"
-                  endId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 1]"
+                  endId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 3]"
                   name="Derived Column Output"
-                  startId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output]" />
+                  startId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Sequence Container\Data Flow Task - Customer (if not exist).Paths[Derived Column Output1]"
                   endId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All.Inputs[Union All Input 2]"
                   name="Derived Column Output"
-                  startId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column.Outputs[Derived Column Output]" />
+                  startId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Sequence Container\Data Flow Task - Customer (if not exist).Paths[Error output]"
                   endId="Package\Sequence Container\Data Flow Task - Customer (if not exist)\OLE DB Destination - OData Source Error output.Inputs[OLE DB Destination Input]"
@@ -7774,42 +7874,42 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="130,42"
           Id="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Row Count"
-          TopLeft="302.5,234.5" />
+          TopLeft="298.5,231.5" />
         <NodeLayout
           Size="154,42"
           Id="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column 1"
-          TopLeft="540.5,143" />
+          TopLeft="536.5,140" />
         <NodeLayout
           Size="154,42"
           Id="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Derived Column"
-          TopLeft="30,117" />
+          TopLeft="9,99" />
         <NodeLayout
           Size="197,42"
           Id="Package\Sequence Container\Data Flow Task - Customer (if not exist)\OLE DB Destination - Derived Col Err Output"
-          TopLeft="292,92" />
+          TopLeft="292,77" />
         <NodeLayout
           Size="171,42"
           Id="Package\Sequence Container\Data Flow Task - Customer (if not exist)\OLE DB Destination"
-          TopLeft="279.5,308.5" />
+          TopLeft="275.5,305.5" />
         <NodeLayout
           Size="144,42"
           Id="Package\Sequence Container\Data Flow Task - Customer (if not exist)\OData Source"
-          TopLeft="42,6" />
+          TopLeft="8,7" />
         <NodeLayout
           Size="204,42"
           Id="Package\Sequence Container\Data Flow Task - Customer (if not exist)\OLE DB Destination - OData Source Error output"
-          TopLeft="290,10" />
+          TopLeft="286,7" />
         <NodeLayout
           Size="158,42"
           Id="Package\Sequence Container\Data Flow Task - Customer (if not exist)\ADO NET Source"
-          TopLeft="534.5,5" />
+          TopLeft="530.5,2" />
         <NodeLayout
           Size="121,42"
           Id="Package\Sequence Container\Data Flow Task - Customer (if not exist)\Union All"
-          TopLeft="304.5,168.5" />
+          TopLeft="300.5,165.5" />
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Customer (if not exist).Paths[Union All Output 1]"
-          TopLeft="366.25,210.5">
+          TopLeft="362.25,207.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7831,7 +7931,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Customer (if not exist).Paths[Row Count Output 1]"
-          TopLeft="366.25,276.5">
+          TopLeft="362.25,273.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7853,18 +7953,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Customer (if not exist).Paths[Output]"
-          TopLeft="110.5,48">
+          TopLeft="83,49">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,69"
+              EndConnector="0,50"
               Start="0,0"
-              End="0,61.5">
+              End="0,42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,61.5" />
+                    End="0,42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7875,54 +7975,78 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Customer (if not exist).Paths[Error output]"
-          TopLeft="186,29">
+          TopLeft="152,28">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="104,0"
+              EndConnector="134,0"
               Start="0,0"
-              End="96.5,0">
+              End="126.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="96.5,0" />
+                    End="126.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="20.73861328125,5,55.0227734375,11.2822265625"
+              BoundingBox="35.73861328125,5,55.0227734375,11.2822265625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Customer (if not exist).Paths[Derived Column Output1]"
-          TopLeft="184,143.666666666667">
+          Id="Package\Sequence Container\Data Flow Task - Customer (if not exist).Paths[Derived Column Error Output]"
+          TopLeft="163,120">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="120.5,45.8333333333333"
+              EndConnector="129,-22"
               Start="0,0"
-              End="113,45.8333333333333">
+              End="121.5,-22">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="46.8532110091743,0" />
+                    End="60.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="46.8532110091743,0"
-                    Point2="50.8532110091743,0"
-                    Point3="50.8532110091743,4" />
+                    Point1="60.5,0"
+                    Point2="64.5,0"
+                    Point3="64.5,-4" />
                   <mssgle:LineSegment
-                    End="50.8532110091743,41.8333333333333" />
+                    End="64.5,-18" />
                   <mssgle:CubicBezierSegment
-                    Point1="50.8532110091743,41.8333333333333"
-                    Point2="50.8532110091743,45.8333333333333"
-                    Point3="54.8532110091743,45.8333333333333" />
+                    Point1="64.5,-18"
+                    Point2="64.5,-22"
+                    Point3="68.5,-22" />
                   <mssgle:LineSegment
-                    End="113,45.8333333333333" />
+                    End="121.5,-22" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-0.461386718749992,1,129.9227734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Customer (if not exist).Paths[ADO NET Source Output]"
+          TopLeft="611.5,44">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,96"
+              Start="0,0"
+              End="0,88.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,88.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7933,7 +8057,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Customer (if not exist).Paths[Derived Column Output]"
-          TopLeft="540.5,164">
+          TopLeft="86,141">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="275,24.5"
+              Start="0,0"
+              End="275,17">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.25"
+                    Point2="0,12.25"
+                    Point3="4,12.25" />
+                  <mssgle:LineSegment
+                    End="271,12.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="271,12.25"
+                    Point2="275,12.25"
+                    Point3="275,16.25" />
+                  <mssgle:LineSegment
+                    End="275,17" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Customer (if not exist).Paths[Derived Column Output1]"
+          TopLeft="536.5,161">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7965,64 +8123,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Customer (if not exist).Paths[Derived Column Error Output]"
-          TopLeft="184,132.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="108,-19.3333333333333"
-              Start="0,0"
-              End="100.5,-19.3333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="41.5779816513762,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="41.5779816513762,0"
-                    Point2="45.5779816513762,0"
-                    Point3="45.5779816513762,-4" />
-                  <mssgle:LineSegment
-                    End="45.5779816513762,-15.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="45.5779816513762,-15.3333333333333"
-                    Point2="45.5779816513762,-19.3333333333333"
-                    Point3="49.5779816513762,-19.3333333333333" />
-                  <mssgle:LineSegment
-                    End="100.5,-19.3333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-19.3834050673738,1,129.9227734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Customer (if not exist).Paths[ADO NET Source Output]"
-          TopLeft="615.5,47">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,96"
-              Start="0,0"
-              End="0,88.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,88.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -8042,19 +8142,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Data Flow Task - Customer (if not exist)\OLE DB Destination - Derived Col Err Output">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <DtsEventHandler
     design-time-name="Package\Sequence Container\Execute SQL Task  - Delete.EventHandlers[OnError]">
     <LayoutInfo>
