@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_stgProduct"
   DTS:PackageType="5"
-  DTS:VersionBuild="54"
-  DTS:VersionGUID="{5C2254FC-26D1-4172-AA83-CB2F2709CEE9}">
+  DTS:VersionBuild="56"
+  DTS:VersionGUID="{D0692020-A8A1-4586-83CC-22C92C63A522}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -185,14 +185,35 @@
           Language="CSharp"
           ReadOnlyVariables="System::PackageName,System::StartTime,User::VarRowCount,$Project::ParEmailFrom,$Project::ParEmailTo">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -594,35 +615,14 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -871,14 +871,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Language="CSharp"
           ReadOnlyVariables="System::PackageName,System::StartTime,$Project::ParEmailFrom,$Project::ParEmailTo">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="ST_e5819d90e8f14836845ba9a3eaee851d.csproj"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1278,35 +1299,14 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -2896,6 +2896,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                               name="FriendlyExpression">ProductModelID</property>
                           </properties>
                         </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\DC-Product.Outputs[Derived Column Output].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\DC-Product.Outputs[Derived Column Output].Columns[sourceName]"
+                          name="sourceName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,100,1252)"MySQL"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,100,1252)"MySQL"</property>
+                          </properties>
+                        </outputColumn>
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -3310,6 +3334,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                               name="FriendlyExpression">(DT_DBTIMESTAMP)DiscontinuedDate</property>
                           </properties>
                         </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Derived Column - u2.Outputs[Derived Column Output].Columns[SourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Derived Column - u2.Outputs[Derived Column Output].Columns[SourceName]"
+                          name="SourceName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,100,1252)"SharePoint"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,100,1252)"SharePoint"</property>
+                          </properties>
+                        </outputColumn>
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -3391,7 +3439,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                       dataType="System.String"
                       description="Specifies the metadata of the reference table in XML format."
                       name="ReferenceMetadataXml"
-                      state="escaped">_x003C_referenceMetadata_x003E__x003C_referenceColumns_x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ParentProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_Name_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_50_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C__x002F_referenceColumns_x003E__x003C__x002F_referenceMetadata_x003E__x000D__x000A_</property>
+                      state="escaped">_x003C_referenceMetadata_x003E__x003C_referenceColumns_x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ParentProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_Name_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_50_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_SourceName_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_100_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C__x002F_referenceColumns_x003E__x003C__x002F_referenceMetadata_x003E__x000D__x000A_</property>
                     <property
                       dataType="System.Boolean"
                       description="If true, each input record will be directly compared against EVERY record in the reference table.  This may produce slightly better results, but will be extremely slow unless the number of records in the reference table is very small.  Note that the entire reference table will be loaded into main memory if this option is enabled.  This option is primarily intended for debugging purposes and should be used with care."
@@ -3942,6 +3990,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                               typeConverter="tcComparisonFlagsEx">0</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup.Inputs[Fuzzy Lookup Input].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\DC-Product.Outputs[Derived Column Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              dataType="System.Null"
+                              description="Name of the reference table column with which the input column should be matched."
+                              name="JoinToReferenceColumn"
+                              state="escaped" />
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies whether the match is a fuzzy or an exact match."
+                              name="JoinType"
+                              typeConverter="tcJoinType">2</property>
+                            <property
+                              dataType="System.Single"
+                              description="Specifies the minimum textual similarity required between input and fuzzy matched records on values in this particular join column.  Must be a floating point value between 0.0 and 1.0."
+                              name="MinSimilarity">0</property>
+                            <property
+                              dataType="System.UInt32"
+                              description="Specifies the comparison options for character data. The options are those supported by the FoldString function."
+                              name="FuzzyComparisonFlags"
+                              typeConverter="tcComparisonFlags">1</property>
+                            <property
+                              dataType="System.UInt32"
+                              description="Flags to FoldString that should be used when comparing whether two strings are equivalent."
+                              name="FuzzyComparisonFlagsEx"
+                              typeConverter="tcComparisonFlagsEx">0</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -4286,6 +4368,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                           </properties>
                         </outputColumn>
                         <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[sourceName]"
+                          name="sourceName">
+                          <properties>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the reference table column that is copied to the output for each match result."
+                              name="CopyFromReferenceColumn"
+                              state="escaped" />
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product\DC-Product.Outputs[Derived Column Output].Columns[sourceName]}</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies whether the column is used to indicate confidence or similarity."
+                              name="ColumnType"
+                              typeConverter="tcColumnType">0</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
                           refId="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[Derived Column FName]"
                           codePage="1252"
                           dataType="str"
@@ -4466,7 +4573,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                       dataType="System.String"
                       description="Specifies the metadata of the reference table in XML format."
                       name="ReferenceMetadataXml"
-                      state="escaped">_x003C_referenceMetadata_x003E__x003C_referenceColumns_x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ParentProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_Name_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_50_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C__x002F_referenceColumns_x003E__x003C__x002F_referenceMetadata_x003E__x000D__x000A_</property>
+                      state="escaped">_x003C_referenceMetadata_x003E__x003C_referenceColumns_x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ParentProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_Name_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_50_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_SourceName_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_100_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C__x002F_referenceColumns_x003E__x003C__x002F_referenceMetadata_x003E__x000D__x000A_</property>
                     <property
                       dataType="System.Boolean"
                       description="If true, each input record will be directly compared against EVERY record in the reference table.  This may produce slightly better results, but will be extremely slow unless the number of records in the reference table is very small.  Note that the entire reference table will be loaded into main memory if this option is enabled.  This option is primarily intended for debugging purposes and should be used with care."
@@ -5017,6 +5124,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                               typeConverter="tcComparisonFlagsEx">0</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup 1.Inputs[Fuzzy Lookup Input].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\DC-Product.Outputs[Derived Column Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              dataType="System.Null"
+                              description="Name of the reference table column with which the input column should be matched."
+                              name="JoinToReferenceColumn"
+                              state="escaped" />
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies whether the match is a fuzzy or an exact match."
+                              name="JoinType"
+                              typeConverter="tcJoinType">2</property>
+                            <property
+                              dataType="System.Single"
+                              description="Specifies the minimum textual similarity required between input and fuzzy matched records on values in this particular join column.  Must be a floating point value between 0.0 and 1.0."
+                              name="MinSimilarity">0</property>
+                            <property
+                              dataType="System.UInt32"
+                              description="Specifies the comparison options for character data. The options are those supported by the FoldString function."
+                              name="FuzzyComparisonFlags"
+                              typeConverter="tcComparisonFlags">1</property>
+                            <property
+                              dataType="System.UInt32"
+                              description="Flags to FoldString that should be used when comparing whether two strings are equivalent."
+                              name="FuzzyComparisonFlagsEx"
+                              typeConverter="tcComparisonFlagsEx">0</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -5361,6 +5502,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                           </properties>
                         </outputColumn>
                         <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[sourceName]"
+                          name="sourceName">
+                          <properties>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the reference table column that is copied to the output for each match result."
+                              name="CopyFromReferenceColumn"
+                              state="escaped" />
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product\DC-Product.Outputs[Derived Column Output].Columns[sourceName]}</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies whether the column is used to indicate confidence or similarity."
+                              name="ColumnType"
+                              typeConverter="tcColumnType">0</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
                           refId="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[Derived Column FName]"
                           codePage="1252"
                           dataType="str"
@@ -5516,7 +5682,7 @@ where [refTable].[Name] = ?</property>
                     <property
                       dataType="System.String"
                       description="Indicates whether to reference metadata in an XML format."
-                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductCategoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ParentProductCategoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductCategoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ParentProductCategoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SourceName" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -5899,6 +6065,21 @@ where [refTable].[Name] = ?</property>
                               name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product\Merge.Outputs[Merge Output 1].Columns[_Confidence]}</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Merge.Inputs[Merge Input 1].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Sort 1.Outputs[Sort Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product\Merge.Outputs[Merge Output 1].Columns[sourceName]}</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -6170,6 +6351,21 @@ where [refTable].[Name] = ?</property>
                               name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product\Merge.Outputs[Merge Output 1].Columns[_Confidence]}</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Merge.Inputs[Merge Input 2].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Sort.Outputs[Sort Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product\Merge.Outputs[Merge Output 1].Columns[sourceName]}</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -6292,6 +6488,13 @@ where [refTable].[Name] = ?</property>
                           dataType="r4"
                           lineageId="Package\Sequence Container\Data Flow Task - Product\Merge.Outputs[Merge Output 1].Columns[_Confidence]"
                           name="_Confidence" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Merge.Outputs[Merge Output 1].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Merge.Outputs[Merge Output 1].Columns[sourceName]"
+                          name="sourceName" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -6502,6 +6705,21 @@ where [refTable].[Name] = ?</property>
                               dataType="System.Int32"
                               description="Output column lineage ID"
                               name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product\Merge 1.Outputs[Merge Output 1].Columns[Derived splitedName]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Merge 1.Inputs[Merge Input 1].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Merge.Outputs[Merge Output 1].Columns[sourceName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product\Merge 1.Outputs[Merge Output 1].Columns[sourceName]}</property>
                           </properties>
                         </inputColumn>
                       </inputColumns>
@@ -6899,6 +7117,21 @@ where [refTable].[Name] = ?</property>
                               name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product\Merge 1.Outputs[Merge Output 1].Columns[ProductCategoryID]}</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Merge 1.Inputs[Merge Input 2].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Sort 2.Outputs[Sort Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product\Merge 1.Outputs[Merge Output 1].Columns[sourceName]}</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -7072,6 +7305,13 @@ where [refTable].[Name] = ?</property>
                           dataType="i4"
                           lineageId="Package\Sequence Container\Data Flow Task - Product\Merge 1.Outputs[Merge Output 1].Columns[ProductCategoryID]"
                           name="ProductCategoryID" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Merge 1.Outputs[Merge Output 1].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Merge 1.Outputs[Merge Output 1].Columns[sourceName]"
+                          name="sourceName" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -7547,6 +7787,14 @@ where [refTable].[Name] = ?</property>
                           cachedName="Derived DiscontinuedDate"
                           externalMetadataColumnId="Package\Sequence Container\Data Flow Task - Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DiscontinuedDate]"
                           lineageId="Package\Sequence Container\Data Flow Task - Product\Union All.Outputs[Union All Output 1].Columns[Derived DiscontinuedDate]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="SourceName"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceName]"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Union All.Outputs[Union All Output 1].Columns[SourceName]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -7622,6 +7870,12 @@ where [refTable].[Name] = ?</property>
                           dataType="str"
                           length="50"
                           name="ThumbnailPhotoFileName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="SourceName" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -8522,6 +8776,24 @@ where [refTable].[Name] = ?</property>
                               name="NewSortKeyPosition">0</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Sort.Inputs[Sort Input].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -8794,6 +9066,21 @@ where [refTable].[Name] = ?</property>
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
                               name="SortColumnId">#{Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[_Confidence]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Sort.Outputs[Sort Output].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Sort.Outputs[Sort Output].Columns[sourceName]"
+                          name="sourceName">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[sourceName]}</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -9160,6 +9447,24 @@ where [refTable].[Name] = ?</property>
                               name="NewSortKeyPosition">0</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Sort 1.Inputs[Sort Input].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -9446,6 +9751,21 @@ where [refTable].[Name] = ?</property>
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
                               name="SortColumnId">#{Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[_Similarity_Derived Column LName]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Sort 1.Outputs[Sort Output].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Sort 1.Outputs[Sort Output].Columns[sourceName]"
+                          name="sourceName">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[sourceName]}</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -9968,6 +10288,24 @@ where [refTable].[Name] = ?</property>
                               name="NewSortKeyPosition">0</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Sort 2.Inputs[Sort Input].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\DC-Product.Outputs[Derived Column Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -10379,6 +10717,21 @@ where [refTable].[Name] = ?</property>
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
                               name="SortColumnId">#{Package\Sequence Container\Data Flow Task - Product\Lookup.Outputs[Lookup Match Output].Columns[ProductCategoryID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Sort 2.Outputs[Sort Output].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Sort 2.Outputs[Sort Output].Columns[sourceName]"
+                          name="sourceName">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - Product\DC-Product.Outputs[Derived Column Output].Columns[sourceName]}</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -10801,6 +11154,21 @@ where [refTable].[Name] = ?</property>
                               name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product\Union All.Outputs[Union All Output 1].Columns[ProductCategoryID]}</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Union All.Inputs[Union All Input 1].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Merge 1.Outputs[Merge Output 1].Columns[sourceName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product\Union All.Outputs[Union All Output 1].Columns[SourceName]}</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -11079,6 +11447,21 @@ where [refTable].[Name] = ?</property>
                               name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product\Union All.Outputs[Union All Output 1].Columns[Derived ProductNumber]}</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Union All.Inputs[Union All Input 2].Columns[SourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="SourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Derived Column - u2.Outputs[Derived Column Output].Columns[SourceName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product\Union All.Outputs[Union All Output 1].Columns[SourceName]}</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -11257,6 +11640,13 @@ where [refTable].[Name] = ?</property>
                           dataType="i4"
                           lineageId="Package\Sequence Container\Data Flow Task - Product\Union All.Outputs[Union All Output 1].Columns[ProductCategoryID]"
                           name="ProductCategoryID" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product\Union All.Outputs[Union All Output 1].Columns[SourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product\Union All.Outputs[Union All Output 1].Columns[SourceName]"
+                          name="SourceName" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -11306,14 +11696,14 @@ where [refTable].[Name] = ?</property>
                   startId="Package\Sequence Container\Data Flow Task - Product\OData Source.Outputs[Error output]" />
                 <path
                   refId="Package\Sequence Container\Data Flow Task - Product.Paths[Fuzzy Lookup Output1]"
-                  endId="Package\Sequence Container\Data Flow Task - Product\Sort.Inputs[Sort Input]"
-                  name="Fuzzy Lookup Output"
-                  startId="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output]" />
-                <path
-                  refId="Package\Sequence Container\Data Flow Task - Product.Paths[Fuzzy Lookup Output]"
                   endId="Package\Sequence Container\Data Flow Task - Product\Sort 1.Inputs[Sort Input]"
                   name="Fuzzy Lookup Output"
                   startId="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup.Outputs[Fuzzy Lookup Output]" />
+                <path
+                  refId="Package\Sequence Container\Data Flow Task - Product.Paths[Fuzzy Lookup Output]"
+                  endId="Package\Sequence Container\Data Flow Task - Product\Sort.Inputs[Sort Input]"
+                  name="Fuzzy Lookup Output"
+                  startId="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output]" />
                 <path
                   refId="Package\Sequence Container\Data Flow Task - Product.Paths[Lookup Match Output]"
                   endId="Package\Sequence Container\Data Flow Task - Product\Sort 2.Inputs[Sort Input]"
@@ -11346,19 +11736,19 @@ where [refTable].[Name] = ?</property>
                   startId="Package\Sequence Container\Data Flow Task - Product\Row Count.Outputs[Row Count Output 1]" />
                 <path
                   refId="Package\Sequence Container\Data Flow Task - Product.Paths[Sort Output2]"
+                  endId="Package\Sequence Container\Data Flow Task - Product\Merge 1.Inputs[Merge Input 2]"
+                  name="Sort Output"
+                  startId="Package\Sequence Container\Data Flow Task - Product\Sort 2.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Sequence Container\Data Flow Task - Product.Paths[Sort Output]"
                   endId="Package\Sequence Container\Data Flow Task - Product\Merge.Inputs[Merge Input 2]"
                   name="Sort Output"
                   startId="Package\Sequence Container\Data Flow Task - Product\Sort.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Sequence Container\Data Flow Task - Product.Paths[Sort Output]"
+                  refId="Package\Sequence Container\Data Flow Task - Product.Paths[Sort Output1]"
                   endId="Package\Sequence Container\Data Flow Task - Product\Merge.Inputs[Merge Input 1]"
                   name="Sort Output"
                   startId="Package\Sequence Container\Data Flow Task - Product\Sort 1.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Sequence Container\Data Flow Task - Product.Paths[Sort Output1]"
-                  endId="Package\Sequence Container\Data Flow Task - Product\Merge 1.Inputs[Merge Input 2]"
-                  name="Sort Output"
-                  startId="Package\Sequence Container\Data Flow Task - Product\Sort 2.Outputs[Sort Output]" />
                 <path
                   refId="Package\Sequence Container\Data Flow Task - Product.Paths[Union All Output 1]"
                   endId="Package\Sequence Container\Data Flow Task - Product\Row Count.Inputs[Row Count Input 1]"
@@ -12739,6 +13129,30 @@ where [refTable].[Name] = ?</property>
                               name="FriendlyExpression">ProductModelID</property>
                           </properties>
                         </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Product.Outputs[Derived Column Output].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Product.Outputs[Derived Column Output].Columns[sourceName]"
+                          name="sourceName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,100,1252)"MySQL"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,100,1252)"MySQL"</property>
+                          </properties>
+                        </outputColumn>
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -13153,6 +13567,30 @@ where [refTable].[Name] = ?</property>
                               name="FriendlyExpression">(DT_DBTIMESTAMP)DiscontinuedDate</property>
                           </properties>
                         </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Derived Column - u2.Outputs[Derived Column Output].Columns[SourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Derived Column - u2.Outputs[Derived Column Output].Columns[SourceName]"
+                          name="SourceName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,100,1252)"SharePoint"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,100,1252)"SharePoint"</property>
+                          </properties>
+                        </outputColumn>
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -13234,7 +13672,7 @@ where [refTable].[Name] = ?</property>
                       dataType="System.String"
                       description="Specifies the metadata of the reference table in XML format."
                       name="ReferenceMetadataXml"
-                      state="escaped">_x003C_referenceMetadata_x003E__x003C_referenceColumns_x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ParentProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_Name_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_50_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C__x002F_referenceColumns_x003E__x003C__x002F_referenceMetadata_x003E__x000D__x000A_</property>
+                      state="escaped">_x003C_referenceMetadata_x003E__x003C_referenceColumns_x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ParentProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_Name_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_50_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_SourceName_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_100_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C__x002F_referenceColumns_x003E__x003C__x002F_referenceMetadata_x003E__x000D__x000A_</property>
                     <property
                       dataType="System.Boolean"
                       description="If true, each input record will be directly compared against EVERY record in the reference table.  This may produce slightly better results, but will be extremely slow unless the number of records in the reference table is very small.  Note that the entire reference table will be loaded into main memory if this option is enabled.  This option is primarily intended for debugging purposes and should be used with care."
@@ -13785,6 +14223,40 @@ where [refTable].[Name] = ?</property>
                               typeConverter="tcComparisonFlagsEx">0</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup.Inputs[Fuzzy Lookup Input].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Product.Outputs[Derived Column Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              dataType="System.Null"
+                              description="Name of the reference table column with which the input column should be matched."
+                              name="JoinToReferenceColumn"
+                              state="escaped" />
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies whether the match is a fuzzy or an exact match."
+                              name="JoinType"
+                              typeConverter="tcJoinType">2</property>
+                            <property
+                              dataType="System.Single"
+                              description="Specifies the minimum textual similarity required between input and fuzzy matched records on values in this particular join column.  Must be a floating point value between 0.0 and 1.0."
+                              name="MinSimilarity">0</property>
+                            <property
+                              dataType="System.UInt32"
+                              description="Specifies the comparison options for character data. The options are those supported by the FoldString function."
+                              name="FuzzyComparisonFlags"
+                              typeConverter="tcComparisonFlags">1</property>
+                            <property
+                              dataType="System.UInt32"
+                              description="Flags to FoldString that should be used when comparing whether two strings are equivalent."
+                              name="FuzzyComparisonFlagsEx"
+                              typeConverter="tcComparisonFlagsEx">0</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -14129,6 +14601,31 @@ where [refTable].[Name] = ?</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[sourceName]"
+                          name="sourceName">
+                          <properties>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the reference table column that is copied to the output for each match result."
+                              name="CopyFromReferenceColumn"
+                              state="escaped" />
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Product.Outputs[Derived Column Output].Columns[sourceName]}</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies whether the column is used to indicate confidence or similarity."
+                              name="ColumnType"
+                              typeConverter="tcColumnType">0</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
                           refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[Derived Column FName]"
                           codePage="1252"
                           dataType="str"
@@ -14309,7 +14806,7 @@ where [refTable].[Name] = ?</property>
                       dataType="System.String"
                       description="Specifies the metadata of the reference table in XML format."
                       name="ReferenceMetadataXml"
-                      state="escaped">_x003C_referenceMetadata_x003E__x003C_referenceColumns_x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ParentProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_Name_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_50_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C__x002F_referenceColumns_x003E__x003C__x002F_referenceMetadata_x003E__x000D__x000A_</property>
+                      state="escaped">_x003C_referenceMetadata_x003E__x003C_referenceColumns_x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_ParentProductCategoryID_x0022__x0020_dataType_x003D__x0022_DT_I4_x0022__x0020_length_x003D__x0022_0_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_0_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_Name_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_50_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_SourceName_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_100_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C__x002F_referenceColumns_x003E__x003C__x002F_referenceMetadata_x003E__x000D__x000A_</property>
                     <property
                       dataType="System.Boolean"
                       description="If true, each input record will be directly compared against EVERY record in the reference table.  This may produce slightly better results, but will be extremely slow unless the number of records in the reference table is very small.  Note that the entire reference table will be loaded into main memory if this option is enabled.  This option is primarily intended for debugging purposes and should be used with care."
@@ -14860,6 +15357,40 @@ where [refTable].[Name] = ?</property>
                               typeConverter="tcComparisonFlagsEx">0</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup 1.Inputs[Fuzzy Lookup Input].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Product.Outputs[Derived Column Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              dataType="System.Null"
+                              description="Name of the reference table column with which the input column should be matched."
+                              name="JoinToReferenceColumn"
+                              state="escaped" />
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies whether the match is a fuzzy or an exact match."
+                              name="JoinType"
+                              typeConverter="tcJoinType">2</property>
+                            <property
+                              dataType="System.Single"
+                              description="Specifies the minimum textual similarity required between input and fuzzy matched records on values in this particular join column.  Must be a floating point value between 0.0 and 1.0."
+                              name="MinSimilarity">0</property>
+                            <property
+                              dataType="System.UInt32"
+                              description="Specifies the comparison options for character data. The options are those supported by the FoldString function."
+                              name="FuzzyComparisonFlags"
+                              typeConverter="tcComparisonFlags">1</property>
+                            <property
+                              dataType="System.UInt32"
+                              description="Flags to FoldString that should be used when comparing whether two strings are equivalent."
+                              name="FuzzyComparisonFlagsEx"
+                              typeConverter="tcComparisonFlagsEx">0</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -15204,6 +15735,31 @@ where [refTable].[Name] = ?</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[sourceName]"
+                          name="sourceName">
+                          <properties>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the reference table column that is copied to the output for each match result."
+                              name="CopyFromReferenceColumn"
+                              state="escaped" />
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Product.Outputs[Derived Column Output].Columns[sourceName]}</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies whether the column is used to indicate confidence or similarity."
+                              name="ColumnType"
+                              typeConverter="tcColumnType">0</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
                           refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[Derived Column FName]"
                           codePage="1252"
                           dataType="str"
@@ -15359,7 +15915,7 @@ where [refTable].[Name] = ?</property>
                     <property
                       dataType="System.String"
                       description="Indicates whether to reference metadata in an XML format."
-                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductCategoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ParentProductCategoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductCategoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ParentProductCategoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SourceName" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -15742,6 +16298,21 @@ where [refTable].[Name] = ?</property>
                               name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Merge.Outputs[Merge Output 1].Columns[_Confidence]}</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge.Inputs[Merge Input 1].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 1.Outputs[Sort Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Merge.Outputs[Merge Output 1].Columns[sourceName]}</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -16013,6 +16584,21 @@ where [refTable].[Name] = ?</property>
                               name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Merge.Outputs[Merge Output 1].Columns[_Confidence]}</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge.Inputs[Merge Input 2].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort.Outputs[Sort Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Merge.Outputs[Merge Output 1].Columns[sourceName]}</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -16135,6 +16721,13 @@ where [refTable].[Name] = ?</property>
                           dataType="r4"
                           lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge.Outputs[Merge Output 1].Columns[_Confidence]"
                           name="_Confidence" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge.Outputs[Merge Output 1].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge.Outputs[Merge Output 1].Columns[sourceName]"
+                          name="sourceName" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -16345,6 +16938,21 @@ where [refTable].[Name] = ?</property>
                               dataType="System.Int32"
                               description="Output column lineage ID"
                               name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1.Outputs[Merge Output 1].Columns[Derived splitedName]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1.Inputs[Merge Input 1].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge.Outputs[Merge Output 1].Columns[sourceName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1.Outputs[Merge Output 1].Columns[sourceName]}</property>
                           </properties>
                         </inputColumn>
                       </inputColumns>
@@ -16742,6 +17350,21 @@ where [refTable].[Name] = ?</property>
                               name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1.Outputs[Merge Output 1].Columns[ProductCategoryID]}</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1.Inputs[Merge Input 2].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 2.Outputs[Sort Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1.Outputs[Merge Output 1].Columns[sourceName]}</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -16915,6 +17538,13 @@ where [refTable].[Name] = ?</property>
                           dataType="i4"
                           lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1.Outputs[Merge Output 1].Columns[ProductCategoryID]"
                           name="ProductCategoryID" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1.Outputs[Merge Output 1].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1.Outputs[Merge Output 1].Columns[sourceName]"
+                          name="sourceName" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -17390,6 +18020,14 @@ where [refTable].[Name] = ?</property>
                           cachedName="Derived DiscontinuedDate"
                           externalMetadataColumnId="Package\Sequence Container\Data Flow Task - Product if not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DiscontinuedDate]"
                           lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Union All.Outputs[Union All Output 1].Columns[Derived DiscontinuedDate]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="SourceName"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task - Product if not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceName]"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Union All.Outputs[Union All Output 1].Columns[SourceName]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -17465,6 +18103,12 @@ where [refTable].[Name] = ?</property>
                           dataType="str"
                           length="50"
                           name="ThumbnailPhotoFileName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="SourceName" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -18365,6 +19009,24 @@ where [refTable].[Name] = ?</property>
                               name="NewSortKeyPosition">0</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort.Inputs[Sort Input].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -18637,6 +19299,21 @@ where [refTable].[Name] = ?</property>
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
                               name="SortColumnId">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[_Confidence]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort.Outputs[Sort Output].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort.Outputs[Sort Output].Columns[sourceName]"
+                          name="sourceName">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output].Columns[sourceName]}</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -19003,6 +19680,24 @@ where [refTable].[Name] = ?</property>
                               name="NewSortKeyPosition">0</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 1.Inputs[Sort Input].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -19289,6 +19984,21 @@ where [refTable].[Name] = ?</property>
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
                               name="SortColumnId">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[_Similarity_Derived Column LName]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 1.Outputs[Sort Output].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 1.Outputs[Sort Output].Columns[sourceName]"
+                          name="sourceName">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[sourceName]}</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -19811,6 +20521,24 @@ where [refTable].[Name] = ?</property>
                               name="NewSortKeyPosition">0</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 2.Inputs[Sort Input].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Product.Outputs[Derived Column Output].Columns[sourceName]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -20222,6 +20950,21 @@ where [refTable].[Name] = ?</property>
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
                               name="SortColumnId">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Lookup.Outputs[Lookup Match Output].Columns[ProductCategoryID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 2.Outputs[Sort Output].Columns[sourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 2.Outputs[Sort Output].Columns[sourceName]"
+                          name="sourceName">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Product.Outputs[Derived Column Output].Columns[sourceName]}</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -20644,6 +21387,21 @@ where [refTable].[Name] = ?</property>
                               name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Union All.Outputs[Union All Output 1].Columns[ProductCategoryID]}</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Union All.Inputs[Union All Input 1].Columns[sourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="sourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1.Outputs[Merge Output 1].Columns[sourceName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Union All.Outputs[Union All Output 1].Columns[SourceName]}</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -20922,6 +21680,21 @@ where [refTable].[Name] = ?</property>
                               name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Union All.Outputs[Union All Output 1].Columns[Derived ProductNumber]}</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Union All.Inputs[Union All Input 2].Columns[SourceName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="SourceName"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Derived Column - u2.Outputs[Derived Column Output].Columns[SourceName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Sequence Container\Data Flow Task - Product if not Exist\Union All.Outputs[Union All Output 1].Columns[SourceName]}</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -21100,6 +21873,13 @@ where [refTable].[Name] = ?</property>
                           dataType="i4"
                           lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Union All.Outputs[Union All Output 1].Columns[ProductCategoryID]"
                           name="ProductCategoryID" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task - Product if not Exist\Union All.Outputs[Union All Output 1].Columns[SourceName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Sequence Container\Data Flow Task - Product if not Exist\Union All.Outputs[Union All Output 1].Columns[SourceName]"
+                          name="SourceName" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -21128,7 +21908,7 @@ where [refTable].[Name] = ?</property>
                   name="Derived Column Error Output"
                   startId="Package\Sequence Container\Data Flow Task - Product if not Exist\Derived Column - u2.Outputs[Derived Column Error Output]" />
                 <path
-                  refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Output]"
+                  refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Output2]"
                   endId="Package\Sequence Container\Data Flow Task - Product if not Exist\Lookup.Inputs[Lookup Input]"
                   name="Derived Column Output"
                   startId="Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Product.Outputs[Derived Column Output]" />
@@ -21138,7 +21918,7 @@ where [refTable].[Name] = ?</property>
                   name="Derived Column Output"
                   startId="Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Conditional split.Outputs[Derived Column Output]" />
                 <path
-                  refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Output2]"
+                  refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Output]"
                   endId="Package\Sequence Container\Data Flow Task - Product if not Exist\Union All.Inputs[Union All Input 2]"
                   name="Derived Column Output"
                   startId="Package\Sequence Container\Data Flow Task - Product if not Exist\Derived Column - u2.Outputs[Derived Column Output]" />
@@ -21168,12 +21948,12 @@ where [refTable].[Name] = ?</property>
                   name="Lookup No Match Output"
                   startId="Package\Sequence Container\Data Flow Task - Product if not Exist\Lookup.Outputs[Lookup No Match Output]" />
                 <path
-                  refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Merge Output 1]"
+                  refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Merge Output 11]"
                   endId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1.Inputs[Merge Input 1]"
                   name="Merge Output 1"
                   startId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge.Outputs[Merge Output 1]" />
                 <path
-                  refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Merge Output 11]"
+                  refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Merge Output 1]"
                   endId="Package\Sequence Container\Data Flow Task - Product if not Exist\Union All.Inputs[Union All Input 1]"
                   name="Merge Output 1"
                   startId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1.Outputs[Merge Output 1]" />
@@ -21193,12 +21973,12 @@ where [refTable].[Name] = ?</property>
                   name="Sort Output"
                   startId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Sort Output]"
+                  refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Sort Output1]"
                   endId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge.Inputs[Merge Input 1]"
                   name="Sort Output"
                   startId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 1.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Sort Output1]"
+                  refId="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Sort Output]"
                   endId="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1.Inputs[Merge Input 2]"
                   name="Sort Output"
                   startId="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 2.Outputs[Sort Output]" />
@@ -21587,35 +22367,14 @@ where [refTable].[Name] = ?</property>
               Language="CSharp"
               ReadOnlyVariables="System::ErrorDescription,System::SourceName,System::PackageName,System::StartTime,$Project::ParEmailFrom,$Project::ParEmailTo">
               <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -21736,34 +22495,8 @@ using System.Runtime.CompilerServices;
   </resheader>
 </root>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Settings.get_Default():ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Sett" +
-    "ings")]
-
-namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
+                Name="ST_52a2a9f398cf46739a6534d687b9f247.csproj"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{ba38855a-9de9-46a6-a589-5aa861552692}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>ST_e6765987cbdb4366b385d86b362cd7d4</RootNamespace><AssemblyName>ST_52a2a9f398cf46739a6534d687b9f247</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile><Compile Include="ScriptMain.cs"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST140</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -21931,17 +22664,64 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
-                Name="ST_52a2a9f398cf46739a6534d687b9f247.csproj"
-                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{ba38855a-9de9-46a6-a589-5aa861552692}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>ST_e6765987cbdb4366b385d86b362cd7d4</RootNamespace><AssemblyName>ST_52a2a9f398cf46739a6534d687b9f247</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile><Compile Include="ScriptMain.cs"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST140</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Settings.get_Default():ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Sett" +
+    "ings")]
+
+namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -22619,28 +23399,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Sort Output2]"
-          TopLeft="535.833333333333,314.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46.233183856502"
-              Start="0,0"
-              End="0,38.733183856502">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.733183856502" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product.Paths[Sort Output1]"
           TopLeft="338.5,184">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22674,7 +23432,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product.Paths[Sort Output]"
+          Id="Package\Sequence Container\Data Flow Task - Product.Paths[Sort Output1]"
           TopLeft="728,383.116591928251">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22687,6 +23445,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="-147.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product.Paths[Sort Output]"
+          TopLeft="535.833333333333,314.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.233183856502"
+              Start="0,0"
+              End="0,38.733183856502">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.733183856502" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -22845,28 +23625,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product.Paths[Fuzzy Lookup Output1]"
-          TopLeft="536,245">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27.5"
-              Start="0,0"
-              End="0,20">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product.Paths[Fuzzy Lookup Output]"
           TopLeft="780.5,332">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22879,6 +23637,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,24" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product.Paths[Fuzzy Lookup Output]"
+          TopLeft="536,245">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.5"
+              Start="0,0"
+              End="0,20">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23093,6 +23873,42 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     </LayoutInfo>
   </DtsEventHandler>
   <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - Product\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - Product\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\Data Flow Task - Product\OLE DB Destination 2">
     <Properties>
       <Property>
@@ -23118,6 +23934,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - Product\Fuzzy Lookup 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Sequence Container\Data Flow Task - Product if not Exist">
     <LayoutInfo>
@@ -23126,78 +23955,282 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="113,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Lookup"
-          TopLeft="474,135" />
-        <NodeLayout
-          Size="152,42"
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup 1"
-          TopLeft="450,203" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Conditional split"
-          TopLeft="678.5,130.5" />
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Product"
-          TopLeft="467,66" />
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Conditional Split"
-          TopLeft="688,198" />
-        <NodeLayout
-          Size="143,42"
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup"
-          TopLeft="699,284" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\ADO NET Source"
-          TopLeft="453,0" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 2"
-          TopLeft="276,136" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort"
-          TopLeft="478,269.5" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 1"
-          TopLeft="719,357.5" />
-        <NodeLayout
-          Size="108,42"
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge"
-          TopLeft="456,354.733183856502" />
-        <NodeLayout
-          Size="117,42"
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1"
-          TopLeft="258,214.346153846154" />
+          TopLeft="472,138" />
         <NodeLayout
           Size="171,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\OLE DB Destination"
-          TopLeft="20,368.881374722838" />
+          TopLeft="11,359.881374722838" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup"
+          TopLeft="697,287" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort"
+          TopLeft="476,269.5" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Product"
+          TopLeft="465,69" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Row Count"
+          TopLeft="27.5,286.5" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge"
+          TopLeft="454,357.733183856502" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Conditional Split"
+          TopLeft="686,201" />
         <NodeLayout
           Size="144,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\OData Source"
-          TopLeft="20,3" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Derived Column - u2"
-          TopLeft="6,83" />
+          TopLeft="18,6" />
         <NodeLayout
           Size="121,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Union All"
-          TopLeft="38.5,219" />
+          TopLeft="31.5,219" />
         <NodeLayout
-          Size="180,42"
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\OLE DB Destination 1"
-          TopLeft="237.5,4.89655172413794" />
+          Size="107,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 1"
+          TopLeft="717,360.5" />
         <NodeLayout
           Size="180,42"
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist\OLE DB Destination 2"
-          TopLeft="247.5,76.8965517241379" />
+          TopLeft="245.5,79.8965517241379" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Sort 2"
+          TopLeft="274,139" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Derived Column - u2"
+          TopLeft="4,86" />
+        <NodeLayout
+          Size="117,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Merge 1"
+          TopLeft="254,218.346153846154" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\OLE DB Destination 1"
+          TopLeft="235.5,7.89655172413791" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\DC-Conditional split"
+          TopLeft="676.5,133.5" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\ADO NET Source"
+          TopLeft="451,3" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup 1"
+          TopLeft="449,200" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Union All Output 1]"
+          TopLeft="92.25,261">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.5"
+              Start="0,0"
+              End="0,18">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Sort Output]"
+          TopLeft="327.5,181">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15,37.346153846154"
+              Start="0,0"
+              End="-15,29.846153846154">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.673076923077" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.673076923077"
+                    Point2="0,18.673076923077"
+                    Point3="-4,18.673076923077" />
+                  <mssgle:LineSegment
+                    End="-11,18.673076923077" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-11,18.673076923077"
+                    Point2="-15,18.673076923077"
+                    Point3="-15,22.673076923077" />
+                  <mssgle:LineSegment
+                    End="-15,29.846153846154" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Sort Output1]"
+          TopLeft="717,380.116591928251">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-155,0"
+              Start="0,0"
+              End="-147.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-147.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Sort Output2]"
+          TopLeft="524.833333333333,311.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.233183856502"
+              Start="0,0"
+              End="0,38.733183856502">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.733183856502" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Row Count Output 1]"
+          TopLeft="94.5,328.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.381374722838"
+              Start="0,0"
+              End="0,23.881374722838">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.881374722838" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Output]"
+          TopLeft="91,48">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Merge Output 1]"
+          TopLeft="254,239.673076923077">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-101.5,0"
+              Start="0,0"
+              End="-94,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-94,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Merge Output 11]"
+          TopLeft="491.333333333333,357.733183856502">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-178.833333333333,-97.387030010348"
+              Start="0,0"
+              End="-178.833333333333,-89.887030010348">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-35.8078370845218" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-35.8078370845218"
+                    Point2="0,-39.8078370845218"
+                    Point3="-4,-39.8078370845218" />
+                  <mssgle:LineSegment
+                    End="-174.833333333333,-39.8078370845218" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-174.833333333333,-39.8078370845218"
+                    Point2="-178.833333333333,-39.8078370845218"
+                    Point3="-178.833333333333,-43.8078370845218" />
+                  <mssgle:LineSegment
+                    End="-178.833333333333,-89.887030010348" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Lookup No Match Output]"
-          TopLeft="587,153.75">
+          TopLeft="585,156.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23221,7 +24254,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Lookup Match Output]"
-          TopLeft="474,156.5">
+          TopLeft="472,159.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23244,19 +24277,87 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Output]"
-          TopLeft="531.75,108">
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Fuzzy Lookup Output]"
+          TopLeft="769.5,329">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,27"
+              EndConnector="0,31.5"
               Start="0,0"
-              End="0,19.5">
+              End="0,24">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5" />
+                    End="0,24" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Fuzzy Lookup Output1]"
+          TopLeft="525,242">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.5"
+              Start="0,0"
+              End="0,20">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Error output]"
+          TopLeft="162,27.948275862069">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73.5,0"
+              Start="0,0"
+              End="66,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="66,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="5.48861328125,5,55.0227734375,11.2822265625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Output]"
+          TopLeft="92,128">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,91"
+              Start="0,0"
+              End="0,83.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,83.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23267,7 +24368,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Output1]"
-          TopLeft="764.75,172.5">
+          TopLeft="762.75,175.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23288,8 +24389,54 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Output2]"
+          TopLeft="529.75,111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27"
+              Start="0,0"
+              End="0,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Error Output]"
+          TopLeft="180,103.948275862069">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.5,0"
+              Start="0,0"
+              End="58,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="58,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-35.96138671875,5,129.9227734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Conditional Split Default Output]"
-          TopLeft="768,240">
+          TopLeft="766,243">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23313,31 +24460,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Case 1]"
-          TopLeft="688,221.5">
+          TopLeft="686,221.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-86,0"
+              EndConnector="-85,0"
               Start="0,0"
-              End="-78.5,0">
+              End="-77.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-78.5,0" />
+                    End="-77.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-54.4680859375,5,30.436171875,9.5537109375"
+              BoundingBox="-53.9680859375,5,30.436171875,9.5537109375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[ADO NET Source Output]"
-          TopLeft="532.5,42">
+          TopLeft="530.5,45">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -23349,324 +24496,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,16.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Fuzzy Lookup Output]"
-          TopLeft="771.5,326">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.5"
-              Start="0,0"
-              End="0,24">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Fuzzy Lookup Output1]"
-          TopLeft="526.5,245">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,24.5"
-              Start="0,0"
-              End="0,17">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Sort Output2]"
-          TopLeft="526.833333333333,311.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,43.233183856502"
-              Start="0,0"
-              End="0,35.733183856502">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.733183856502" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Sort Output]"
-          TopLeft="719,377.116591928251">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-155,0"
-              Start="0,0"
-              End="-147.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-147.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Sort Output1]"
-          TopLeft="329.5,178">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-13,36.346153846154"
-              Start="0,0"
-              End="-13,28.846153846154">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.173076923077" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.173076923077"
-                    Point2="0,18.173076923077"
-                    Point3="-4,18.173076923077" />
-                  <mssgle:LineSegment
-                    End="-9,18.173076923077" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-9,18.173076923077"
-                    Point2="-13,18.173076923077"
-                    Point3="-13,22.173076923077" />
-                  <mssgle:LineSegment
-                    End="-13,28.846153846154" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Merge Output 1]"
-          TopLeft="493.333333333333,354.733183856502">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-176.833333333333,-98.387030010348"
-              Start="0,0"
-              End="-176.833333333333,-90.887030010348">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-36.2165962086094" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-36.2165962086094"
-                    Point2="0,-40.2165962086094"
-                    Point3="-4,-40.2165962086094" />
-                  <mssgle:LineSegment
-                    End="-172.833333333333,-40.2165962086094" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-172.833333333333,-40.2165962086094"
-                    Point2="-176.833333333333,-40.2165962086094"
-                    Point3="-176.833333333333,-44.2165962086094" />
-                  <mssgle:LineSegment
-                    End="-176.833333333333,-90.887030010348" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Output]"
-          TopLeft="93,45">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Merge Output 11]"
-          TopLeft="258,237.673076923077">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-98.5,0"
-              Start="0,0"
-              End="-91,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-91,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Output2]"
-          TopLeft="96.5,125">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,94"
-              Start="0,0"
-              End="0,86.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,86.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Error output]"
-          TopLeft="164,24.948275862069">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="73.5,0"
-              Start="0,0"
-              End="66,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="66,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="5.48861328125,5,55.0227734375,11.2822265625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Derived Column Error Output]"
-          TopLeft="182,100.948275862069">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="65.5,0"
-              Start="0,0"
-              End="58,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="58,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-35.96138671875,5,129.9227734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist\Row Count"
-          TopLeft="40,294.5" />
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Union All Output 1]"
-          TopLeft="102,261">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33.5"
-              Start="0,0"
-              End="0,26">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - Product if not Exist.Paths[Row Count Output 1]"
-          TopLeft="105.25,336.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32.381374722838"
-              Start="0,0"
-              End="0,24.881374722838">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.881374722838" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23726,5 +24555,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - Product if not Exist\Fuzzy Lookup">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
