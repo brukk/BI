@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SharePointTest</Name>
-    <LastWriteTime>2019-05-30T15:36:30.4495746Z</LastWriteTime>
+    <LastWriteTime>2019-06-06T23:08:05.3176896Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -38,7 +38,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_stgSalesOrderHeader.dtsx</Name>
-      <LastWriteTime>2019-06-05T16:14:34.4741638Z</LastWriteTime>
+      <LastWriteTime>2019-06-05T16:16:36.207866Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -59,6 +59,11 @@
     <ProjectBuildItemInfo>
       <Name>CatchAddress.dtsx</Name>
       <LastWriteTime>2019-05-30T15:36:30.4126718Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DwDimProduct.dtsx</Name>
+      <LastWriteTime>2019-06-06T23:08:02.4855024Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

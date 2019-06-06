@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-50T1H82M</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAACAAAAAAAQZgAAAAEAACAAAACSusGbbDh6yfwtYq5mMmZ54/U4NNUIWcPt//rnay8sFAAAAAAOgAAAAAIAACAAAAARfZO8OM5RKkoWlKh1WIPr5sTq5P1gt7KXwt15F00lp5AAAACy/kpAvSsYAoQN1Pg4KIHiFrqF1wkkKt6+rn2Evyxorr1cRju86+a5O7l1unBn/JnHMdC0ZdVUdydyAQIW/VaSqVf0AZodZou7DKFahsnw4m/d65cKysie3vWEFcTibEygbzNLWdddZkt76hB1cv21sET8AhzV8gHr+L1+1YkojDWq/wS0pQ4Vtg5pkDcsUuJAAAAApqvuUxCqTo1Vdoh65efVospydjOy2scGN721IfTG0FftJ/CILL0wzHXyOsFqkBif/Yz1qmaTrxJIn40BGCua+Q==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAACAAAAAAAQZgAAAAEAACAAAABLoQIFeEBp38LvoMZqR/qncL2FGhoW12WYdk0nmgfjWgAAAAAOgAAAAAIAACAAAABV2i0xuxQziFqkgtFJ+C/vSkYcQRDGPb1fBE7SahRe6pAAAAA0fQWyedslgtNp3adre0HEgnLXuWEJIU5DAAR4mcjgiQrDBtLu5si5T3o+qToIZn4p5e6JEckpXcFPCWc0LgUgTumWa4+Vv2HzbU6FToeve1tx1ztZbcKMDPOGHwhSGnzpkr+bocfLfyOOFgJQepdS/l25RP9K+MvZslgRxzdlJW43BgmmMAthxmEBGaoSWGlAAAAAvFnTOpz3CTRE1rARw/V/9AAUoKxo/ETt5DDJ5GiqXz6txoZxbTiS6NoMP0CDO4trgRSZydW6TfiAgDon0Fe0BQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -41,6 +41,7 @@
           <SSIS:Package SSIS:Name="Pkg_stgPayment.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Pkg_stgRental.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="CatchAddress.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DwDimProduct.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="100.36.220.45,53000.SSIS_Log.baname.conmgr" />
@@ -209,7 +210,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Service Document Url=https://dunatkcom.sharepoint.com/sites/Masterpieces/_vti_bin/listdata.svc;Include Atom Elements=Auto;Include Expanded Entities=False;Integrated Security=False;Cookie="SPOIDCRL=77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48U1A+VjUsMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAwNDUzOWU4OWZAbGl2ZS5jb20sMCMuZnxtZW1iZXJzaGlwfHNoYXJlcG9pbnRAZHVuYXRrLmNvbSwxMzIwMzcwMzAxMTAwMDAwMDAsMTMyMDA0Mjc0NjEwMDAwMDAwLDEzMjAzNzg5NDExOTIzMjQ4MywwLjAuMC4wLDQsODVkZGY3ZTktODA2OC00YmI2LTg5NzktNDQ3NjE0NDJlMzlhLCwsZDhiN2UxOWUtNDBhMS0wMDAwLTM4NTgtMWQyOTAxYjllN2MwLGQ4YjdlMTllLTQwYTEtMDAwMC0zODU4LTFkMjkwMWI5ZTdjMCwsMCwwLDAsLERER1hlQS9wKzJnMnFyS0lscDEvcEpXUVQwMXk1K1NIL2ZJcldYNTlEbDNIeDMyVjhHVGxWYjQ1Tk4ybHlwaGVyMm9CMDIyd3R6K3BDbjlDMUNOU0NyR2IycnBHODQzVVdwRGFZMzdSQmdyT01XaTlUL280NWVPTlo0Y2p1UzFqcUsvT2NHbDNmTjhRZWlRNDhxeU1weC83Mlk1TEJEMnFvY1NRRlExUjJmQXBTNzJuSDgwc21Nc3lmOWRvc1hTSnR5cXNmYUlzTWFxYzJYek4wMU1MTUU1ZXd2QXBNaitDaTloeE8zdGxueW95THZuSFk3OXNzd2hkNy9pQjB1T2V2b3EzbVB1K3FsMEZaV0d3bTBGRlcrZTQra0pDRU96YWlCZHc1ZklkakhIRURuaHk1MjcvNmZpSWN1eEFHQWdISDlhVHplYmZPZ3ZEcWpJMmpzV0tXQT09PC9TUD4=";User ID=sharepoint@dunatk.com;Persist Security Info=False;Time Out=600;Schema Sample Size=25;Retry Count=5;Retry Sleep=100;Keep Alive=False;Max Received Message Size=4398046511104</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Service Document Url=https://dunatkcom.sharepoint.com/sites/Masterpieces/_vti_bin/listdata.svc;Include Atom Elements=Auto;Include Expanded Entities=False;Integrated Security=False;Cookie="SPOIDCRL=77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48U1A+VjUsMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAwNDUzOWU4OWZAbGl2ZS5jb20sMCMuZnxtZW1iZXJzaGlwfHNoYXJlcG9pbnRAZHVuYXRrLmNvbSwxMzIwNDMzNTk0NDAwMDAwMDAsMTMyMDA0Mjc0NjEwMDAwMDAwLDEzMjA0NDIyMzQ0OTcyNTA4OSwwLjAuMC4wLDQsODVkZGY3ZTktODA2OC00YmI2LTg5NzktNDQ3NjE0NDJlMzlhLCwsNzUxM2U0OWUtZTA0Yy0wMDAwLTNmY2UtOTVmYzE5NDE0Y2U5LDc1MTNlNDllLWUwNGMtMDAwMC0zZmNlLTk1ZmMxOTQxNGNlOSwsMCwwLDAsLGVrZE1ORmZJcld5L1RURkxNUkZja0RxNnlwZnVMWEg1L0dxNEc2bm5UVlV0bkprYTRUSXFZeFFWUm0xaXdSWGVGSmdGWUpFeXBSTHZGTWZoclhKWVE5eEpYdXZKV1U2K0IvejJnSEZZS04vaW9XSkZkd1FIaWlsbmRWckt3YWNocmhHeHVkOUY1QVA4Qk9OQ3ZTUUNPNXhjWEtxOGtReFo2cmk1YkdydGZCRURhSmtXZmVoNFBlU2k4cDd6VmNuU0IvcEhrOVE1VTNMa0VJZmVNb0xmSTlQY1lGZVZ6SGlORUxkbFJYSlhsSjNrczZ4SUpFcWpyd1hLb01zaFB5OUpwL3oyYjZqUGNGUGplbnNLUVdCK290Z2dwOVB1WDI3ZG1hUmtlaFhTeVY0NlpHa1l4NVA4Z0dpdWVDQ29nNC9JMGdEUSt1aEtrL040YWM3b24zaUtCQT09PC9TUD4=";User ID=sharepoint@dunatk.com;Persist Security Info=False;Time Out=600;Schema Sample Size=25;Retry Count=5;Retry Sleep=100;Keep Alive=False;Max Received Message Size=4398046511104</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -385,10 +386,10 @@
                 <SSIS:Property SSIS:Name="Name">Pkg_stgProduct</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">50</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">56</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{5C394101-E6D5-4AAF-AA00-A7763E15CFB1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{D0692020-A8A1-4586-83CC-22C92C63A522}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -627,8 +628,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1202,8 +1201,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1383,6 +1380,112 @@
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Value">C:\Users\Biruk\Desktop\ftpCatch</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+              </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DwDimProduct.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{FD903990-466C-47DF-B3F7-F5B21FFC74B8}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">DwDimProduct</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{4E868228-7433-4BAE-AF9B-62380BF20964}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="CM.LAPTOP-50T1H82M.Masterpieces.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=LAPTOP-50T1H82M;Initial Catalog=Masterpieces;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.LAPTOP-50T1H82M.Masterpieces.InitialCatalog">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Masterpieces</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.LAPTOP-50T1H82M.Masterpieces.Password">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">1</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.LAPTOP-50T1H82M.Masterpieces.RetainSameConnection">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.LAPTOP-50T1H82M.Masterpieces.ServerName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">LAPTOP-50T1H82M</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.LAPTOP-50T1H82M.Masterpieces.UserName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
