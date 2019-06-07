@@ -1,0 +1,821 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/7/2019 12:55:14 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-50T1H82M"
+  DTS:CreatorName="LAPTOP-50T1H82M\Biruk"
+  DTS:DTSID="{18F4913D-4B23-4C29-B6D0-9E8DBD16D88E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.0900.40"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="DW_SalesOrderDetail"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{730FA81A-CFFD-40B9-A3AA-4B14C31A1406}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-50T1H82M.Masterpieces]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{215C13CE-26B8-4968-8234-0728B670A5B1}"
+      DTS:ObjectName="LAPTOP-50T1H82M.Masterpieces">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-50T1H82M;Initial Catalog=Masterpieces;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F513BE94-2A36-416F-B889-0EE10D29D300}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[SalesOrderID]"
+                      cachedDataType="r8"
+                      cachedName="SalesOrderID"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[SalesOrderID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[SalesOrderDetailID]"
+                      cachedDataType="r8"
+                      cachedName="SalesOrderDetailID"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[SalesOrderDetailID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[OrderQty]"
+                      cachedDataType="r8"
+                      cachedName="OrderQty"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[OrderQty]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[ProductID]"
+                      cachedDataType="r8"
+                      cachedName="ProductID"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[UnitPrice]"
+                      cachedDataType="r8"
+                      cachedName="UnitPrice"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[UnitPrice]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[UnitPriceDiscount]"
+                      cachedDataType="r8"
+                      cachedName="UnitPriceDiscount"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[UnitPriceDiscount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[LineTotal]"
+                      cachedDataType="r8"
+                      cachedName="LineTotal"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[LineTotal]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column salesOrderId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column salesOrderId]"
+                      name="Derived Column salesOrderId"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)#{Package\Data Flow Task\OData Source.Outputs[Output].Columns[SalesOrderID]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)SalesOrderID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column salesOrdDetaiId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column salesOrdDetaiId]"
+                      name="Derived Column salesOrdDetaiId"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)#{Package\Data Flow Task\OData Source.Outputs[Output].Columns[SalesOrderDetailID]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)SalesOrderDetailID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column OrderQty]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column OrderQty]"
+                      name="Derived Column OrderQty"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I2)#{Package\Data Flow Task\OData Source.Outputs[Output].Columns[OrderQty]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I2)OrderQty</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column productId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column productId]"
+                      name="Derived Column productId"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)#{Package\Data Flow Task\OData Source.Outputs[Output].Columns[ProductID]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)ProductID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Unitprice]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Unitprice]"
+                      name="Derived Column Unitprice"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_CY)#{Package\Data Flow Task\OData Source.Outputs[Output].Columns[UnitPrice]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_CY)UnitPrice</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column UnitPriceDisc]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column UnitPriceDisc]"
+                      name="Derived Column UnitPriceDisc"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_CY)#{Package\Data Flow Task\OData Source.Outputs[Output].Columns[UnitPriceDiscount]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_CY)UnitPriceDiscount</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column LineTotal]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column LineTotal]"
+                      name="Derived Column LineTotal"
+                      precision="38"
+                      scale="6"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_NUMERIC,38,6)#{Package\Data Flow Task\OData Source.Outputs[Output].Columns[LineTotal]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_NUMERIC,38,6)LineTotal</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[sourceName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[sourceName]"
+                      name="sourceName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(Dt_str,100,1252)"SharePoint"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(Dt_str,100,1252)"SharePoint"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OData Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="OData Source Component;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Read data from OData services"
+              name="OData Source"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Name of the collection to be retrieved from the service."
+                  expressionType="Notify"
+                  name="CollectionName">SalesOrderDetail</property>
+                <property
+                  dataType="System.Int32"
+                  description="The default maximum length for a string that has no maxlength specified in the schema."
+                  name="DefaultStringLength">4000</property>
+                <property
+                  dataType="System.String"
+                  description="Query in the url. "
+                  expressionType="Notify"
+                  name="Query">$select=SalesOrderID,SalesOrderDetailID,OrderQty,ProductID,UnitPrice,UnitPriceDiscount,LineTotal</property>
+                <property
+                  dataType="System.String"
+                  description="Resource path of the collection to be retrieved from the service."
+                  expressionType="Notify"
+                  name="ResourcePath"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="When set to true, use the resource path as requested collection; otherwise, use the collection name."
+                  expressionType="Notify"
+                  name="UseResourcePath">false</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.OData</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OData Source.Connections[Connection]"
+                  connectionManagerID="{5B8D63D1-4519-4F7A-AA2B-41491D87D9AF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OData Source]"
+                  description="Connection to OData Service"
+                  name="Connection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OData Source.Outputs[Output]"
+                  name="Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[SalesOrderID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[SalesOrderID]"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[SalesOrderID]"
+                      name="SalesOrderID"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[SalesOrderDetailID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[SalesOrderDetailID]"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[SalesOrderDetailID]"
+                      name="SalesOrderDetailID"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[OrderQty]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[OrderQty]"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[OrderQty]"
+                      name="OrderQty"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[ProductID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[ProductID]"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[UnitPrice]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[UnitPrice]"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[UnitPrice]"
+                      name="UnitPrice"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[UnitPriceDiscount]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[UnitPriceDiscount]"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[UnitPriceDiscount]"
+                      name="UnitPriceDiscount"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[LineTotal]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[LineTotal]"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[LineTotal]"
+                      name="LineTotal"
+                      truncationRowDisposition="RedirectRow" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[SalesOrderID]"
+                      dataType="r8"
+                      name="SalesOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[SalesOrderDetailID]"
+                      dataType="r8"
+                      name="SalesOrderDetailID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[OrderQty]"
+                      dataType="r8"
+                      name="OrderQty" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[ProductID]"
+                      dataType="r8"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[UnitPrice]"
+                      dataType="r8"
+                      name="UnitPrice" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[UnitPriceDiscount]"
+                      dataType="r8"
+                      name="UnitPriceDiscount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[LineTotal]"
+                      dataType="r8"
+                      name="LineTotal" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\OData Source.Outputs[Error output]"
+                  isErrorOut="true"
+                  name="Error output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[SalesOrderID]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[SalesOrderID]"
+                      name="SalesOrderID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[SalesOrderDetailID]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[SalesOrderDetailID]"
+                      name="SalesOrderDetailID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[OrderQty]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[OrderQty]"
+                      name="OrderQty" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ProductID]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ProductID]"
+                      name="ProductID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[UnitPrice]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[UnitPrice]"
+                      name="UnitPrice" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[UnitPriceDiscount]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[UnitPriceDiscount]"
+                      name="UnitPriceDiscount" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[LineTotal]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[LineTotal]"
+                      name="LineTotal" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[stgSalesOrderDetail]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-50T1H82M.Masterpieces]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-50T1H82M.Masterpieces]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column OrderQty]"
+                      cachedDataType="i2"
+                      cachedName="Derived Column OrderQty"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderQty]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column OrderQty]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sourceName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="sourceName"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sourceName]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[sourceName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column UnitPriceDisc]"
+                      cachedDataType="cy"
+                      cachedName="Derived Column UnitPriceDisc"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UnitPriceDisc]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column UnitPriceDisc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column Unitprice]"
+                      cachedDataType="cy"
+                      cachedName="Derived Column Unitprice"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Unitprice]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column Unitprice]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column productId]"
+                      cachedDataType="i4"
+                      cachedName="Derived Column productId"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productId]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column productId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column salesOrdDetaiId]"
+                      cachedDataType="i4"
+                      cachedName="Derived Column salesOrdDetaiId"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[salesOrdDetaiId]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column salesOrdDetaiId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column salesOrderId]"
+                      cachedDataType="i4"
+                      cachedName="Derived Column salesOrderId"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[salesOrderId]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column salesOrderId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Derived Column LineTotal]"
+                      cachedDataType="numeric"
+                      cachedName="Derived Column LineTotal"
+                      cachedPrecision="38"
+                      cachedScale="6"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LineTotal]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Derived Column LineTotal]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderQty]"
+                      dataType="i2"
+                      name="OrderQty" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LineTotal]"
+                      dataType="numeric"
+                      name="LineTotal"
+                      precision="38"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[salesOrderId]"
+                      dataType="i4"
+                      name="salesOrderId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[salesOrdDetaiId]"
+                      dataType="i4"
+                      name="salesOrdDetaiId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productId]"
+                      dataType="i4"
+                      name="productId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Unitprice]"
+                      dataType="cy"
+                      name="Unitprice" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UnitPriceDisc]"
+                      dataType="cy"
+                      name="UnitPriceDisc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sourceName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="sourceName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output]"
+              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+              name="Output"
+              startId="Package\Data Flow Task\OData Source.Outputs[Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Data Flow Task\OData Source"
+          TopLeft="74,60" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="60,311" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="72,137" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output]"
+          TopLeft="147.5,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="147.25,179">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,132"
+              Start="0,0"
+              End="0,124.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,124.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

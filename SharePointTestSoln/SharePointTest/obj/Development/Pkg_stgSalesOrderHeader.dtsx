@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_stgSalesOrderHeader"
   DTS:PackageType="5"
-  DTS:VersionBuild="53"
-  DTS:VersionGUID="{9732D05A-CC3F-46D0-A2E3-874EC61D8872}">
+  DTS:VersionBuild="54"
+  DTS:VersionGUID="{27C1F569-199B-467A-B1E7-77A1A2D8C48A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -44,7 +44,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task - End Time Logging"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
@@ -97,7 +97,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task - Start time Logging"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -152,7 +152,7 @@
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Script Task - Email End Notification"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
@@ -185,14 +185,35 @@
           Language="CSharp"
           ReadOnlyVariables="System::PackageName,System::StartTime,User::VarRowCount,$Project::ParEmailFrom,$Project::ParEmailTo">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -593,35 +614,14 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -837,7 +837,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Script Task - Email Start Notification"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
@@ -870,14 +870,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Language="CSharp"
           ReadOnlyVariables="System::PackageName,System::StartTime,$Project::ParEmailFrom,$Project::ParEmailTo">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1278,35 +1299,14 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -8127,6 +8127,15 @@ where [refTable].[SalesOrderID] = ?</property>
               Language="CSharp"
               ReadOnlyVariables="System::ErrorDescription,System::SourceName,System::PackageName,System::StartTime,$Project::ParEmailFrom,$Project::ParEmailTo">
               <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -8245,35 +8254,6 @@ where [refTable].[SalesOrderID] = ?</property>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Settings.get_Default():ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Sett" +
-    "ings")]
-
-namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -8444,6 +8424,35 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Settings.get_Default():ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Sett" +
+    "ings")]
+
+namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+              <ProjectItem
                 Name="Properties\AssemblyInfo.cs"
                 Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -8473,15 +8482,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -9070,49 +9070,49 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="279,46"
-          Id="Package\Sequence Container\Data Flow Task - If Data Exists\OLE DB Destination - Der Col Error Output"
-          TopLeft="431,251.5" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data Exists\Row Count"
-          TopLeft="179.5,311.5" />
-        <NodeLayout
-          Size="273,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data Exists\OLE DB Destination - OData Error Output"
-          TopLeft="427,6.5" />
-        <NodeLayout
           Size="113,42"
           Id="Package\Sequence Container\Data Flow Task - If Data Exists\Lookup"
           TopLeft="180.5,141" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data Exists\OData Source"
+          TopLeft="166.5,3" />
         <NodeLayout
           Size="163,42"
           Id="Package\Sequence Container\Data Flow Task - If Data Exists\Derived Column 1"
           TopLeft="166.5,246" />
         <NodeLayout
-          Size="144,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data Exists\OData Source"
-          TopLeft="166.5,4" />
-        <NodeLayout
-          Size="276,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data Exists\OLE DB Destination - Lookup Error output"
-          TopLeft="428,140.5" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data Exists\OLE DB Destination"
-          TopLeft="159.5,377" />
-        <NodeLayout
           Size="120,42"
           Id="Package\Sequence Container\Data Flow Task - If Data Exists\Multicast"
           TopLeft="22,271.5" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data Exists\Row Count"
+          TopLeft="179.5,311.5" />
         <NodeLayout
           Size="271,42"
           Id="Package\Sequence Container\Data Flow Task - If Data Exists\OLE DB Destination  - Der col Err Output"
           TopLeft="429,79.5" />
         <NodeLayout
+          Size="273,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data Exists\OLE DB Destination - OData Error Output"
+          TopLeft="427,6.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data Exists\OLE DB Destination"
+          TopLeft="159.5,377" />
+        <NodeLayout
           Size="154,42"
           Id="Package\Sequence Container\Data Flow Task - If Data Exists\Derived Column"
           TopLeft="158.5,73" />
+        <NodeLayout
+          Size="276,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data Exists\OLE DB Destination - Lookup Error output"
+          TopLeft="428,140.5" />
+        <NodeLayout
+          Size="279,46"
+          Id="Package\Sequence Container\Data Flow Task - If Data Exists\OLE DB Destination - Der Col Error Output"
+          TopLeft="431,251.5" />
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data Exists.Paths[Row Count Output 1]"
           TopLeft="244.75,353.5">
@@ -9137,18 +9137,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data Exists.Paths[Output]"
-          TopLeft="237,46">
+          TopLeft="237,45">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,27"
+              EndConnector="0,28"
               Start="0,0"
-              End="0,19.5">
+              End="0,20.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5" />
+                    End="0,20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9243,7 +9243,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data Exists.Paths[Error output]"
-          TopLeft="310.5,26.25">
+          TopLeft="310.5,25.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9670,7 +9670,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Data Flow Task- if Data Doesn't exist\OLE DB Destination - Der Col Error Output">
+    design-time-name="Package\Sequence Container\Data Flow Task- if Data Doesn't exist\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[SalesOrderDateLookup]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task- if Data Doesn't exist\OLE DB Destination  - Der col Err Output">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9696,25 +9719,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Data Flow Task- if Data Doesn't exist\Lookup">
+    design-time-name="Package\Sequence Container\Data Flow Task- if Data Doesn't exist\OLE DB Destination">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[SalesOrderDateLookup]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -9732,20 +9745,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Data Flow Task- if Data Doesn't exist\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Data Flow Task- if Data Doesn't exist\OLE DB Destination  - Der col Err Output">
+    design-time-name="Package\Sequence Container\Data Flow Task- if Data Doesn't exist\OLE DB Destination - Der Col Error Output">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
