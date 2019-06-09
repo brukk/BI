@@ -10,7 +10,7 @@
       DTS:ConnectionString="Data Source=100.36.220.45,53000;User ID=baname;Initial Catalog=SSIS_Log;Provider=SQLNCLI11.1;Auto Translate=False;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAACAAAAAAAQZgAAAAEAACAAAAAF0KyRAnjZX6Ht7+w7K1eednqeDo1fg30G9GgWKuWsEwAAAAAOgAAAAAIAACAAAADTBbjwajOnnugOMr99EmWu+w2OWfRe7KCUihr8ATeqyIAAAADgovm0DAibNshIQG7sSAi+udvGa4gvkZ7bUHG8dIslN7MiV4gR82ZRIbx1/HTWgmZhnlb5IZgoMdnUVzzbS4G1b3iOoMP/GvIdY1x2H8gUN87DMlYKWlMZBdl+jiAqZqybD+J7xXR9pR1mO/eowMg53wW/XGPiY9Lu35MesF1YVkAAAACbrn0EKqhJEaziel/WZIZw/bncFgXnNTe3aROg6fvLcH42CC7mxbZuKRtUYS/QTPc0UzFjPs6J2glk3y/KzINp</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAACAAAAAAAQZgAAAAEAACAAAACE5g9bnHQ4AuazeAT2i8sOGm5pB88Nv3aq/OmGu/C2tgAAAAAOgAAAAAIAACAAAADwU61KIhRpSyBCNqzFZs+gv0D/5pILjflbNbVcpNvIlYAAAACyar3Z/iYjbdnnGcDJCuaJziC6+1Xzb9pQoO3oqe+0DT3u4BuBkbkIzfTzraQpjIA3MTWen8QzC4i4Eftwe3GENtiS35SZsa6aclpXONAhWLfPrU9T5U3ik9eYsMzCzcBsOKfloGsfvz3xXOzpA0VSXjO2L/qset2FuKsis9/gjEAAAAB7v91zV/bw3CI0huqlyugAX8aCURI7VRpmWXGqRwNgQ2eeoYTZsd4lpioUFCcUUs7osi9HVyHKby77qAbRWEso</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
