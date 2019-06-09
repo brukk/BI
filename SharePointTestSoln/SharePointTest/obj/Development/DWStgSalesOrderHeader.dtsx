@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWStgSalesOrderHeader"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{89F8F563-DBC2-4E1A-A9C0-2E195AE51DEE}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{9EF41C18-5562-4E72-8561-8B80E48FC5CE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1734,7 +1734,7 @@ where [refTable].[SalesOrderID] = ?</property>
         <NodeLayout
           Size="163,42"
           Id="Package\Data Flow Task\Derived Column 1"
-          TopLeft="204.5,303" />
+          TopLeft="210.5,335" />
         <NodeLayout
           Size="120,42"
           Id="Package\Data Flow Task\Multicast"
@@ -1742,7 +1742,7 @@ where [refTable].[SalesOrderID] = ?</property>
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="197.5,434" />
+          TopLeft="212.5,435" />
         <NodeLayout
           Size="154,42"
           Id="Package\Data Flow Task\Derived Column"
@@ -1807,25 +1807,25 @@ where [refTable].[SalesOrderID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="289.25,240">
+          TopLeft="292.25,240">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63"
+              EndConnector="0,95"
               Start="0,0"
-              End="0,55.5">
+              End="0,87.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,55.5" />
+                    End="0,87.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,21.9453125,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,37.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1853,18 +1853,18 @@ where [refTable].[SalesOrderID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output1]"
-          TopLeft="284.5,345">
+          TopLeft="295,377">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,89"
+              EndConnector="0,58"
               Start="0,0"
-              End="0,81.5">
+              End="0,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,81.5" />
+                    End="0,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
