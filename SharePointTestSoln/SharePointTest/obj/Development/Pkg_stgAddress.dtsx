@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_stgAddress"
   DTS:PackageType="5"
-  DTS:VersionBuild="221"
-  DTS:VersionGUID="{078ABE06-5F37-45DB-B95C-90D9BDDA5F7F}">
+  DTS:VersionBuild="222"
+  DTS:VersionGUID="{78318294-7A2D-4550-8900-72A63349B60A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -195,7 +195,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADQep3CBl/iemvv7Wp3r1u8eGaKZoKPQpCYZ5ty68NQ1gAAAAAOgAAAAAIAACAAAABlU4UMG4nxBaX1t3nQJYPaAWI9J5RhwsqYQGqXtlRzzyAAAADAYd0zz4yCPVCi/NzhDIFBhNnuCLs+A9mv9whfargRXEAAAAD8jnXiWL0lw7+EXNSDrqFqym8ome2142BsE2/e+eJc2VFLLwdUK1CgjMnOu9cJ0i7mdbzd0+CKLMKcpi8lqkRR</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACFsvZgZb9vxFF3HaaqnqtcJ33qm9H/maYEjazcDqH2kgAAAAAOgAAAAAIAACAAAACuADNmtLOO4Vzfb3f6BLDK9AConeWpo+RUwwNCmJeJjiAAAACGRGKBRF5VbOpD03tGYdTt18K9c625osWXbwc3dL2H7kAAAACNxNBUYsKK92ar0HPvZ+khMr5aMRhO18o6RGcb5kjjp8Y/BfNP/vHsEGCv9dMgEewioXk7pfQZsi065LPxE3OK</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -401,14 +401,35 @@
           Language="CSharp"
           ReadOnlyVariables="System::PackageName,System::StartTime,User::VarRowCount,$Project::ParEmailFrom,$Project::ParEmailTo">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -809,35 +830,14 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -1086,14 +1086,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Language="CSharp"
           ReadOnlyVariables="System::PackageName,System::StartTime,$Project::ParEmailFrom,$Project::ParEmailTo">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1494,35 +1515,14 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -7130,12 +7130,12 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Sequence Container\Data Flow Task - If Data exist\Sort 1.Outputs[Sort Output].Columns[city]"
+                          refId="Package\Sequence Container\Data Flow Task - If Data exist\Sort 1.Outputs[Sort Output].Columns[City]"
                           codePage="1252"
                           dataType="str"
                           length="50"
-                          lineageId="Package\Sequence Container\Data Flow Task - If Data exist\Sort 1.Outputs[Sort Output].Columns[city]"
-                          name="city">
+                          lineageId="Package\Sequence Container\Data Flow Task - If Data exist\Sort 1.Outputs[Sort Output].Columns[City]"
+                          name="City">
                           <properties>
                             <property
                               containsID="true"
@@ -8063,36 +8063,6 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
               Language="CSharp"
               ReadOnlyVariables="System::ErrorDescription,System::SourceName,System::PackageName,System::StartTime,$Project::ParEmailFrom,$Project::ParEmailTo">
               <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
-[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-              <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -8211,6 +8181,35 @@ using System.Runtime.CompilerServices;
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Settings.get_Default():ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Sett" +
+    "ings")]
+
+namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
               <ProjectItem
                 Name="ST_9829f9ceced049f9ae1941df8dbf6596.csproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -8464,34 +8463,35 @@ namespace ST_e6765987cbdb4366b385d86b362cd7d4
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
 //
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("ST_e6765987cbdb4366b385d86b362cd7d4")]
+[assembly: AssemblyCopyright("Copyright @ HP Inc. 2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Settings.get_Default():ST_e6765987cbdb4366b385d86b362cd7d4.Properties.Sett" +
-    "ings")]
-
-namespace ST_e6765987cbdb4366b385d86b362cd7d4.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Settings.settings"
                 Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -9541,87 +9541,76 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - OData Error Output">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Sequence Container\Data Flow Task - If Data exist">
     <LayoutInfo>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="154,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\Derived Column"
-          TopLeft="500,227" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\Sort"
-          TopLeft="467,90" />
+          Size="130,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\Row Count"
+          TopLeft="187.5,242.5" />
         <NodeLayout
           Size="154,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\Derived Column 1"
           TopLeft="13,94" />
         <NodeLayout
-          Size="107,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\Sort 1"
-          TopLeft="632,85" />
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\Flat File Source"
-          TopLeft="622,20" />
-        <NodeLayout
           Size="130,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\Merge Join"
           TopLeft="510,156" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\Sort"
+          TopLeft="467,90" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\Sort 1"
+          TopLeft="632,85" />
         <NodeLayout
           Size="144,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\OData Source 1"
           TopLeft="16,17" />
         <NodeLayout
-          Size="193,47"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination - OData Error Output"
-          TopLeft="219,16" />
-        <NodeLayout
           Size="171,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination"
           TopLeft="174.5,308.5" />
         <NodeLayout
-          Size="121,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\Union All"
-          TopLeft="197.5,173.5" />
+          Size="154,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\Derived Column"
+          TopLeft="500,227" />
         <NodeLayout
           Size="188,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination - Derived Col Err Output"
           TopLeft="242,95" />
         <NodeLayout
-          Size="130,42"
-          Id="Package\Sequence Container\Data Flow Task - If Data exist\Row Count"
-          TopLeft="187.5,242.5" />
+          Size="193,47"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\OLE DB Destination - OData Error Output"
+          TopLeft="219,16" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\Flat File Source"
+          TopLeft="622,20" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Sequence Container\Data Flow Task - If Data exist\Union All"
+          TopLeft="197.5,173.5" />
         <NodeLayout
           Size="157,42"
           Id="Package\Sequence Container\Data Flow Task - If Data exist\ADO NET Source- Address"
           TopLeft="442,20" />
-        <EdgeLayout
-          Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Derived Column Error Output]"
-          TopLeft="167,115.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="75,0"
-              Start="0,0"
-              End="67.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="67.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-31.21138671875,5,129.9227734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[ADO NET Source Output]"
           TopLeft="518.25,62">
@@ -9914,6 +9903,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task - If Data exist.Paths[Derived Column Error Output]"
+          TopLeft="167,115.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="75,0"
+              Start="0,0"
+              End="67.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="67.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-31.21138671875,5,129.9227734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -9995,18 +10008,5 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Sequence Container.PrecedenceConstraints[Constraint 3]">
     <ShowAnnotation>ConstraintOptions</ShowAnnotation>
   </PrecedenceConstraint>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Data Flow Task - if Data does not Exist\OLE DB Destination - OData Error Output">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
