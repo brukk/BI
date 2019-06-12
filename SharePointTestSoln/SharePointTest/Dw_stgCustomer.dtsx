@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Dw_stgCustomer"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{DA44C88E-7423-4AEA-89C0-0DE239144032}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{5E4B6042-3567-434E-A933-3DDD2588BD5A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1971,7 +1971,7 @@
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="274.5,274.5" />
+          TopLeft="254.5,272.5" />
         <NodeLayout
           Size="154,42"
           Id="Package\Data Flow Task\Derived Column"
@@ -1986,30 +1986,18 @@
           TopLeft="272.5,192.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Union All Output 1]"
-          TopLeft="333,234.5">
+          TopLeft="336.5,234.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="27,40"
+              EndConnector="0,38"
               Start="0,0"
-              End="27,32.5">
+              End="0,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16"
-                    Point2="0,20"
-                    Point3="4,20" />
-                  <mssgle:LineSegment
-                    End="23,20" />
-                  <mssgle:CubicBezierSegment
-                    Point1="23,20"
-                    Point2="27,20"
-                    Point3="27,24" />
-                  <mssgle:LineSegment
-                    End="27,32.5" />
+                    End="0,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
