@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWstgAddress"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{4D6421BE-7C4D-4719-803F-57D4E8C02D66}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{65BB7541-331F-4954-8315-D02FECAA8E33}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -612,13 +612,13 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1252)(DT_WSTR,50)#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]}</property>
+                          name="Expression">(DT_STR,50,1252)[REPLACENULL]((dt_wstr,50)#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]},"UKN")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,50,1252)(DT_WSTR,50)StateProvince</property>
+                          name="FriendlyExpression">(DT_STR,50,1252)REPLACENULL((dt_wstr,50)StateProvince,"UKN")</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -842,13 +842,13 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1252)(DT_WSTR,50)#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[StateProvince]}</property>
+                          name="Expression">(DT_STR,50,1252)[REPLACENULL]((dt_wstr,50)#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[StateProvince]},"UKN")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,50,1252)(DT_WSTR,50)StateProvince</property>
+                          name="FriendlyExpression">(DT_STR,50,1252)REPLACENULL((dt_wstr,50)StateProvince,"UKN")</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
