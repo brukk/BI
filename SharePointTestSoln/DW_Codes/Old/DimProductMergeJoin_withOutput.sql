@@ -3,7 +3,7 @@ USING (SELECT P.*, PC.ParentProductCategoryID FROM stgProduct P
 JOIN stgProductCategory PC
 ON P.ProductCategoryID = PC.ProductCategoryID
 JOIN stgProductModel M
-ON P.ProductModelID = M.ProductModelID  ) AS SOURCE 
+ON P.ProductModelID = M.ProductModelID) AS SOURCE 
 ON (TARGET.ProductID = SOURCE.ProductID AND TARGET.SourceName = Source.SourceName) 
 --When records are matched, update the records if there is any change
 WHEN MATCHED AND TARGET.ProductID <> SOURCE.ProductID
@@ -20,8 +20,8 @@ WHEN MATCHED AND TARGET.ProductID <> SOURCE.ProductID
 			  OR TARGET.SellEndDate <> SOURCE.SellEndDate
 			  OR TARGET.SourceName <> SOURCE.SourceName
   			  OR TARGET.ParentProductCategoryID <> Source.ParentProductCategoryID
-			  --OR TARGET.CategoryName <> dbo.stgProductCategory.Name
-			  --OR TARGET.ProductModelName <> dbo.stgProductModel.Name
+			  OR TARGET.CategoryName <> dbo.stgProductCategory.Name
+			  OR TARGET.ProductModelName <> dbo.stgProductModel.Name
 THEN UPDATE SET TARGET.ProductName = SOURCE.Name, 
 			    TARGET.ProductID = SOURCE.ProductID,
 			    TARGET.ProductNumber = SOURCE.ProductNumber,
@@ -35,9 +35,9 @@ THEN UPDATE SET TARGET.ProductName = SOURCE.Name,
 			    TARGET.SellStartDate = SOURCE.SellStartDate,
 			    TARGET.SellEndDate = SOURCE.SellEndDate,
 				TARGET.SourceName = SOURCE.SourceName,
-				TARGET.ParentProductCategoryID = Source.ParentProductCategoryID
-				--TARGET.CategoryName = dbo.stgProductCategory.Name ,
-				--TARGET.ProductModelName = dbo.stgProductModel.Name
+				TARGET.ParentProductCategoryID = Source.ParentProductCategoryID,
+				TARGET.CategoryName = dbo.stgProductCategory.Name ,
+				TARGET.ProductModelName = dbo.stgProductModel.Name
 --When no records are matched, insert the incoming records from source table to target table
 WHEN NOT MATCHED BY TARGET THEN 
 INSERT([ProductID]
@@ -54,8 +54,8 @@ INSERT([ProductID]
       ,[SellEndDate]
 	  , SourceName 
 	  ,ParentProductCategoryID
-	  --,CategoryName 
-	  --,ProductModelName
+	  ,CategoryName 
+	  ,ProductModelName
 )
 VALUES(SOURCE.[ProductID]
       ,SOURCE.[Name]
@@ -71,8 +71,8 @@ VALUES(SOURCE.[ProductID]
       ,SOURCE.[sellEndDate]
 	  ,Source.SourceName
 	  ,Source.ParentProductCategoryID
-	  --,dbo.stgProductCategory.[Name]
-	  --,dbo.stgProductModel.Name
+	  ,dbo.stgProductCategory.[Name]
+	  ,dbo.stgProductModel.Name
 )          
 --When there is a row that exists in target and same record does not exist in source then 
    --delete this record target

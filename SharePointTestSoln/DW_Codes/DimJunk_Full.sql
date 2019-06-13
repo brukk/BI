@@ -1,5 +1,5 @@
 declare @dimjunk table
-	 (Junkkey int identity(1,1),NKey INT, [Name] varchar(200), [Value] varchar(200), SourceName varchar(100))
+	 (JunkSK int identity(1,1),NKey INT, [Name] varchar(200), [Value] varchar(200), SourceName varchar(100))
 Insert INTO @dimjunk (NKey, Name, Value,SourceName)
 /*the first row has to be a null handling row to record null values but that has contextual meaning*/
 select * from (

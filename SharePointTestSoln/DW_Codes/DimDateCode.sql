@@ -1,23 +1,25 @@
 /*
 --The initial date must correspond to the minimum date value in your transaction tables 
---@SDate uDate = '20040101'-- Initialize your Start Date (uDate is a user Defined Data type of Date)
+--@StartDate uDate = '20040101'-- Initialize your Start Date (uDate is a user Defined Data type of Date)
 --@NoOfYrs INT = 2;---Used to limit the number of Year to be generated 
 */
 
 DECLARE 
-  @SDate Date = '20040101' 
-, @NoOfYrs INT = 1; 
+  @StartDate Date = '20040101' 
+, @NoOfYrs INT = 4;   --determines for how many years should the code generate the date values
 
 
-SET DATEFIRST 7;
-SET DATEFORMAT mdy;
+SET DATEFIRST 7;      -- on which day the week starts (7 is sunday)
+SET DATEFORMAT mdy;   -- Date format (mdy = month-day-year  *weird)
 SET LANGUAGE US_ENGLISH;
 
-DECLARE @CutoffDate DATE = DATEADD(YEAR, @NoOfYrs, @SDate);-- This will give us the last date value 
-DROP TABLE IF EXISTS #dimDate
+DECLARE @CutoffDate DATE = DATEADD(YEAR, @NoOfYrs, @StartDate);-- This will give us the last date value 
+-- select @CutoffDate
 
-CREATE TABLE #dimDate (
-  dimDateKey   AS CONVERT(CHAR(8), [date], 112) ,
+DROP TABLE IF EXISTS dimDate
+
+CREATE TABLE DimDate (
+  dimDateKey   AS CONVERT(CHAR(8),   [date], 112) ,
   [Date]       DATE  ,
   [Day]        AS DATEPART(DAY,      [date]),
   [Month]      AS DATEPART(MONTH,    [date]),
@@ -38,21 +40,22 @@ That is 364 or 371 days instead of the usual 365 or 366 days.
 
 ;WITH CTE_Date_Row
 AS(
-    SELECT TOP (DATEDIFF(DAY, @SDate, @CutoffDate))  rn = ROW_NUMBER() OVER (ORDER BY s1.[object_id])
+    SELECT TOP (DATEDIFF(DAY, @StartDate, @CutoffDate))  rn = ROW_NUMBER() OVER (ORDER BY s1.[object_id])
     FROM sys.all_objects AS s1
     CROSS JOIN sys.all_objects AS s2
     ORDER BY s1.[object_id]
  ) ,CTE_Date
  AS
  (
- SELECT d = DATEADD(DAY, rn - 1, @SDate)
+ SELECT d = DATEADD(DAY, rn - 1, @StartDate)
  FROM  CTE_Date_Row
  )
 
- INSERT #dimDate([date]) 
+ INSERT dimDate([date]) 
  SELECT * FROM CTE_Date
 
-SELECT * FROM #dimDate
+SELECT * FROM dimDate
+
 
 
 
