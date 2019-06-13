@@ -2,7 +2,9 @@
 --keep historical data if Email changes
 --updata Firstname, LastName, Phone if Source changes
 --Title is fixed value, ignore it if source changes 
+CREATE PROCEDURE usp_DimCustomerPopulator AS
 
+BEGIN
 IF EXISTS (
 	SELECT 1 FROM stgCustomer CS JOIN dimCustomer DC 
 	ON CS.customerID = DC.customerID
@@ -12,7 +14,7 @@ IF EXISTS (
 )
 
 	SET XACT_ABORT ON;
-	GO
+	
 	BEGIN TRY
 
 		BEGIN TRANSACTION;
@@ -59,7 +61,7 @@ IF EXISTS (
 		SELECT DC.customerID, DC.FirstName, DC.LastNAme ,DC.EmailAddress, DC.Phone FROM dbo.dimCustomer DC 
 )  
 		SET XACT_ABORT ON;
-		GO	
+		
 BEGIN TRY
 
 		BEGIN TRANSACTION;
@@ -92,3 +94,4 @@ BEGIN CATCH
 	SELECT @@ERROR
 END CATCH
 
+END

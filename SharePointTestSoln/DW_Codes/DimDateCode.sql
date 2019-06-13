@@ -3,6 +3,8 @@
 --@StartDate uDate = '20040101'-- Initialize your Start Date (uDate is a user Defined Data type of Date)
 --@NoOfYrs INT = 2;---Used to limit the number of Year to be generated 
 */
+CREATE PROCEDURE usp_DimDatePopulator AS
+BEGIN
 
 DECLARE 
   @StartDate Date = '20040101' 
@@ -54,7 +56,7 @@ AS(
  INSERT dimDate([date]) 
  SELECT * FROM CTE_Date
 
-SELECT * FROM dimDate
+END
 
 
 

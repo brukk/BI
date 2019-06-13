@@ -2,6 +2,10 @@
 --keep historical data if City changes
 --update any other changes on active row
 
+CREATE PROCEDURE usp_DimAddressPopulator AS
+
+BEGIN
+
 IF EXISTS (
 	SELECT 1 FROM stgAddress SA JOIN DimAddress DA 
 	ON SA.AddressID = DA.AddressID
@@ -11,7 +15,7 @@ IF EXISTS (
 )
 
 	SET XACT_ABORT ON;
-	GO
+	
 	BEGIN TRY
 
 		BEGIN TRANSACTION;
@@ -58,7 +62,7 @@ IF EXISTS (
 
 )  
 		SET XACT_ABORT ON;
-		GO	
+			
 BEGIN TRY
 
 		BEGIN TRANSACTION;
@@ -94,3 +98,5 @@ BEGIN CATCH
 	SELECT @@ERROR
 END CATCH
 
+
+END

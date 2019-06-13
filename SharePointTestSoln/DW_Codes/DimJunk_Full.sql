@@ -1,3 +1,6 @@
+CREATE PROCEDURE usp_DimJunk_Populator AS
+
+BEGIN
 declare @dimjunk table
 	 (JunkSK int identity(1,1),NKey INT, [Name] varchar(200), [Value] varchar(200), SourceName varchar(100))
 Insert INTO @dimjunk (NKey, Name, Value,SourceName)
@@ -21,7 +24,7 @@ select * into dimJunk from @dimjunk
 select * from dimJunk
 
 
-
+END
 
 
 
