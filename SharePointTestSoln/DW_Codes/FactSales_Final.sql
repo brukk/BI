@@ -1,4 +1,4 @@
-ALTER procedure usp_FactSalesPopulator AS
+ALTER procedure usp_FactSales_Populator AS
 BEGIN
 
 INSERT INTO FactSales (SalesOrderID, SalesOrderDetailID, OrderQty, UnitPrice, UnitPriceDiscount, LineTotal,

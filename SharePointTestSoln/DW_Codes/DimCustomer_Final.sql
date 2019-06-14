@@ -2,7 +2,7 @@
 --keep historical data if Email changes
 --updata Firstname, LastName, Phone if Source changes
 --Title is fixed value, ignore it if source changes 
-CREATE PROCEDURE usp_DimCustomerPopulator AS
+CREATE PROCEDURE usp_DimCustomer_Populator AS
 
 BEGIN
 IF EXISTS (

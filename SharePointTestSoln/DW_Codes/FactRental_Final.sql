@@ -1,4 +1,4 @@
-ALTER PROCEDURE usp_FactRentalPopulator AS
+ALTER PROCEDURE usp_FactRental_Populator AS
 
 BEGIN
 
