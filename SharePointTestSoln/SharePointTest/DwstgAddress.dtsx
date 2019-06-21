@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWstgAddress"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{65BB7541-331F-4954-8315-D02FECAA8E33}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{D51B7512-94D8-4CC2-90AC-F1977B0121C0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -516,13 +516,13 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,60,1252)(DT_WSTR,60)#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Address2]}</property>
+                          name="Expression">(DT_STR,60,1252)[REPLACENULL]((DT_WSTR,60)#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Address2]},"")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,60,1252)(DT_WSTR,60)Address2</property>
+                          name="FriendlyExpression">(DT_STR,60,1252)REPLACENULL((DT_WSTR,60)Address2,"")</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -612,13 +612,13 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1252)[REPLACENULL]((dt_wstr,50)#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]},"UKN")</property>
+                          name="Expression">(DT_STR,50,1252)[REPLACENULL]((dt_wstr,50)#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[StateProvince]},"")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,50,1252)REPLACENULL((dt_wstr,50)StateProvince,"UKN")</property>
+                          name="FriendlyExpression">(DT_STR,50,1252)REPLACENULL((dt_wstr,50)StateProvince,"")</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -794,13 +794,13 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,60,1252)(DT_WSTR,60)#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[AddressLine2]}</property>
+                          name="Expression">(DT_STR,60,1252)[REPLACENULL]((DT_WSTR,60)#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[AddressLine2]},"")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,60,1252)(DT_WSTR,60)AddressLine2</property>
+                          name="FriendlyExpression">(DT_STR,60,1252)REPLACENULL((DT_WSTR,60)AddressLine2,"")</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -842,13 +842,13 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1252)[REPLACENULL]((dt_wstr,50)#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[StateProvince]},"UKN")</property>
+                          name="Expression">(DT_STR,50,1252)[REPLACENULL]((dt_wstr,50)#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[StateProvince]},"")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,50,1252)REPLACENULL((dt_wstr,50)StateProvince,"UKN")</property>
+                          name="FriendlyExpression">(DT_STR,50,1252)REPLACENULL((dt_wstr,50)StateProvince,"")</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3221,6 +3221,10 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="98,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="514,134" />
+        <NodeLayout
           Size="154,42"
           Id="Package\Data Flow Task\Derived Column 1"
           TopLeft="60,138" />
@@ -3229,25 +3233,21 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
           Id="Package\Data Flow Task\Merge Join"
           TopLeft="557,200" />
         <NodeLayout
-          Size="98,42"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="514,134" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Data Flow Task\Sort 1"
-          TopLeft="679,129" />
+          Size="154,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="547,271" />
         <NodeLayout
           Size="144,42"
           Id="Package\Data Flow Task\OData Source 1"
           TopLeft="63,61" />
         <NodeLayout
+          Size="107,42"
+          Id="Package\Data Flow Task\Sort 1"
+          TopLeft="679,129" />
+        <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="221.5,352.5" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="547,271" />
         <NodeLayout
           Size="188,42"
           Id="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output"
@@ -3268,6 +3268,64 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
           Size="157,42"
           Id="Package\Data Flow Task\ADO NET Source- Address"
           TopLeft="489,64" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="547,292">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-181.5,-53.5"
+              Start="0,0"
+              End="-174,-53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-86.75,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-86.75,0"
+                    Point2="-90.75,0"
+                    Point3="-90.75,-4" />
+                  <mssgle:LineSegment
+                    End="-90.75,-49.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-90.75,-49.5"
+                    Point2="-90.75,-53.5"
+                    Point3="-94.75,-53.5" />
+                  <mssgle:LineSegment
+                    End="-174,-53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Error Output]"
+          TopLeft="214,159.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="75,0"
+              Start="0,0"
+              End="67.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="67.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-31.21138671875,5,129.9227734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[ADO NET Source Output]"
           TopLeft="565.25,106">
@@ -3291,31 +3349,19 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="563,176">
+          Id="Package\Data Flow Task.Paths[Union All Output 1]"
+          TopLeft="306,259.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="38.6666666666666,24"
+              EndConnector="0,93"
               Start="0,0"
-              End="38.6666666666666,16.5">
+              End="0,85.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,10.2249240121581" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.2249240121581"
-                    Point2="0,14.2249240121581"
-                    Point3="4,14.2249240121581" />
-                  <mssgle:LineSegment
-                    End="34.6666666666666,14.2249240121581" />
-                  <mssgle:CubicBezierSegment
-                    Point1="34.6666666666666,14.2249240121581"
-                    Point2="38.6666666666666,14.2249240121581"
-                    Point3="38.6666666666666,18.2249240121581" />
-                  <mssgle:LineSegment
-                    End="38.6666666666666,16.5" />
+                    End="0,85.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3350,6 +3396,40 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                     Point3="-90.1666666666666,21.1884498480243" />
                   <mssgle:LineSegment
                     End="-90.1666666666666,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="563,176">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38.6666666666666,24"
+              Start="0,0"
+              End="38.6666666666666,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.2249240121581" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.2249240121581"
+                    Point2="0,14.2249240121581"
+                    Point3="4,14.2249240121581" />
+                  <mssgle:LineSegment
+                    End="34.6666666666666,14.2249240121581" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.6666666666666,14.2249240121581"
+                    Point2="38.6666666666666,14.2249240121581"
+                    Point3="38.6666666666666,18.2249240121581" />
+                  <mssgle:LineSegment
+                    End="38.6666666666666,16.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3449,40 +3529,6 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="547,292">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-181.5,-53.5"
-              Start="0,0"
-              End="-174,-53.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-86.75,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-86.75,0"
-                    Point2="-90.75,0"
-                    Point3="-90.75,-4" />
-                  <mssgle:LineSegment
-                    End="-90.75,-49.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-90.75,-49.5"
-                    Point2="-90.75,-53.5"
-                    Point3="-94.75,-53.5" />
-                  <mssgle:LineSegment
-                    End="-174,-53.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output1]"
           TopLeft="137,180">
           <EdgeLayout.Curve>
@@ -3508,52 +3554,6 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
                     Point3="168,22.75" />
                   <mssgle:LineSegment
                     End="168,30" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Error Output]"
-          TopLeft="214,159.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="75,0"
-              Start="0,0"
-              End="67.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="67.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-31.21138671875,5,129.9227734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Union All Output 1]"
-          TopLeft="306,259.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,93"
-              Start="0,0"
-              End="0,85.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,85.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
