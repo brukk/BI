@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWstgAddress"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{D51B7512-94D8-4CC2-90AC-F1977B0121C0}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{E5694BA0-70DB-4BC0-A4F5-A665D097D37A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3223,54 +3223,54 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         <NodeLayout
           Size="98,42"
           Id="Package\Data Flow Task\Sort"
-          TopLeft="514,134" />
+          TopLeft="467,82" />
         <NodeLayout
           Size="154,42"
           Id="Package\Data Flow Task\Derived Column 1"
-          TopLeft="60,138" />
+          TopLeft="13,86" />
         <NodeLayout
           Size="130,42"
           Id="Package\Data Flow Task\Merge Join"
-          TopLeft="557,200" />
+          TopLeft="510,148" />
         <NodeLayout
           Size="154,42"
           Id="Package\Data Flow Task\Derived Column"
-          TopLeft="547,271" />
+          TopLeft="500,219" />
         <NodeLayout
           Size="144,42"
           Id="Package\Data Flow Task\OData Source 1"
-          TopLeft="63,61" />
+          TopLeft="16,9" />
         <NodeLayout
           Size="107,42"
           Id="Package\Data Flow Task\Sort 1"
-          TopLeft="679,129" />
+          TopLeft="632,77" />
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="221.5,352.5" />
+          TopLeft="174.5,300.5" />
         <NodeLayout
           Size="188,42"
           Id="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output"
-          TopLeft="289,139" />
+          TopLeft="242,87" />
         <NodeLayout
           Size="193,47"
           Id="Package\Data Flow Task\OLE DB Destination - OData Error Output"
-          TopLeft="266,60" />
+          TopLeft="219,8" />
         <NodeLayout
           Size="139,42"
           Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="669,64" />
+          TopLeft="622,12" />
         <NodeLayout
           Size="121,42"
           Id="Package\Data Flow Task\Union All"
-          TopLeft="244.5,217.5" />
+          TopLeft="197.5,165.5" />
         <NodeLayout
           Size="157,42"
           Id="Package\Data Flow Task\ADO NET Source- Address"
-          TopLeft="489,64" />
+          TopLeft="442,12" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="547,292">
+          TopLeft="500,240">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3304,7 +3304,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Error Output]"
-          TopLeft="214,159.5">
+          TopLeft="167,107.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3328,7 +3328,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[ADO NET Source Output]"
-          TopLeft="565.25,106">
+          TopLeft="518.25,54">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3350,7 +3350,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Union All Output 1]"
-          TopLeft="306,259.5">
+          TopLeft="259,207.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3372,7 +3372,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output1]"
-          TopLeft="732.5,171">
+          TopLeft="685.5,119">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3406,7 +3406,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="563,176">
+          TopLeft="516,124">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3440,7 +3440,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output]"
-          TopLeft="136,103">
+          TopLeft="89,51">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3462,7 +3462,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Merge Join Output]"
-          TopLeft="623,242">
+          TopLeft="576,190">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3484,7 +3484,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="735.5,106">
+          TopLeft="688.5,54">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3506,7 +3506,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Error output]"
-          TopLeft="207,82.75">
+          TopLeft="160,30.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3530,7 +3530,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output1]"
-          TopLeft="137,180">
+          TopLeft="90,128">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
