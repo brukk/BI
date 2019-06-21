@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWstgAddress"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{E5694BA0-70DB-4BC0-A4F5-A665D097D37A}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{FA435091-B3F6-4847-8114-C717ABDD2D26}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3247,7 +3247,7 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="174.5,300.5" />
+          TopLeft="174.5,260.5" />
         <NodeLayout
           Size="188,42"
           Id="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output"
@@ -3354,14 +3354,14 @@ INNER JOIN Country H on H.countryId = C.countryid</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,93"
+              EndConnector="0,53"
               Start="0,0"
-              End="0,85.5">
+              End="0,45.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,85.5" />
+                    End="0,45.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
