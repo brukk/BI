@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-50T1H82M"
   DTS:CreatorName="LAPTOP-50T1H82M\Biruk"
-  DTS:DTSID="{300B1E10-3E58-4789-BEF2-D0B7C9349560}"
+  DTS:DTSID="{3B27DFCB-D54D-4042-95A2-47778891437D}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Dw_stgCustomer"
+  DTS:ObjectName="DW_stgCustomer"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{5E4B6042-3567-434E-A933-3DDD2588BD5A}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{EFF13004-6B37-4F23-88A6-32D32346132E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

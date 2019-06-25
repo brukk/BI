@@ -5,17 +5,27 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-50T1H82M"
   DTS:CreatorName="LAPTOP-50T1H82M\Biruk"
-  DTS:DTSID="{FD903990-466C-47DF-B3F7-F5B21FFC74B8}"
+  DTS:DTSID="{8AD33F31-9A66-4012-BD92-51E14BA5D942}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
-  DTS:ObjectName="DwDimProduct"
+  DTS:ObjectName="DW_stgProduct"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{4E868228-7433-4BAE-AF9B-62380BF20964}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{DB5E3AAD-1860-4B72-AB91-8E4244C17EEA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-50T1H82M.DwPrac4]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5F15F224-2FD3-40A6-955A-71C6405D7629}"
+      DTS:ObjectName="LAPTOP-50T1H82M.DwPrac4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-50T1H82M;Initial Catalog=DwPrac4;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LAPTOP-50T1H82M.Masterpieces]"
       DTS:CreationName="OLEDB"
@@ -6122,7 +6132,7 @@ where [refTable].[Name] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Product2]</property>
+                  name="OpenRowset">[dbo].[stgProduct]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -6165,8 +6175,8 @@ where [refTable].[Name] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-50T1H82M.Masterpieces]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-50T1H82M.Masterpieces]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-50T1H82M.DwPrac4]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-50T1H82M.DwPrac4]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -10136,14 +10146,14 @@ where [refTable].[Name] = ?</property>
               startId="Package\Data Flow Task\OData Source.Outputs[Error output]" />
             <path
               refId="Package\Data Flow Task.Paths[Fuzzy Lookup Output1]"
-              endId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
-              name="Fuzzy Lookup Output"
-              startId="Package\Data Flow Task\Fuzzy Lookup.Outputs[Fuzzy Lookup Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Fuzzy Lookup Output]"
               endId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
               name="Fuzzy Lookup Output"
               startId="Package\Data Flow Task\Fuzzy Lookup 1.Outputs[Fuzzy Lookup Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Fuzzy Lookup Output]"
+              endId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
+              name="Fuzzy Lookup Output"
+              startId="Package\Data Flow Task\Fuzzy Lookup.Outputs[Fuzzy Lookup Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output]"
               endId="Package\Data Flow Task\Sort 2.Inputs[Sort Input]"
@@ -10171,19 +10181,19 @@ where [refTable].[Name] = ?</property>
               startId="Package\Data Flow Task\OData Source.Outputs[Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Sort Output2]"
+              endId="Package\Data Flow Task\Merge.Inputs[Merge Input 2]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output]"
               endId="Package\Data Flow Task\Merge 1.Inputs[Merge Input 2]"
               name="Sort Output"
               startId="Package\Data Flow Task\Sort 2.Outputs[Sort Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Sort Output]"
+              refId="Package\Data Flow Task.Paths[Sort Output1]"
               endId="Package\Data Flow Task\Merge.Inputs[Merge Input 1]"
               name="Sort Output"
               startId="Package\Data Flow Task\Sort 1.Outputs[Sort Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Sort Output1]"
-              endId="Package\Data Flow Task\Merge.Inputs[Merge Input 2]"
-              name="Sort Output"
-              startId="Package\Data Flow Task\Sort.Outputs[Sort Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Union All Output 1]"
               endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
@@ -10205,8 +10215,8 @@ where [refTable].[Name] = ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{5047C035-7F9E-4A48-8A79-7727B22D2A20}"
-          SQLTask:SqlStatementSource="Truncate table dbo.Product2" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{5F15F224-2FD3-40A6-955A-71C6405D7629}"
+          SQLTask:SqlStatementSource="Truncate table stgProduct" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -10344,18 +10354,30 @@ where [refTable].[Name] = ?</property>
           TopLeft="497,4" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="763,381.116591928251">
+          TopLeft="373.5,182">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-155,0"
+              EndConnector="-15,37.346153846154"
               Start="0,0"
-              End="-147.5,0">
+              End="-15,29.846153846154">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-147.5,0" />
+                    End="0,14.673076923077" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.673076923077"
+                    Point2="0,18.673076923077"
+                    Point3="-4,18.673076923077" />
+                  <mssgle:LineSegment
+                    End="-11,18.673076923077" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-11,18.673076923077"
+                    Point2="-15,18.673076923077"
+                    Point3="-15,22.673076923077" />
+                  <mssgle:LineSegment
+                    End="-15,29.846153846154" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10492,28 +10514,6 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Fuzzy Lookup Output1]"
-          TopLeft="815.5,330">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.5"
-              Start="0,0"
-              End="0,24">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Fuzzy Lookup Output]"
           TopLeft="571,243">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10526,6 +10526,28 @@ where [refTable].[Name] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,20" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Fuzzy Lookup Output]"
+          TopLeft="815.5,330">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.5"
+              Start="0,0"
+              End="0,24">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10742,40 +10764,6 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output2]"
-          TopLeft="373.5,182">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-15,37.346153846154"
-              Start="0,0"
-              End="-15,29.846153846154">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.673076923077" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.673076923077"
-                    Point2="0,18.673076923077"
-                    Point3="-4,18.673076923077" />
-                  <mssgle:LineSegment
-                    End="-11,18.673076923077" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-11,18.673076923077"
-                    Point2="-15,18.673076923077"
-                    Point3="-15,22.673076923077" />
-                  <mssgle:LineSegment
-                    End="-15,29.846153846154" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output1]"
           TopLeft="570.833333333333,312.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10788,6 +10776,28 @@ where [refTable].[Name] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,38.733183856502" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output1]"
+          TopLeft="763,381.116591928251">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-155,0"
+              Start="0,0"
+              End="-147.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-147.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

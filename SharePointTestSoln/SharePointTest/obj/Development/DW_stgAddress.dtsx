@@ -1,18 +1,18 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/11/2019 7:29:21 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-50T1H82M"
   DTS:CreatorName="LAPTOP-50T1H82M\Biruk"
-  DTS:DTSID="{5BC4986E-1EE3-4FE6-B7EB-4C14C4EF1753}"
+  DTS:DTSID="{639D3D09-E493-4E37-8CBB-237104F1CC6A}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
-  DTS:ObjectName="DWstgAddress"
+  DTS:ObjectName="DW_stgAddress"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{FA435091-B3F6-4847-8114-C717ABDD2D26}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{7286814B-AEE7-4EB2-82DE-D2739E45DB81}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

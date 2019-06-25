@@ -1,18 +1,18 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/7/2019 12:55:14 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-50T1H82M"
   DTS:CreatorName="LAPTOP-50T1H82M\Biruk"
-  DTS:DTSID="{18F4913D-4B23-4C29-B6D0-9E8DBD16D88E}"
+  DTS:DTSID="{3079F829-3A6F-4C9B-BE56-6426893C91FE}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
-  DTS:ObjectName="DW_SalesOrderDetail"
+  DTS:ObjectName="DW_stgSalesOrderDetail"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{9B4B5141-D996-4655-865E-EE358F61C75C}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{8248AA6B-A3AA-436F-918A-4BE8721B049E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -743,7 +743,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{0594FF13-7DBC-4B57-9C36-C55F12C1B6BB}"
-          SQLTask:SqlStatementSource="truncate stgSalesOrderDetail" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="truncate table stgSalesOrderDetail" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>

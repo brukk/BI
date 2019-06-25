@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-50T1H82M"
   DTS:CreatorName="LAPTOP-50T1H82M\Biruk"
-  DTS:DTSID="{AA540D69-E842-4828-9092-5F4255FB5DA7}"
+  DTS:DTSID="{961A11AD-A09F-48C6-BC81-6C9F501B738E}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package2"
+  DTS:ObjectName="DW_Customer2"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{319B5258-B79A-469F-9651-FD178DB0674F}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{D92B7E01-7D24-4902-BAA7-8FE2CB9C0BF8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -357,13 +357,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,250,1252)(DT_WSTR,250)#{Package\Data Flow Task\OData Source.Outputs[Output].Columns[Phone]}</property>
+                          name="Expression">(DT_STR,250,1252)(DT_WSTR,15)#{Package\Data Flow Task\OData Source.Outputs[Output].Columns[Phone]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,250,1252)(DT_WSTR,250)Phone</property>
+                          name="FriendlyExpression">(DT_STR,250,1252)(DT_WSTR,15)Phone</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1544,40 +1544,28 @@
         <NodeLayout
           Size="180,42"
           Id="Package\Data Flow Task\OLE DB Destination 1"
-          TopLeft="364.5,115.5" />
+          TopLeft="478.5,124.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Error Output]"
-          TopLeft="288.5,146.5">
+          TopLeft="288.5,146">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="76,-10"
+              EndConnector="190,0"
               Start="0,0"
-              End="68.5,-10">
+              End="182.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="34,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="34,0"
-                    Point2="38,0"
-                    Point3="38,-4" />
-                  <mssgle:LineSegment
-                    End="38,-6" />
-                  <mssgle:CubicBezierSegment
-                    Point1="38,-6"
-                    Point2="38,-10"
-                    Point3="42,-10" />
-                  <mssgle:LineSegment
-                    End="68.5,-10" />
+                    End="182.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-35.8300390625,1,147.660078125,16"
+              BoundingBox="17.4199609375,5,147.660078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
