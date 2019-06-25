@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DW_Customer2"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{D92B7E01-7D24-4902-BAA7-8FE2CB9C0BF8}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{B8A69F76-F59C-4CFA-BBD4-1EDD264474D6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1090,7 +1090,7 @@
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="15"
                       name="Phone" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PasswordHash]"
@@ -1486,6 +1486,10 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="180,42"
+          Id="Package\Data Flow Task\OLE DB Destination 1"
+          TopLeft="478.5,124.5" />
+        <NodeLayout
           Size="144,42"
           Id="Package\Data Flow Task\OData Source"
           TopLeft="135.5,40.5" />
@@ -1493,6 +1497,10 @@
           Size="154,42"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="134.5,125.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="123.5,213.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output]"
           TopLeft="209.5,82.5">
@@ -1515,10 +1523,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="123.5,213.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
           TopLeft="210.25,167.5">
@@ -1541,10 +1545,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="180,42"
-          Id="Package\Data Flow Task\OLE DB Destination 1"
-          TopLeft="478.5,124.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Error Output]"
           TopLeft="288.5,146">
@@ -1573,7 +1573,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Data Flow Task\OLE DB Destination 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1586,7 +1586,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination 1">
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
