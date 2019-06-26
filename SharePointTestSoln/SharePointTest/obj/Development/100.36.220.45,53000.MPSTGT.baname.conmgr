@@ -10,7 +10,7 @@
       DTS:ConnectionString="Data Source=100.36.220.45,53000;User ID=baname;Initial Catalog=MPSTGT;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQBol+NVn+U6vH5oFUvoCgQAAAAACAAAAAAAQZgAAAAEAACAAAAB3+WVoDUQqFfUHGvtj0fwa9yJfcikDFqUKQIQ/AfButwAAAAAOgAAAAAIAACAAAACZDb5V9dHHurHIvh5e1RQbzYTVtsjIpAynI5aIOVCNpIAAAADq+bobp2jfmUeeHitBvMUnvacrrjzQAQyRkECQDYjqMjOxLMwy6mNnWdkzy2BEfcYt9TVEjPGSjKHPE0SdtLSg9OHRTT0gMRqFV00LiQqkFEPG3kBYmKjKYKNB51J5TqyliZPYxkVH2xKM52ZHK7apqihMxeMB8NDzmnq1CisMkUAAAADsXrMvWAWrfvQgmhk08LLEcEp9t5W+LNz1nmrao+saNX2ldW0aN8ILOpgtQQ/Xul5GqQ0G7vl64qwY0HAgO6Bk</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQBol+NVn+U6vH5oFUvoCgQAAAAACAAAAAAAQZgAAAAEAACAAAADjF8fFA6QuPBp/pPWKuJH9H3cdIwMyjnB6pMYM3d77kwAAAAAOgAAAAAIAACAAAABqGATvKExScAZTMLes8ok84tHogqqyRuCl9sJ2GbncqYAAAADHtT7MT9/Auh/l69rcNsYAI36DaV35PVijiiKOnAS52JuWwpRB3ELIqtOLJvmN/yiRuOZ5XhiCN9Kj+CU7hMh0fgcQRRtR+jsBsTavaz0flq5JORpTJqKB1Swsv+upNgurf+uHN7+yivY6MSCfkHIziiMlWrUc3V/8GEc7tN3QO0AAAADnLofOERPbMFMmZjhLk4/pXutIbiLflqp4ziYi7Yy5ozkUds86we190DNTzVppk2tbhmA76vpbRk9qCoyqbNjZ</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
