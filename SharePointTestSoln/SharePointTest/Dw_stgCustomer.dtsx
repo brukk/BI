@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DW_stgCustomer"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{EFF13004-6B37-4F23-88A6-32D32346132E}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{75BB4714-26BC-4C0F-9B78-D6282B8F68F5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -494,13 +494,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,25,1252)(DT_WSTR,100)#{Package\Data Flow Task\OData Source.Outputs[Output].Columns[Phone]}</property>
+                          name="Expression">(DT_STR,25,1252)(DT_WSTR,25)#{Package\Data Flow Task\OData Source.Outputs[Output].Columns[Phone]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,25,1252)(DT_WSTR,100)Phone</property>
+                          name="FriendlyExpression">(DT_STR,25,1252)(DT_WSTR,25)Phone</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1376,7 +1376,7 @@
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
                       codePage="1252"
                       dataType="str"
-                      length="25"
+                      length="15"
                       name="Phone" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PasswordHash]"
