@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SharePointTest</Name>
-    <LastWriteTime>2019-06-30T23:17:18.8655455Z</LastWriteTime>
+    <LastWriteTime>2019-07-01T19:45:56.7240953Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -97,11 +97,6 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>DW_stgAddress.dtsx</Name>
-      <LastWriteTime>2019-06-30T23:23:03.2183843Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
       <Name>DW_stgProductCategory.dtsx</Name>
       <LastWriteTime>2019-06-25T17:28:41.6853232Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
@@ -109,6 +104,16 @@
     <ProjectBuildItemInfo>
       <Name>DW_stgSalesOrderDetail.dtsx</Name>
       <LastWriteTime>2019-06-25T17:41:26.2433976Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DW_stgAddress.dtsx</Name>
+      <LastWriteTime>2019-07-01T19:52:13.7777973Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>stgAddressToMSTGT.dtsx</Name>
+      <LastWriteTime>2019-07-01T19:58:18.5844958Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

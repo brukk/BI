@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-50T1H82M"
   DTS:CreatorName="LAPTOP-50T1H82M\Biruk"
-  DTS:DTSID="{B9D073F9-D351-4645-A228-A31159264616}"
+  DTS:DTSID="{B3CC8131-3CEC-4841-85B6-C283200A58B6}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
-  DTS:ObjectName="DW_stgAddress"
+  DTS:ObjectName="AddressJoin"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{9CA5F059-6007-492E-91C7-BF39908BB7FF}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{F970EEE8-5698-4BBF-9949-1E7A89E591A4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1358,6 +1358,54 @@
                       dataType="nText"
                       name="PostalCode" />
                     <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ContentTypeID]"
+                      dataType="nText"
+                      name="ContentTypeID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
+                      dataType="nText"
+                      name="Title" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ComplianceAssetId]"
+                      dataType="nText"
+                      name="ComplianceAssetId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ContentType]"
+                      dataType="nText"
+                      name="ContentType" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Modified]"
+                      dataType="dbTimeStamp"
+                      name="Modified" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      dataType="dbTimeStamp"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[CreatedById]"
+                      dataType="i4"
+                      name="CreatedById" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedById]"
+                      dataType="i4"
+                      name="ModifiedById" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Owshiddenversion]"
+                      dataType="i4"
+                      name="Owshiddenversion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Version]"
+                      dataType="nText"
+                      name="Version" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[Path]"
+                      dataType="nText"
+                      name="Path" />
+                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination - OData Error Output.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
                       dataType="i4"
                       name="ErrorCode" />
@@ -1418,7 +1466,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT A.AddressID, A.AdressdLine1, ISNULL(A.AddressLine2, '') AS AddressLine2, A.City,isnull(U.StateName, '') AS StateProvince, 
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT A.AddressID, A.AdressdLine1, A.AddressLine2, A.City,isnull(U.StateName, '') AS StateProvince, 
         A.Country AS CountryRegion, A.Postal AS PostalCode, A.Sourcename
   FROM [AddressMysql] A JOIN [ADD] D on A.AddressID = D.addressid
   left join AddressUS U 

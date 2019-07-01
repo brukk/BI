@@ -1,284 +1,21 @@
 <?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="7/1/2019 3:29:34 PM"
+  DTS:CreationDate="7/1/2019 3:43:54 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-50T1H82M"
   DTS:CreatorName="LAPTOP-50T1H82M\Biruk"
-  DTS:DTSID="{B9D073F9-D351-4645-A228-A31159264616}"
+  DTS:DTSID="{5C853745-FC5D-4C42-8DA1-71D08B7F1724}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
-  DTS:ObjectName="DW_stgAddress"
+  DTS:ObjectName="stgAddressToMSTGT"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{9CA5F059-6007-492E-91C7-BF39908BB7FF}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{09D9BDDA-6329-4C34-ADBC-068039F756A8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 3]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{68BE6D67-EAB2-4F06-97A4-2D2C7E757185}"
-      DTS:ObjectName="Flat File Connection Manager 3">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Biruk\Desktop\BIProject\SharePointTestSoln\uszips.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="addressid"
-              DTS:DTSID="{5C99B79F-0F63-4D76-B8AC-502365D62AE7}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="address1"
-              DTS:DTSID="{11D0B648-34A7-4007-BAF3-666E7AD4339F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="address2"
-              DTS:DTSID="{E69E5C0A-6208-49B8-A88B-AF50598D7C18}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="city"
-              DTS:DTSID="{523D22C8-A0FE-4411-8028-A88C79A7ADCA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="state_name"
-              DTS:DTSID="{C2F08EC2-4CE9-4015-820C-C4C1414595EA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="postalcode"
-              DTS:DTSID="{309108A7-4E61-4DA2-A432-7D96C5D413D0}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Latitude"
-              DTS:DTSID="{5FB903D8-7C36-4B53-93A1-76D479EA8A0C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Longitude"
-              DTS:DTSID="{4A79E886-54EE-4202-9D0E-71FC1AFC9949}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Accuracy Score"
-              DTS:DTSID="{D14ED940-A25A-4B24-A8FB-4622B875A7C4}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Accuracy Type"
-              DTS:DTSID="{3B5EE8ED-D3B4-4D81-B92F-B3E08A70218C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Number"
-              DTS:DTSID="{94FEA0A1-81F1-4ACD-AEE4-0FC79D292D82}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Street"
-              DTS:DTSID="{908D77AA-B7EF-4BB9-ACFE-4BBA0C3BC7CE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="City"
-              DTS:DTSID="{9E782A53-C9BD-4EE2-BC40-5029EE6DD683}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="state_id"
-              DTS:DTSID="{43BEDEB5-3DE3-4E7B-B363-B1025819160F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="county_name"
-              DTS:DTSID="{1C4AF967-7170-4A03-B4A4-0608F9C50DC8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Zip"
-              DTS:DTSID="{E19D20C8-F270-45D2-B2C3-4C18F90B65A1}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Country"
-              DTS:DTSID="{8082AC9F-FF78-46E3-86F1-46649457DDD1}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Source"
-              DTS:DTSID="{BD7C8FA2-CBFC-42F5-A0A4-C11F698F4C5F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="county_fips"
-              DTS:DTSID="{45B9735D-6496-4372-918B-E70BBFA9C75D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="all_county_weights"
-              DTS:DTSID="{561EA93C-68A3-4513-8E12-83B56E545A90}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="imprecise"
-              DTS:DTSID="{B7B33FAC-C1B0-48CE-839F-72133A5BEA06}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="military"
-              DTS:DTSID="{E5867ECE-0D42-46BA-A9B1-BACCF799989D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="timezone"
-              DTS:DTSID="{21DE03DC-DEA7-428A-A8EE-F505985E88B8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="zcta"
-              DTS:DTSID="{D24B4F77-E2A2-46F9-A257-A9053E859AD5}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="parent_zcta"
-              DTS:DTSID="{9B5910A9-4968-46EB-A361-378763505468}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="population"
-              DTS:DTSID="{9FF151E0-3329-4F3C-BE52-B09FB5DAB0BB}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="density"
-              DTS:DTSID="{58DC7093-C3E8-474F-B005-A57EFAF567E4}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LAPTOP-50T1H82M.DwPrac4]"
       DTS:CreationName="OLEDB"
@@ -306,7 +43,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{89DDD42E-2CFD-441F-8A36-3341D5F26002}"
+      DTS:DTSID="{78D6B65E-3F89-4E85-8AA1-0248A4E4BC73}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
@@ -415,13 +152,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,60,1252)(DT_WSTR,60)#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[AddressLine2]}</property>
+                          name="Expression">(DT_STR,60,1252)[REPLACENULL]((DT_WSTR,60)#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[AddressLine2]},"")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,60,1252)(DT_WSTR,60)AddressLine2</property>
+                          name="FriendlyExpression">(DT_STR,60,1252)REPLACENULL((DT_WSTR,60)AddressLine2,"")</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -855,8 +592,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-50T1H82M.DwPrac4 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-50T1H82M.DwPrac4 1]"
+                  connectionManagerID="{2D1F8954-21C8-46E9-AE6F-76CA9BDCCBB7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[100.36.220.45,53000.MPSTGT.baname]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2168,7 +1905,7 @@
       DTS:refId="Package\Execute SQL Task"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{9315E572-6EC9-4130-BC4F-1FC5DFDEBD54}"
+      DTS:DTSID="{C23DA7B2-74BF-42C2-9236-665F2A957985}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task"
@@ -2176,8 +1913,8 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{42D5AA72-1FB9-49B6-BE9E-2DC3C6CB562D}"
-          SQLTask:SqlStatementSource="truncate table stgAddress" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{2D1F8954-21C8-46E9-AE6F-76CA9BDCCBB7}"
+          SQLTask:SqlStatementSource="delete from stgAddress" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -2185,7 +1922,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{FD9D28C6-8CCE-4900-A9F5-52E6F910C595}"
+      DTS:DTSID="{C284657A-1CF9-42B5-9B32-10CAE9A91407}"
       DTS:From="Package\Execute SQL Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -2206,7 +1943,7 @@
         <NodeLayout
           Size="151,42"
           Id="Package\Data Flow Task"
-          TopLeft="272.5,105.5" />
+          TopLeft="305.5,117.5" />
         <NodeLayout
           Size="163,42"
           Id="Package\Execute SQL Task"
@@ -2217,26 +1954,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="231,28"
+              EndConnector="264,40"
               Start="0,0"
-              End="231,20.5">
+              End="264,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,10" />
+                    End="0,16" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,10"
-                    Point2="0,14"
-                    Point3="4,14" />
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="4,20" />
                   <mssgle:LineSegment
-                    End="227,14" />
+                    End="260,20" />
                   <mssgle:CubicBezierSegment
-                    Point1="227,14"
-                    Point2="231,14"
-                    Point3="231,18" />
+                    Point1="260,20"
+                    Point2="264,20"
+                    Point3="264,24" />
                   <mssgle:LineSegment
-                    End="231,20.5" />
+                    End="264,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2256,30 +1993,34 @@
         <NodeLayout
           Size="154,42"
           Id="Package\Data Flow Task\Derived Column 1"
-          TopLeft="60,138" />
+          TopLeft="27,127" />
         <NodeLayout
           Size="121,42"
           Id="Package\Data Flow Task\Union All"
-          TopLeft="244.5,217.5" />
+          TopLeft="211.5,206.5" />
         <NodeLayout
           Size="144,42"
           Id="Package\Data Flow Task\OData Source 1"
-          TopLeft="63,61" />
+          TopLeft="30,50" />
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="221.5,352.5" />
+          TopLeft="188.5,341.5" />
         <NodeLayout
           Size="188,42"
           Id="Package\Data Flow Task\OLE DB Destination - Derived Col Err Output"
-          TopLeft="289,139" />
+          TopLeft="256,128" />
         <NodeLayout
           Size="193,47"
           Id="Package\Data Flow Task\OLE DB Destination - OData Error Output"
-          TopLeft="266,60" />
+          TopLeft="233,49" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="529.5,108.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Union All Output 1]"
-          TopLeft="306,259.5">
+          TopLeft="273,248.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2301,7 +2042,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output]"
-          TopLeft="136,103">
+          TopLeft="103,92">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2323,7 +2064,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Error output]"
-          TopLeft="207,82.75">
+          TopLeft="174,71.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2347,7 +2088,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="137,180">
+          TopLeft="104,169">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2381,7 +2122,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Error Output]"
-          TopLeft="214,159.5">
+          TopLeft="181,148.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2403,13 +2144,9 @@
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="562.5,119.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="637.5,161.5">
+          TopLeft="604.5,150.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
