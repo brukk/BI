@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="CatchAddress"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{2804D9AD-D98A-4314-A3E8-B469F9156127}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{B520BBE6-37D0-4D95-AB97-F92B79220654}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -427,6 +427,208 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Cache Connection Manager 2]"
+      DTS:CreationName="CACHE"
+      DTS:DTSID="{8BBF7A71-7826-4D9A-9C18-BA80F6586213}"
+      DTS:ObjectName="Cache Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager>
+          <DTS:CacheColumns>
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:IndexPosition="1"
+              DTS:ObjectName="addressid"
+              DTS:DTSID="{C2F02B43-6E20-4133-85BA-F2920978F357}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="address1"
+              DTS:DTSID="{E7A5E27B-5B24-481E-9472-4B90846C743B}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="address2"
+              DTS:DTSID="{126833EE-053B-4230-A73E-A5DE96CA2837}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="city"
+              DTS:DTSID="{4E193B58-3076-4003-8DF2-D14B5134D96C}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="state_name"
+              DTS:DTSID="{1FE3CB7E-B78A-487C-8715-8967478D1C6B}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="postalcode"
+              DTS:DTSID="{25FB435A-679D-4D33-8E99-411E33E36916}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="Latitude"
+              DTS:DTSID="{003ABEDB-22BC-4844-B3D2-5029275614BE}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="Longitude"
+              DTS:DTSID="{6094634C-3831-4626-BA69-EC69FD9AEB41}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="Accuracy Score"
+              DTS:DTSID="{C79BED76-5F92-4A2B-8665-1112735F9E6C}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="Accuracy Type"
+              DTS:DTSID="{1149445D-5E6B-4FF2-B722-0726918F0790}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="Number"
+              DTS:DTSID="{E00DAE05-D383-4DEF-BC48-39042FF0BF70}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="Street"
+              DTS:DTSID="{96ED59D9-1570-4BDC-9335-E6964D87E805}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="City"
+              DTS:DTSID="{5D091F41-0F55-4CBA-937C-D169858C37BB}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="state_id"
+              DTS:DTSID="{0E923BC5-D0CE-4353-8966-F0C78C9D17B4}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="county_name"
+              DTS:DTSID="{694388BB-0174-4B7E-B35A-4A43FB31A65A}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="Zip"
+              DTS:DTSID="{19C3DCB7-6A1D-4E71-8838-9EC5DE5C500A}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{04110DE3-24CA-4742-B591-D7FB32760706}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="Source"
+              DTS:DTSID="{B532D2B0-AC2A-487E-917A-37055A1B2315}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="county_fips"
+              DTS:DTSID="{62AC1454-E4C2-4B81-906F-D0048E752B79}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="all_county_weights"
+              DTS:DTSID="{4E0A097A-9805-42AA-8D9A-7BB4DE55F260}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="imprecise"
+              DTS:DTSID="{D9B8595F-3876-42A8-B924-825ABD5BE524}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="military"
+              DTS:DTSID="{3C5BAABA-3F99-44B7-BB62-82896FE0D4C9}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="timezone"
+              DTS:DTSID="{2F084361-3628-4367-B981-D90BA70B6470}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="zcta"
+              DTS:DTSID="{8472DCC7-E9A0-4BAA-9990-0C43D66EC9E0}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="parent_zcta"
+              DTS:DTSID="{19D13351-02EE-4FA0-AA9D-E470193D6EEE}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="population"
+              DTS:DTSID="{B1773BB1-0DF1-4638-AC10-2CB14250BAB8}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="129"
+              DTS:Length="50"
+              DTS:CodePage="1252"
+              DTS:ObjectName="density"
+              DTS:DTSID="{B9D65A0C-D871-40D5-847C-CE9308208F2C}"
+              DTS:CreationName="" />
+          </DTS:CacheColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{1551E924-A895-4559-8FDB-E80F6785EC8C}"
@@ -704,7 +906,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAShBXBzs/i0uSvX3vehNBegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAfzEWPnlUuyxJHzxNGOJkentu3NchH3sv0QWArsm1zVAAAAAAOgAAAAAIAACAAAAA+HXMkmnC5Dhk/uDHc67MQwj+VLOeSTfnnNtNyskFTQyAAAAD2LZ1fvKu7b+h8pM27TimKIW3jIuV5NC00qYPcAK97wEAAAAChmVx4AsI/Vl/T7AI0lIx8nSeDGpRjIngDTpW4UkA1XbMyS9XT4AxefBfsC0axykidiZW7Ue14dJReruSRrIRe</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQBol+NVn+U6vH5oFUvoCgQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB46VjqbN/kn3jRK5tiQPK3AMtsbhlq2Pjfr8q7j/jBPQAAAAAOgAAAAAIAACAAAAAnH30ZCR0RBINLgnmiC521y/iPr4EbW7FJqd9zHnJcciAAAADHTITxEoEbEjh32x/ry582VI/zMO4Kn9c7dxHR/dk9wUAAAABjmb+vobmDZc2bIzwBQUtWfhJR4EumR/SH03XNN5bY9xTtYjD8hmHhdGLgFRiXKWWv32LvvE93sDUlFkZ2IqH2</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -718,6 +920,16 @@
         <DTS:ConnectionManager
           DTS:FileUsageType="2"
           DTS:ConnectionString="C:\Users\Biruk\Desktop\ftpCatch" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-50T1H82M.DwPrac4]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{50A20A7B-17BC-48B2-9C47-6A9DA44BBA81}"
+      DTS:ObjectName="LAPTOP-50T1H82M.DwPrac4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-50T1H82M;Initial Catalog=DwPrac4;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -763,8 +975,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Cache Transform.Connections[CacheConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Cache Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Cache Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[Cache Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Cache Connection Manager 2]"
                   description="The connection used to access the cache."
                   name="CacheConnection" />
               </connections>
@@ -2597,8 +2809,8 @@ where [refTable].[address1] = ? and [refTable].[postalcode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\Lookup.Connections[CacheConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Cache Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Cache Connection Manager 1]"
+                  connectionManagerID="Package.ConnectionManagers[Cache Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Cache Connection Manager 2]"
                   description="Connection manager used to access lookup data."
                   name="CacheConnection" />
               </connections>
@@ -2789,8 +3001,8 @@ where [refTable].[address1] = ? and [refTable].[postalcode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{2D1F8954-21C8-46E9-AE6F-76CA9BDCCBB7}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[100.36.220.45,53000.MPSTGT.baname]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-50T1H82M.DwPrac4]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-50T1H82M.DwPrac4]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2899,6 +3111,12 @@ where [refTable].[address1] = ? and [refTable].[postalcode] = ?</property>
                       dataType="str"
                       length="15"
                       name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="SourceName" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2959,6 +3177,22 @@ where [refTable].[address1] = ? and [refTable].[postalcode] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C10084FF-06F5-4D74-A48A-565B5857300C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{50A20A7B-17BC-48B2-9C47-6A9DA44BBA81}"
+          SQLTask:SqlStatementSource="truncate table stgAddress" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\FTP Task"
       DTS:CreationName="Microsoft.FtpTask"
       DTS:Description="FTP Task"
@@ -2996,6 +3230,14 @@ where [refTable].[address1] = ? and [refTable].[postalcode] = ?</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\Data Flow Task 1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{1BB8ADDD-8478-4F48-ABEA-5DAB9DCF7477}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Data Flow Task 1" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -3012,37 +3254,75 @@ where [refTable].[address1] = ? and [refTable].[postalcode] = ?</property>
         <NodeLayout
           Size="151,42"
           Id="Package\Data Flow Task"
-          TopLeft="254.5,106.5" />
+          TopLeft="69.5,138.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Data Flow Task 1"
+          TopLeft="262,188" />
         <NodeLayout
           Size="122,42"
           Id="Package\FTP Task"
           TopLeft="60,60" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="182,81">
+          TopLeft="121,102">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="72.5,46.5"
+              EndConnector="24,36.5"
               Start="0,0"
-              End="65,46.5">
+              End="24,29">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="32.25,0" />
+                    End="0,14.25" />
                   <mssgle:CubicBezierSegment
-                    Point1="32.25,0"
-                    Point2="36.25,0"
-                    Point3="36.25,4" />
+                    Point1="0,14.25"
+                    Point2="0,18.25"
+                    Point3="4,18.25" />
                   <mssgle:LineSegment
-                    End="36.25,42.5" />
+                    End="20,18.25" />
                   <mssgle:CubicBezierSegment
-                    Point1="36.25,42.5"
-                    Point2="36.25,46.5"
-                    Point3="40.25,46.5" />
+                    Point1="20,18.25"
+                    Point2="24,18.25"
+                    Point3="24,22.25" />
                   <mssgle:LineSegment
-                    End="65,46.5" />
+                    End="24,29" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="220.5,159.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="41.5,49.5"
+              Start="0,0"
+              End="34,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="16.75,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.75,0"
+                    Point2="20.75,0"
+                    Point3="20.75,4" />
+                  <mssgle:LineSegment
+                    End="20.75,45.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.75,45.5"
+                    Point2="20.75,49.5"
+                    Point3="24.75,49.5" />
+                  <mssgle:LineSegment
+                    End="34,49.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3052,35 +3332,35 @@ where [refTable].[address1] = ? and [refTable].[postalcode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="160,42"
-          Id="Package\Data Flow Task 1"
-          TopLeft="136,207" />
+          Size="163,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="338,40" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="330,148.5">
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="419.5,82">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-114,58.5"
+              EndConnector="-77.5,106"
               Start="0,0"
-              End="-114,51">
+              End="-77.5,98.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.25" />
+                    End="0,49" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.25"
-                    Point2="0,29.25"
-                    Point3="-4,29.25" />
+                    Point1="0,49"
+                    Point2="0,53"
+                    Point3="-4,53" />
                   <mssgle:LineSegment
-                    End="-110,29.25" />
+                    End="-73.5,53" />
                   <mssgle:CubicBezierSegment
-                    Point1="-110,29.25"
-                    Point2="-114,29.25"
-                    Point3="-114,33.25" />
+                    Point1="-73.5,53"
+                    Point2="-77.5,53"
+                    Point3="-77.5,57" />
                   <mssgle:LineSegment
-                    End="-114,51" />
+                    End="-77.5,98.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3148,25 +3428,51 @@ where [refTable].[address1] = ? and [refTable].[postalcode] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="157,46"
-          Id="Package\Data Flow Task 1\ADO NET Source- Address"
-          TopLeft="100,9" />
-        <NodeLayout
           Size="154,42"
           Id="Package\Data Flow Task 1\Derived Column"
           TopLeft="103,83" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task 1\OLE DB Destination"
-          TopLeft="89,298" />
+          Size="163,42"
+          Id="Package\Data Flow Task 1\Derived Column 1"
+          TopLeft="91,225" />
         <NodeLayout
           Size="113,42"
           Id="Package\Data Flow Task 1\Lookup"
           TopLeft="122,149" />
         <NodeLayout
-          Size="163,42"
-          Id="Package\Data Flow Task 1\Derived Column 1"
-          TopLeft="91,225" />
+          Size="120,42"
+          Id="Package\Data Flow Task 1\Multicast"
+          TopLeft="357.5,152.5" />
+        <NodeLayout
+          Size="157,46"
+          Id="Package\Data Flow Task 1\ADO NET Source- Address"
+          TopLeft="100,9" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task 1\OLE DB Destination"
+          TopLeft="89,298" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Derived Column Output]"
+          TopLeft="179.25,125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24"
+              Start="0,0"
+              End="0,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task 1.Paths[ADO NET Source Output]"
           TopLeft="179.25,55">
@@ -3190,25 +3496,27 @@ where [refTable].[address1] = ? and [refTable].[postalcode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[Derived Column Output]"
-          TopLeft="179.25,125">
+          Id="Package\Data Flow Task 1.Paths[Lookup No Match Output]"
+          TopLeft="235,171.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,24"
+              EndConnector="122.5,0"
               Start="0,0"
-              End="0,16.5">
+              End="115,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.5" />
+                    End="115,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="1.69361328125,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3257,36 +3565,31 @@ where [refTable].[address1] = ? and [refTable].[postalcode] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="120,42"
-          Id="Package\Data Flow Task 1\Multicast"
-          TopLeft="357.5,152.5" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[Lookup No Match Output]"
-          TopLeft="235,171.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="122.5,0"
-              Start="0,0"
-              End="115,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="115,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="1.69361328125,5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 1\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 1\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
